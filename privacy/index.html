@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Contact Photos by Auaha</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0f1e;
+      --surface: #111827;
+      --card: #1a2235;
+      --accent: #38bdf8;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --border: #1e2d45;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(10,15,30,0.9);
+    }
+    .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .logo span { color: var(--accent); }
+    nav a.back { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+    nav a.back:hover { color: var(--accent); }
+    main { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .chip {
+      display: inline-block;
+      background: rgba(56,189,248,0.12);
+      color: var(--accent);
+      border: 1px solid rgba(56,189,248,0.25);
+      border-radius: 99px;
+      padding: 0.25rem 0.9rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 2.5rem; }
+    h2 { font-size: 1.15rem; font-weight: 700; margin: 2.25rem 0 0.6rem; color: var(--text); }
+    p { color: var(--muted); margin-bottom: 0.9rem; }
+    ul { color: var(--muted); margin: 0.5rem 0 0.9rem 1.25rem; }
+    ul li { margin-bottom: 0.4rem; }
+    a { color: var(--accent); }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">Auaha<span>.</span></a>
+    <a href="/" class="back">← Back to Home</a>
+  </nav>
+
+  <main>
+    <div class="chip">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Applies to: Contact Photos &nbsp;·&nbsp; Last updated: June 1, 2026 &nbsp;·&nbsp; Auaha App Development LLC</p>
+
+    <p>This Privacy Policy explains how Contact Photos ("the App"), developed by Auaha App Development LLC ("we," "us," or "our"), handles your data. We built Contact Photos to be a lightweight, privacy-respecting tool. We do not run servers that store your personal information.</p>
+
+    <h2>1. What the App Does</h2>
+    <p>Contact Photos helps you identify companies that text you, find their logo, and create a contact on your device with that logo. All contact creation happens locally on your device.</p>
+
+    <h2>2. Data We Access</h2>
+
+    <h2>2a. Contacts</h2>
+    <p>The App requests permission to read and write your device contacts. This access is used solely to create new contacts you explicitly request. We do not transmit, store, or share any of your contact data. Contact information never leaves your device.</p>
+
+    <h2>2b. Company Search Queries</h2>
+    <p>When you search for a company, the text you enter may be sent to Google's Gemini AI via Firebase AI to identify likely matching companies. Google processes this query according to their own privacy policy. We do not log or store search queries on our servers.</p>
+    <p>The App also makes direct HTTP requests to candidate company websites (e.g., <code>example.com</code>) to verify they exist and fetch logo images. These requests appear as standard web traffic from a mobile browser.</p>
+
+    <h2>2c. Logo Images</h2>
+    <p>To find a company's logo, the App may make requests to:</p>
+    <ul>
+      <li>The company's own website</li>
+      <li>Third-party logo services: <strong>LogoKit</strong> (img.logokit.com) and <strong>Apistemic</strong> (logos-api.apistemic.com)</li>
+      <li>logos-world.net</li>
+      <li>Public social media profile pages (Facebook, Instagram) for companies that use social logos</li>
+    </ul>
+    <p>These requests are made to download image files only. We do not share any personal data with these services.</p>
+
+    <h2>3. Data We Do Not Collect</h2>
+    <ul>
+      <li>We do not create user accounts or require sign-in</li>
+      <li>We do not collect analytics or usage telemetry</li>
+      <li>We do not read your SMS messages</li>
+      <li>We do not store any data on our servers</li>
+      <li>We do not sell your data to third parties</li>
+    </ul>
+
+    <h2>4. Third-Party Services</h2>
+    <p>The App uses the following third-party services, each governed by their own privacy policy:</p>
+    <ul>
+      <li><strong>Google Firebase / Gemini AI</strong> — processes company search queries</li>
+      <li><strong>LogoKit</strong> — logo image provider</li>
+      <li><strong>Apistemic</strong> — logo image provider</li>
+    </ul>
+
+    <h2>5. Children's Privacy</h2>
+    <p>The App is not directed to children under 13. We do not knowingly collect personal information from children.</p>
+
+    <h2>6. Changes to This Policy</h2>
+    <p>We may update this policy from time to time. The "Last updated" date at the top will reflect any changes. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>7. Contact</h2>
+    <p>Questions about this policy? Email us at <a href="mailto:hello@auaha.app">hello@auaha.app</a>.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Auaha App Development LLC &nbsp;·&nbsp; <a href="/privacy">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms">Terms of Service</a> &nbsp;·&nbsp; <a href="mailto:hello@auaha.app">hello@auaha.app</a></p>
+  </footer>
+</body>
+</html>
