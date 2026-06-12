@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Contact Photos by Auaha</title>
+  <meta name="description" content="Get help with Contact Photos. FAQs, troubleshooting, and contact information." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0f1e;
+      --surface: #111827;
+      --card: #1a2235;
+      --accent: #38bdf8;
+      --accent2: #818cf8;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --border: #1e2d45;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(10,15,30,0.9);
+    }
+    .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 1.25rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+
+    main { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+
+    .chip {
+      display: inline-block;
+      background: rgba(56,189,248,0.12);
+      color: var(--accent);
+      border: 1px solid rgba(56,189,248,0.25);
+      border-radius: 99px;
+      padding: 0.25rem 0.9rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin-bottom: 3rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+
+    /* CONTACT CARD */
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .contact-icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+      width: 56px; height: 56px;
+      background: rgba(56,189,248,0.1);
+      border: 1px solid rgba(56,189,248,0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-text h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .contact-text p { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
+    .contact-text a { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .contact-text a:hover { text-decoration: underline; }
+
+    /* FAQ */
+    .faq-section-label {
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+    details {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    details[open] { border-color: rgba(56,189,248,0.35); }
+
+    summary {
+      padding: 1.1rem 1.25rem;
+      font-weight: 600;
+      font-size: 0.97rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      user-select: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: '+';
+      color: var(--accent);
+      font-size: 1.25rem;
+      font-weight: 300;
+      flex-shrink: 0;
+      margin-left: 1rem;
+      transition: transform 0.2s;
+    }
+    details[open] summary::after { transform: rotate(45deg); }
+
+    .faq-body {
+      padding: 0 1.25rem 1.1rem;
+      color: var(--muted);
+      font-size: 0.93rem;
+      line-height: 1.7;
+    }
+    .faq-body p + p { margin-top: 0.6rem; }
+    .faq-body a { color: var(--accent); }
+
+    /* SECTION DIVIDER */
+    .section-gap { margin-top: 3rem; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 560px) {
+      .contact-card { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">Auaha<span>.</span></a>
+    <div class="nav-links">
+      <a href="/contactphotos">← Contact Photos</a>
+      <a href="/contactphotos/privacy">Privacy</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="chip">Support</div>
+    <h1>How can we help?</h1>
+    <p class="subtitle">Support for Contact Photos — available on iOS and Android.</p>
+
+    <!-- CONTACT -->
+    <div class="contact-card">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-text">
+        <h2>Email Support</h2>
+        <p>We typically respond within one business day.</p>
+        <a href="mailto:hello@auaha.app">hello@auaha.app</a>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <p class="faq-section-label">Frequently Asked Questions</p>
+
+    <div class="faq-list">
+
+      <details>
+        <summary>How does Contact Photos find company logos?</summary>
+        <div class="faq-body">
+          <p>When you search for a company, the app uses AI (Google Gemini via Firebase) to identify the most likely matching companies. It then fetches logo images directly from the company's website and from third-party logo services (LogoKit and Apistemic).</p>
+          <p>All of this happens on-device — no data about your contacts is ever sent to our servers.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Why does the app need access to my contacts?</summary>
+        <div class="faq-body">
+          <p>Contact Photos needs contacts permission to save the logo you choose as a new contact on your device. The app reads your existing contacts only to avoid creating duplicates. Your contact data never leaves your device.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What's included in the free version?</summary>
+        <div class="faq-body">
+          <p>You can add logos for up to 3 contacts for free. After that, a one-time $1.99 purchase unlocks unlimited contacts — no subscription, no recurring charges.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>I paid but the unlock isn't showing. What do I do?</summary>
+        <div class="faq-body">
+          <p>First, try tapping <strong>Restore Purchases</strong> in the app's settings. Your purchase is tied to your App Store or Google Play account, so restoring it on a new device or after reinstalling should work automatically.</p>
+          <p>If the restore option doesn't fix it, email us at <a href="mailto:hello@auaha.app">hello@auaha.app</a> with your order confirmation and we'll sort it out.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>The logo it found doesn't look right. Can I change it?</summary>
+        <div class="faq-body">
+          <p>Yes — after the search results appear, you can swipe through the logo options or search again with a different company name to get a better match. If no good result is found, you can skip saving a logo and create the contact without one.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Does the app read my text messages?</summary>
+        <div class="faq-body">
+          <p>No. Contact Photos does not have access to your messages and cannot read your SMS or iMessage content. You manually type or paste the company name you want to look up — the app never reads your inbox.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Will the logo show up in my Messages app?</summary>
+        <div class="faq-body">
+          <p>Yes — because the logo is saved as a standard contact photo on your device, it appears anywhere your device shows contact info, including the Messages app, Phone app, and any other app that reads your contacts.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I delete a contact created by the app?</summary>
+        <div class="faq-body">
+          <p>Contacts are saved directly to your device's contacts — just open the Contacts app on your phone and delete them like any other contact. The app doesn't maintain a separate database.</p>
+        </div>
+      </details>
+
+      <details open>
+        <summary>I found a bug or have a feature request.</summary>
+        <div class="faq-body">
+          <p>We'd love to hear it — email us at <a href="mailto:hello@auaha.app">hello@auaha.app</a> with as much detail as you can (device, OS version, what happened vs. what you expected). Feature requests are also very welcome.</p>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- VERSION INFO -->
+    <div class="section-gap"></div>
+    <p class="faq-section-label">App Information</p>
+    <div class="faq-list">
+      <details>
+        <summary>What platforms is the app available on?</summary>
+        <div class="faq-body">
+          <p>Contact Photos is available on iOS (iPhone and iPad) and Android. You can find it on the App Store and Google Play.</p>
+        </div>
+      </details>
+      <details>
+        <summary>What iOS / Android version do I need?</summary>
+        <div class="faq-body">
+          <p>iOS 15 or later. Android requirements are listed on the Google Play listing.</p>
+        </div>
+      </details>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2026 Auaha App Development LLC &nbsp;·&nbsp;
+      <a href="/contactphotos">Contact Photos</a> &nbsp;·&nbsp;
+      <a href="/contactphotos/privacy">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="/contactphotos/terms">Terms of Service</a> &nbsp;·&nbsp;
+      <a href="mailto:hello@auaha.app">hello@auaha.app</a>
+    </p>
+  </footer>
+
+</body>
+</html>
