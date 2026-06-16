@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Threshold by Auaha</title>
+  <meta name="description" content="Get help with Threshold. FAQs, troubleshooting, and contact information for real estate agents." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0f1e;
+      --surface: #111827;
+      --card: #1a2235;
+      --accent: #6366f1;
+      --accent2: #a78bfa;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --border: #1e2d45;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(10,15,30,0.9);
+    }
+    .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 1.25rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+    main { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .chip {
+      display: inline-block;
+      background: rgba(99,102,241,0.12);
+      color: var(--accent);
+      border: 1px solid rgba(99,102,241,0.25);
+      border-radius: 99px;
+      padding: 0.25rem 0.9rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
+
+    .contact-card {
+      background: var(--card);
+      border: 1px solid rgba(99,102,241,0.3);
+      border-radius: 12px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .contact-card-icon { font-size: 2rem; flex-shrink: 0; }
+    .contact-card h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .contact-card p { color: var(--muted); font-size: 0.9rem; margin: 0; }
+    .contact-card a { color: var(--accent); font-weight: 600; }
+
+    h2.section { font-size: 1.3rem; font-weight: 800; margin: 2.5rem 0 1.25rem; color: var(--text); }
+
+    .faq { margin-bottom: 0.75rem; }
+    .faq-q {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      transition: border-color 0.2s;
+    }
+    .faq-q:hover { border-color: var(--accent); }
+    .faq-q.open { border-color: var(--accent); border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+    .faq-q .chevron { transition: transform 0.2s; color: var(--muted); font-style: normal; }
+    .faq-q.open .chevron { transform: rotate(180deg); }
+    .faq-a {
+      display: none;
+      background: var(--surface);
+      border: 1px solid var(--accent);
+      border-top: none;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      padding: 1rem 1.25rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .faq-a.open { display: block; }
+    .faq-a a { color: var(--accent); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">Auaha<span>.</span></a>
+    <div class="nav-links">
+      <a href="/threshold">← Threshold</a>
+      <a href="/threshold/privacy">Privacy</a>
+      <a href="/threshold/terms">Terms</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="chip">Support</div>
+    <h1>Threshold Support</h1>
+    <p class="subtitle">Help and answers for real estate agents using Threshold.</p>
+
+    <div class="contact-card">
+      <div class="contact-card-icon">✉️</div>
+      <div>
+        <h2>Contact Us</h2>
+        <p>Can't find the answer below? Email us at <a href="mailto:hello@auaha.app">hello@auaha.app</a> and we'll get back to you as soon as possible.</p>
+      </div>
+    </div>
+
+    <h2 class="section">Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">Who is Threshold for? <i class="chevron">▾</i></div>
+      <div class="faq-a">Threshold is designed for licensed real estate agents and brokers, particularly those working in Colorado. It helps you complete buyer representation agreements digitally — including the Colorado BC60 form — without paper or delays.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">How do I create an account? <i class="chevron">▾</i></div>
+      <div class="faq-a">Open the app and tap "Sign Up." Enter your email address and create a password. You'll receive a verification email — confirm it and you're ready to go.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">Is the BC60 form always up to date? <i class="chevron">▾</i></div>
+      <div class="faq-a">We make reasonable efforts to keep the BC60 form current with the version published by the Colorado Real Estate Commission. However, real estate forms are subject to regulatory updates. You should always verify that the form version in the app matches the currently required version from your brokerage or the CREC before using it with clients. If you notice a discrepancy, please email us at <a href="mailto:hello@auaha.app">hello@auaha.app</a>.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">Where is my agreement data stored? <i class="chevron">▾</i></div>
+      <div class="faq-a">Agreement data is stored on your device. If you have cloud sync enabled, it is also backed up to your secure Firebase account (Google Cloud). Your data is encrypted in transit and at rest. We do not sell or share your data. See our <a href="/threshold/privacy">Privacy Policy</a> for full details.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">What happens if I lose my phone or get a new one? <i class="chevron">▾</i></div>
+      <div class="faq-a">If cloud sync is enabled, simply log in on your new device and your agreements will restore automatically. If you were using local-only storage, agreements stored on the old device will not transfer. We recommend enabling cloud sync to protect your data.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">Can I share or export a completed agreement? <i class="chevron">▾</i></div>
+      <div class="faq-a">Yes. Completed agreements can be exported as PDFs and shared via the native iOS or Android share sheet — email, AirDrop, messaging apps, or saved to your Files app.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">I forgot my password. How do I reset it? <i class="chevron">▾</i></div>
+      <div class="faq-a">On the login screen, tap "Forgot Password" and enter your email address. We'll send you a password reset link.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">How do I delete my account? <i class="chevron">▾</i></div>
+      <div class="faq-a">To delete your account and all associated data, email us at <a href="mailto:hello@auaha.app">hello@auaha.app</a> with the subject "Account Deletion Request." We will process your request within 30 days.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">Does Threshold work offline? <i class="chevron">▾</i></div>
+      <div class="faq-a">Yes. You can view and fill out agreements without a network connection. An internet connection is required for login, account creation, and syncing data to the cloud.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">The app is crashing or not working correctly — what should I do? <i class="chevron">▾</i></div>
+      <div class="faq-a">First, try closing and reopening the app. If the problem persists, try uninstalling and reinstalling. If you're still experiencing issues, email us at <a href="mailto:hello@auaha.app">hello@auaha.app</a> with a description of what's happening and what device and OS version you're using. Screenshots or screen recordings are very helpful.</div>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2026 Auaha App Development LLC &nbsp;·&nbsp;
+      <a href="/">Auaha.app</a> &nbsp;·&nbsp;
+      <a href="/threshold">Threshold</a> &nbsp;·&nbsp;
+      <a href="/threshold/privacy">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="/threshold/terms">Terms of Service</a>
+    </p>
+  </footer>
+
+  <script>
+    function toggle(el) {
+      const answer = el.nextElementSibling;
+      el.classList.toggle('open');
+      answer.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

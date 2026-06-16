@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Threshold — Buyer Agreements for Real Estate Agents</title>
+  <meta name="description" content="Threshold lets real estate agents capture and manage buyer agreements digitally, on-device — including Colorado's BC60 form. No paper, no delays." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0f1e;
+      --surface: #111827;
+      --card: #1a2235;
+      --accent: #6366f1;
+      --accent2: #a78bfa;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --border: #1e2d45;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(10, 15, 30, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 1.5rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 800px; height: 800px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99,102,241,0.07) 0%, transparent 70%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .hero-inner { max-width: 680px; }
+
+    .badge {
+      display: inline-block;
+      background: rgba(99,102,241,0.12);
+      color: var(--accent);
+      border: 1px solid rgba(99,102,241,0.25);
+      border-radius: 99px;
+      padding: 0.3rem 1rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .store-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      transition: all 0.2s;
+      min-width: 160px;
+    }
+
+    .store-btn:hover {
+      border-color: var(--accent);
+      background: rgba(99,102,241,0.08);
+      transform: translateY(-2px);
+    }
+
+    .store-btn svg { flex-shrink: 0; }
+    .store-btn-text { text-align: left; line-height: 1.2; }
+    .store-btn-sub { font-size: 0.7rem; color: var(--muted); display: block; }
+    .store-btn-name { font-size: 1rem; font-weight: 700; display: block; }
+
+    .hero-note {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    #features { padding: 5rem 1.5rem; }
+
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .section-label {
+      text-align: center;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 500px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .card:hover { border-color: var(--accent); transform: translateY(-3px); }
+
+    .card-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+
+    #how-it-works { background: var(--surface); padding: 5rem 1.5rem; }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .step {
+      text-align: center;
+      padding: 1.5rem;
+    }
+
+    .step-number {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: rgba(99,102,241,0.12);
+      border: 1px solid rgba(99,102,241,0.3);
+      color: var(--accent);
+      font-size: 1.2rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+
+    .step h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .step p { color: var(--muted); font-size: 0.9rem; }
+
+    #download { padding: 5rem 1.5rem; text-align: center; }
+
+    .download-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 3.5rem 2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .download-card::before {
+      content: '';
+      position: absolute;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99,102,241,0.06) 0%, transparent 70%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .download-card h2 { margin-bottom: 0.75rem; }
+    .download-card p { color: var(--muted); margin-bottom: 2rem; max-width: 400px; margin-left: auto; margin-right: auto; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">Auaha<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#download">Download</a></li>
+      <li><a href="/threshold/support">Support</a></li>
+      <li><a href="/threshold/privacy">Privacy</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="badge">For Real Estate Agents</div>
+      <h1>Buyer Agreements,<br /><span>Done Right</span></h1>
+      <p>Threshold lets you capture, complete, and store buyer representation agreements on your phone — including Colorado's BC60 form — without the paperwork and delays.</p>
+
+      <div class="store-buttons">
+        <a href="#download" class="store-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          <span class="store-btn-text">
+            <span class="store-btn-sub">Download on the</span>
+            <span class="store-btn-name">App Store</span>
+          </span>
+        </a>
+        <a href="#download" class="store-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#EA4335" d="M12.954 11.558 3.906.5H3.9c-.258.198-.4.499-.4.834v21.334c0 .335.142.636.4.834z"/>
+            <path fill="#FBBC04" d="m16.063 14.667-3.109-3.109-9.048 11.942c.25.208.565.333.885.333.277 0 .553-.08.793-.247z"/>
+            <path fill="#34A853" d="M16.063 9.333 5.584.414C5.344.247 5.068.167 4.791.167c-.32 0-.635.125-.885.333l9.048 11.942z"/>
+            <path fill="#4285F4" d="M20.55 10.714 16.063 8.167l-3.109 3.391 3.109 3.109 4.487-2.547c.716-.406.716-1.806 0-2.406z"/>
+          </svg>
+          <span class="store-btn-text">
+            <span class="store-btn-sub">Get it on</span>
+            <span class="store-btn-name">Google Play</span>
+          </span>
+        </a>
+      </div>
+      <p class="hero-note">For licensed real estate agents &amp; brokers</p>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <p class="section-label">Why Threshold</p>
+      <h2>Built for the Field</h2>
+      <p class="section-sub">Everything you need to get a buyer agreement signed — wherever you are, whenever you need it.</p>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <h3>Colorado BC60 Ready</h3>
+          <p>Threshold includes the Colorado Buyer Agency Agreement (BC60 form) pre-loaded and ready to fill out — no manual entry required.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📱</div>
+          <h3>On-Device, Always Available</h3>
+          <p>Agreements are stored on your device so you can access and complete them in the field without depending on a network connection.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔐</div>
+          <h3>Secure Agent Login</h3>
+          <p>Each agent has their own authenticated account. Your agreements and client data stay private to you.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Fast Form Filling</h3>
+          <p>Smart fields and dynamic form parsing guide you through agreements quickly — spend less time on paperwork and more time with clients.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📄</div>
+          <h3>Share &amp; Export</h3>
+          <p>Export completed agreements as PDFs and share them directly with clients or your brokerage — all from within the app.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🏠</div>
+          <h3>Made for Colorado</h3>
+          <p>Built around Colorado real estate requirements from the ground up, with forms and workflows tailored to Colorado agents and brokers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works">
+    <div class="container">
+      <p class="section-label">How It Works</p>
+      <h2>Agreement in Minutes</h2>
+      <p class="section-sub">From first meeting to signed agreement, Threshold keeps things moving.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Log In</h3>
+          <p>Sign in with your agent account. Your profile and past agreements are ready instantly.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Start an Agreement</h3>
+          <p>Select the buyer agreement form. Threshold guides you through each required field.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Fill &amp; Review</h3>
+          <p>Complete the form with your buyer. Review everything before finalizing — no surprises.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Export &amp; Share</h3>
+          <p>Export the completed agreement as a PDF and share it with your client and brokerage.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download">
+    <div class="container">
+      <div class="download-card">
+        <h2>Ready to Go Paperless?</h2>
+        <p>Download Threshold and start completing buyer agreements faster, wherever you are.</p>
+
+        <div class="store-buttons">
+          <a href="#" class="store-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <span class="store-btn-text">
+              <span class="store-btn-sub">Download on the</span>
+              <span class="store-btn-name">App Store</span>
+            </span>
+          </a>
+          <a href="#" class="store-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#EA4335" d="M12.954 11.558 3.906.5H3.9c-.258.198-.4.499-.4.834v21.334c0 .335.142.636.4.834z"/>
+              <path fill="#FBBC04" d="m16.063 14.667-3.109-3.109-9.048 11.942c.25.208.565.333.885.333.277 0 .553-.08.793-.247z"/>
+              <path fill="#34A853" d="M16.063 9.333 5.584.414C5.344.247 5.068.167 4.791.167c-.32 0-.635.125-.885.333l9.048 11.942z"/>
+              <path fill="#4285F4" d="M20.55 10.714 16.063 8.167l-3.109 3.391 3.109 3.109 4.487-2.547c.716-.406.716-1.806 0-2.406z"/>
+            </svg>
+            <span class="store-btn-text">
+              <span class="store-btn-sub">Get it on</span>
+              <span class="store-btn-name">Google Play</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      &copy; 2026 Auaha App Development LLC &nbsp;·&nbsp;
+      <a href="/">Auaha.app</a> &nbsp;·&nbsp;
+      <a href="/threshold/support">Support</a> &nbsp;·&nbsp;
+      <a href="/threshold/privacy">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="/threshold/terms">Terms of Service</a> &nbsp;·&nbsp;
+      <a href="mailto:hello@auaha.app">hello@auaha.app</a>
+    </p>
+  </footer>
+
+</body>
+</html>
