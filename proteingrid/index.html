@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProteinGrid — Simple Protein Tracking</title>
+  <meta name="description" content="ProteinGrid is a fast, no-fuss protein tracker. Log grams in seconds, set a daily goal, and see streaks at a glance — no account needed." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0a0f1e;
+      --surface: #111827;
+      --card: #1a2235;
+      --accent: #34d399;
+      --accent2: #6ee7b7;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --border: #1e2d45;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(10, 15, 30, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 1.5rem 5rem;
+    }
+
+    .hero-inner { max-width: 680px; }
+
+    .chip {
+      display: inline-block;
+      background: rgba(52, 211, 153, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(52, 211, 153, 0.3);
+      border-radius: 99px;
+      padding: 0.3rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+
+    h1 span { color: var(--accent); }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 4rem;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #0a0f1e;
+      border: none;
+      border-radius: 10px;
+      padding: 0.85rem 2rem;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.1s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.85rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: border-color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-secondary:hover { border-color: var(--accent); }
+
+    .mock {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 340px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .mock-header {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .mock-goal {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .mock-goal span { color: var(--accent); }
+
+    .mock-label { font-size: 0.85rem; color: var(--muted); margin-bottom: 1.25rem; }
+
+    .mock-bar-bg {
+      height: 8px;
+      background: var(--border);
+      border-radius: 99px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+
+    .mock-bar-fill {
+      height: 100%;
+      width: 72%;
+      background: linear-gradient(to right, var(--accent), var(--accent2));
+      border-radius: 99px;
+    }
+
+    .mock-log { display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .mock-entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--surface);
+      border-radius: 8px;
+      padding: 0.6rem 0.85rem;
+      font-size: 0.9rem;
+    }
+
+    .mock-entry-label { color: var(--text); }
+    .mock-entry-g { font-weight: 700; color: var(--accent); }
+
+    /* Features */
+    .features {
+      padding: 5rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 3.5rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      transition: border-color 0.2s;
+    }
+
+    .feature-card:hover { border-color: rgba(52, 211, 153, 0.35); }
+
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-card p { color: var(--muted); font-size: 0.9rem; }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 1rem; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">Auaha<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/proteingrid/privacy">Privacy</a></li>
+      <li><a href="/proteingrid/terms">Terms</a></li>
+      <li><a href="/proteingrid/support">Support</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="chip">Now available</div>
+      <h1>Hit your protein<br><span>every single day.</span></h1>
+      <p class="subtitle">
+        ProteinGrid is a fast, distraction-free protein tracker. Log grams in seconds from your home screen, set a daily goal, and watch streaks build.
+      </p>
+      <div class="cta-group">
+        <a href="#" class="btn-primary">
+          ⬇ Download on App Store
+        </a>
+        <a href="#" class="btn-secondary">
+          ⬇ Get it on Google Play
+        </a>
+      </div>
+
+      <div class="mock">
+        <div class="mock-header">Today</div>
+        <div class="mock-goal"><span>144</span> / 200g</div>
+        <div class="mock-label">protein logged</div>
+        <div class="mock-bar-bg"><div class="mock-bar-fill"></div></div>
+        <div class="mock-log">
+          <div class="mock-entry"><span class="mock-entry-label">Chicken breast</span><span class="mock-entry-g">+42g</span></div>
+          <div class="mock-entry"><span class="mock-entry-label">Greek yogurt</span><span class="mock-entry-g">+17g</span></div>
+          <div class="mock-entry"><span class="mock-entry-label">Protein shake</span><span class="mock-entry-g">+30g</span></div>
+          <div class="mock-entry"><span class="mock-entry-label">Eggs ×3</span><span class="mock-entry-g">+18g</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <p class="section-label">Features</p>
+    <h2 class="section-title">Everything you need, nothing you don't</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Log from your home screen</h3>
+        <p>Quick-action shortcuts let you add common amounts (30g, 40g) without even opening the app.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Daily goal tracking</h3>
+        <p>Set your protein goal and see a clear progress bar reset every morning at midnight.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔔</div>
+        <h3>Smart reminders</h3>
+        <p>Optional notifications remind you to log so your streak stays alive.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>History at a glance</h3>
+        <p>A grid view shows which days you hit your goal — streaks keep you consistent.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Completely private</h3>
+        <p>No account. No cloud sync. All data lives on your device and never leaves it.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📤</div>
+        <h3>Export your data</h3>
+        <p>Share a log summary whenever you need it — great for check-ins with a coach or dietitian.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/proteingrid/privacy">Privacy Policy</a>
+      <a href="/proteingrid/terms">Terms of Use</a>
+      <a href="/proteingrid/support">Support</a>
+      <a href="/">Auaha App Development</a>
+    </div>
+    <p>&copy; 2026 Auaha App Development LLC. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

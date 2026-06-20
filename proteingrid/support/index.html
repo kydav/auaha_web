@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — ProteinGrid</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0f1e;
+      --surface: #111827;
+      --card: #1a2235;
+      --accent: #34d399;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --border: #1e2d45;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(10,15,30,0.9);
+    }
+    .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 1.25rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+    .nav-links a:hover { color: var(--accent); }
+    main { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .chip {
+      display: inline-block;
+      background: rgba(52,211,153,0.12);
+      color: var(--accent);
+      border: 1px solid rgba(52,211,153,0.25);
+      border-radius: 99px;
+      padding: 0.25rem 0.9rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
+    h2 { font-size: 1.15rem; font-weight: 700; margin: 2.25rem 0 0.6rem; color: var(--text); }
+    p { color: var(--muted); margin-bottom: 0.9rem; }
+    ul { color: var(--muted); margin: 0.5rem 0 0.9rem 1.25rem; }
+    ul li { margin-bottom: 0.4rem; }
+    a { color: var(--accent); }
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.75rem;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .contact-card h3 { font-size: 1.1rem; font-weight: 700; }
+    .contact-card p { margin: 0; }
+    .contact-btn {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: var(--accent);
+      color: #0a0f1e;
+      border-radius: 10px;
+      padding: 0.7rem 1.5rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      width: fit-content;
+      transition: opacity 0.2s;
+    }
+    .contact-btn:hover { opacity: 0.85; color: #0a0f1e; text-decoration: none; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">Auaha<span>.</span></a>
+    <div class="nav-links">
+      <a href="/proteingrid">← ProteinGrid</a>
+      <a href="/proteingrid/privacy">Privacy</a>
+      <a href="/proteingrid/terms">Terms</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="chip">Help</div>
+    <h1>Support</h1>
+    <p class="meta">ProteinGrid &nbsp;·&nbsp; Auaha App Development LLC</p>
+
+    <p>Have a question or running into an issue? We're happy to help.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h2>How do I change my daily protein goal?</h2>
+    <p>Tap the settings icon in the top-right corner of the home screen. You can update your goal there at any time.</p>
+
+    <h2>Why did my data disappear?</h2>
+    <p>ProteinGrid stores all data locally on your device. If you deleted and reinstalled the App, uninstalling removes your local data. If you switched devices, your logs do not automatically transfer — the App is intentionally offline and does not sync to the cloud.</p>
+
+    <h2>How do I use the home screen shortcuts?</h2>
+    <p>On iOS, long-press the ProteinGrid app icon and select a quick-log action (e.g., "Log 30g"). On Android, long-press the icon to see the same shortcuts. These let you add a common amount without opening the app.</p>
+
+    <h2>How do I turn off notifications?</h2>
+    <p>Go to Settings within the App and toggle reminders off. You can also revoke notification permission at any time through your device's system settings under Apps > ProteinGrid > Notifications.</p>
+
+    <h2>Can I export my data?</h2>
+    <p>Yes. In the History screen, tap the share icon to export a summary of your logs using your device's share sheet.</p>
+
+    <h2>How do I delete all my data?</h2>
+    <p>Uninstalling the App from your device permanently removes all locally stored data.</p>
+
+    <div class="contact-card">
+      <h3>Still need help?</h3>
+      <p>Send us an email and we'll get back to you as soon as possible.</p>
+      <a href="mailto:hello@auaha.app" class="contact-btn">Email support</a>
+    </div>
+  </main>
+
+  <footer>
+    <p><a href="/proteingrid">ProteinGrid</a> &nbsp;·&nbsp; <a href="/proteingrid/privacy">Privacy</a> &nbsp;·&nbsp; <a href="/proteingrid/terms">Terms</a> &nbsp;·&nbsp; &copy; 2026 Auaha App Development LLC</p>
+  </footer>
+</body>
+</html>
