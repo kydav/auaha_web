@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Prior by Auaha</title>
+  <meta name="description" content="Get help with Prior — the Utah water rights lookup app for real estate agents. FAQs, troubleshooting, and contact." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #020d18;
+      --surface: #0a1628;
+      --card: #0f2034;
+      --accent: #0ea5e9;
+      --accent2: #38bdf8;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --border: #0e2540;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(2, 13, 24, 0.9);
+    }
+    .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 1.25rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+    main { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .chip {
+      display: inline-block;
+      background: rgba(14, 165, 233, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(14, 165, 233, 0.25);
+      border-radius: 99px;
+      padding: 0.25rem 0.9rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
+
+    .contact-card {
+      background: var(--card);
+      border: 1px solid rgba(14, 165, 233, 0.3);
+      border-radius: 12px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .contact-card-icon { font-size: 2rem; flex-shrink: 0; }
+    .contact-card h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .contact-card p { color: var(--muted); font-size: 0.9rem; margin: 0; }
+    .contact-card a { color: var(--accent); font-weight: 600; }
+
+    h2.section { font-size: 1.3rem; font-weight: 800; margin: 2.5rem 0 1.25rem; color: var(--text); }
+
+    .faq { margin-bottom: 0.75rem; }
+    .faq-q {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      transition: border-color 0.2s;
+    }
+    .faq-q:hover { border-color: var(--accent); }
+    .faq-q.open { border-color: var(--accent); border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+    .faq-q .chevron { transition: transform 0.2s; color: var(--muted); font-style: normal; }
+    .faq-q.open .chevron { transform: rotate(180deg); }
+    .faq-a {
+      display: none;
+      background: var(--surface);
+      border: 1px solid var(--accent);
+      border-top: none;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      padding: 1rem 1.25rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .faq-a.open { display: block; }
+    .faq-a a { color: var(--accent); }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">Auaha<span>.</span></a>
+    <div class="nav-links">
+      <a href="/prior">← Prior</a>
+      <a href="/prior/privacy">Privacy</a>
+      <a href="/prior/terms">Terms</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="chip">Support</div>
+    <h1>Prior Support</h1>
+    <p class="subtitle">Help and answers for Utah water rights lookups.</p>
+
+    <div class="contact-card">
+      <div class="contact-card-icon">✉️</div>
+      <div>
+        <h2>Contact Us</h2>
+        <p>Can't find the answer below? Email us at <a href="mailto:hello@auaha.app">hello@auaha.app</a> and we'll get back to you as soon as possible.</p>
+      </div>
+    </div>
+
+    <h2 class="section">Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">What is Prior? <i class="chevron">▾</i></div>
+      <div class="faq-a">Prior is a mobile app for Utah real estate agents and buyers that lets you look up water rights for any Utah property. Search by address, GPS coordinates, or parcel number — Prior shows you the parcel boundaries on an interactive map and displays any Points of Diversion (wells, diversions, water rights) tied to that parcel from the Utah Division of Water Resources.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">What are Points of Diversion and why do they matter? <i class="chevron">▾</i></div>
+      <div class="faq-a">A Point of Diversion (POD) is a physical location where water is diverted from a natural source — a well, a canal head gate, a spring box, or a stream diversion. Each POD is tied to one or more water rights in the Utah water rights registry. In Utah, water rights are property rights that can transfer with land or be held separately. Knowing whether a property has PODs — and what water rights they represent — can significantly affect land value and use, especially for agricultural, rural, or undeveloped parcels.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">The property I searched shows no water rights — is that correct? <i class="chevron">▾</i></div>
+      <div class="faq-a">It may be correct. Most urban and suburban properties in Utah are served by a municipal culinary water system, which means there are no private Points of Diversion on the parcel itself — the city or water district holds the water rights. Prior only shows rights tied to a POD physically located within the parcel boundary. If a property uses municipal water, Prior will show no results, which is expected. For rural, agricultural, or undeveloped land, a result with no water rights may warrant further investigation through the <a href="https://waterrights.utah.gov" target="_blank" rel="noopener">Utah Division of Water Rights</a>.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">How do I search for a property? <i class="chevron">▾</i></div>
+      <div class="faq-a">Tap the search bar at the bottom of the map screen. You can enter:
+        <br /><br />
+        • A street address (e.g., "462 Ocotillo Way, Ivins, UT")<br />
+        • GPS coordinates (e.g., "37.164, -113.675")<br />
+        • A parcel number / APN (e.g., "SG-0000-1234")<br /><br />
+        You can also simply tap any parcel directly on the map when zoomed in enough to see parcel boundaries.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">How do I create an account? <i class="chevron">▾</i></div>
+      <div class="faq-a">Open the app and tap "Sign Up." Enter your email address and create a password. You'll be logged in immediately and can start searching.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">Why can't I see parcel boundaries on the map? <i class="chevron">▾</i></div>
+      <div class="faq-a">Parcel boundaries are only shown when you're zoomed in enough — they appear at approximately zoom level 12 or closer. If you're zoomed out too far, tapping the map is disabled and no boundaries are drawn. Zoom into your area of interest and the parcels will appear.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">How do I change the map style? <i class="chevron">▾</i></div>
+      <div class="faq-a">Tap the map layers button (the stacked squares icon) near the bottom of the screen. A sheet will appear with style options: Standard, Satellite, Satellite + Streets, Outdoors, and Dark. Tap any style to switch.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">Where does the data come from? Is it accurate? <i class="chevron">▾</i></div>
+      <div class="faq-a">Prior queries data directly from Utah state government sources in real time:<br /><br />
+        • <strong>Parcel data:</strong> Utah SGID Statewide Parcel layer (AGRC/UGRC)<br />
+        • <strong>Water rights:</strong> Utah Division of Water Resources ArcGIS (Points of Diversion)<br />
+        • <strong>Geocoding:</strong> Mapbox<br /><br />
+        We display this data as-is. Government records can contain errors, may not reflect very recent changes, and should not be used as a substitute for a title search or water rights opinion. Always verify important information through the <a href="https://waterrights.utah.gov" target="_blank" rel="noopener">Utah Division of Water Rights</a> or a licensed professional.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">I forgot my password. How do I reset it? <i class="chevron">▾</i></div>
+      <div class="faq-a">On the login screen, tap "Forgot Password" and enter your email address. We'll send you a password reset link.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">How do I delete my account? <i class="chevron">▾</i></div>
+      <div class="faq-a">You can delete your account from the Profile screen (tap the person icon in the search bar). Tap "Delete Account" and confirm your password. Your account and data will be permanently deleted. Alternatively, email us at <a href="mailto:hello@auaha.app">hello@auaha.app</a> with the subject "Account Deletion Request" and we'll process it within 30 days.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">The app is crashing or something isn't loading — what should I do? <i class="chevron">▾</i></div>
+      <div class="faq-a">First, try closing and reopening the app. Check that you have an internet connection — Prior needs network access to fetch parcel and water rights data. If the problem persists, try uninstalling and reinstalling. If you're still having issues, email us at <a href="mailto:hello@auaha.app">hello@auaha.app</a> with a description of what's happening, your device model, and your iOS/Android version. Screenshots are very helpful.</div>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2026 Auaha App Development LLC &nbsp;·&nbsp;
+      <a href="/">Auaha.app</a> &nbsp;·&nbsp;
+      <a href="/prior">Prior</a> &nbsp;·&nbsp;
+      <a href="/prior/privacy">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="/prior/terms">Terms of Service</a>
+    </p>
+  </footer>
+
+  <script>
+    function toggle(el) {
+      const answer = el.nextElementSibling;
+      el.classList.toggle('open');
+      answer.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
