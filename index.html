@@ -298,6 +298,61 @@
 
     .stat-label { color: var(--muted); font-size: 0.85rem; margin-top: 0.25rem; }
 
+    /* APPS */
+    #apps { background: var(--surface); }
+
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .app-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem 1.75rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .app-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+
+    .app-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 14px;
+      object-fit: cover;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+
+    .app-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .app-desc {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .app-link {
+      margin-top: auto;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
     /* CONTACT */
     #contact { text-align: center; }
 
@@ -340,6 +395,7 @@
     <a href="#" class="logo">Auaha<span>.</span></a>
     <ul>
       <li><a href="#services">Services</a></li>
+      <li><a href="#apps">Apps</a></li>
       <li><a href="#process">Process</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
@@ -381,6 +437,54 @@
           <h3>Technology Consulting</h3>
           <p>Strategic guidance on technology choices, architecture, and roadmaps to help your business make smart decisions and move faster.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPS -->
+  <section id="apps">
+    <div class="container">
+      <p class="section-label">Our Apps</p>
+      <h2>What We've Built</h2>
+      <p class="section-sub">Production apps used by real people — from real estate professionals to everyday iPhone users.</p>
+      <div class="apps-grid">
+
+        <a href="/threshold" class="app-card">
+          <img src="/icons/threshold.png" alt="Threshold icon" class="app-icon" />
+          <div>
+            <div class="app-name">Threshold</div>
+            <div class="app-desc">Buyer representation agreements for real estate agents — sign state-approved forms on-device, from anywhere.</div>
+          </div>
+          <span class="app-link">Learn more →</span>
+        </a>
+
+        <a href="/prior" class="app-card">
+          <img src="/icons/prior.png" alt="Prior icon" class="app-icon" />
+          <div>
+            <div class="app-name">Prior</div>
+            <div class="app-desc">Water rights lookup by address, map tap, or parcel number — covering Utah and Colorado real estate.</div>
+          </div>
+          <span class="app-link">Learn more →</span>
+        </a>
+
+        <a href="/proteingrid" class="app-card">
+          <img src="/icons/proteingrid.png" alt="ProteinGrid icon" class="app-icon" />
+          <div>
+            <div class="app-name">ProteinGrid</div>
+            <div class="app-desc">Simple daily protein tracking. Hit your goal every day without the complexity of a full diet app.</div>
+          </div>
+          <span class="app-link">Learn more →</span>
+        </a>
+
+        <a href="/contactphotos" class="app-card">
+          <img src="/icons/contactphotos.png" alt="Contact Photos icon" class="app-icon" />
+          <div>
+            <div class="app-name">Contact Photos</div>
+            <div class="app-desc">Identify who's texting you. Search company logos and contact photos to put a face to an unknown number.</div>
+          </div>
+          <span class="app-link">Learn more →</span>
+        </a>
+
       </div>
     </div>
   </section>
