@@ -378,9 +378,66 @@
       text-decoration: underline;
     }
 
+    #screenshots {
+      padding: 5rem 0;
+    }
+
+    #screenshots .container {
+      padding: 0 1.5rem;
+    }
+
+    .screenshots-scroll {
+      display: flex;
+      gap: 1.75rem;
+      justify-content: center;
+      overflow-x: auto;
+      padding: 1.5rem 2rem 2.5rem;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .screenshots-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .phone-frame {
+      flex: 0 0 auto;
+      width: 210px;
+      text-align: center;
+    }
+
+    .phone-shell {
+      background: #020810;
+      border: 2.5px solid rgba(14, 165, 233, 0.18);
+      border-radius: 46px;
+      padding: 11px;
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(14, 165, 233, 0.04);
+      overflow: hidden;
+    }
+
+    .phone-shell img {
+      width: 100%;
+      display: block;
+      border-radius: 36px;
+    }
+
+    .phone-caption {
+      margin-top: 1.1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
     @media (max-width: 600px) {
       .nav-links {
         display: none;
+      }
+
+      .screenshots-scroll {
+        justify-content: flex-start;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
       }
     }
   </style>
@@ -393,6 +450,7 @@
     <ul class="nav-links">
       <li><a href="#features">Features</a></li>
       <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#screenshots">Screenshots</a></li>
       <li><a href="#download">Download</a></li>
       <li><a href="/prior/support">Support</a></li>
       <li><a href="/prior/privacy">Privacy</a></li>
@@ -512,6 +570,40 @@
           <h3>Know Before You Go</h3>
           <p>Walk into every showing and listing appointment knowing exactly what water rights come with the property.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="screenshots">
+    <div class="container">
+      <p class="section-label">In Action</p>
+      <h2>See It in Action</h2>
+      <p class="section-sub">Search by address, coordinates, or tap a parcel on the map — water rights load instantly.</p>
+    </div>
+    <div class="screenshots-scroll">
+      <div class="phone-frame">
+        <div class="phone-shell">
+          <img src="/prior/screenshots/map.png" alt="Interactive parcel map" loading="lazy" />
+        </div>
+        <p class="phone-caption">Interactive Parcel Map</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-shell">
+          <img src="/prior/screenshots/address.png" alt="Search by address" loading="lazy" />
+        </div>
+        <p class="phone-caption">Search by Address</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-shell">
+          <img src="/prior/screenshots/coordinates.png" alt="Search by coordinates" loading="lazy" />
+        </div>
+        <p class="phone-caption">Search by Coordinates</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-shell">
+          <img src="/prior/screenshots/water_rights.png" alt="Parcel detail and water rights" loading="lazy" />
+        </div>
+        <p class="phone-caption">Parcel &amp; Water Rights Detail</p>
       </div>
     </div>
   </section>
