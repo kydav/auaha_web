@@ -1,4 +1,4 @@
-import { PMTiles, TileType } from "@protomaps/pmtiles";
+import { PMTiles } from "pmtiles";
 
 // Serve tile requests from R2-backed PMTiles; everything else falls through to static assets.
 // Tile URL pattern: /tiles/co/{z}/{x}/{y}.mvt
@@ -47,14 +47,15 @@ export default {
       }
 
       const headers = {
-        "Content-Type": header.tileType === TileType.Mvt
-          ? "application/vnd.mapbox-vector-tile"
-          : "application/x-protobuf",
+        // tippecanoe always produces MVT tiles
+        "Content-Type": "application/vnd.mapbox-vector-tile",
         "Access-Control-Allow-Origin": "*",
         "Cache-Control": "public, max-age=86400",
       };
-      // Tiles stored with gzip compression; let the client decompress.
-      if (header.internalCompression === 2) headers["Content-Encoding"] = "gzip";
+      // internalCompression === 2 means gzip (PMTiles spec)
+      if (header.internalCompression === 2) {
+        headers["Content-Encoding"] = "gzip";
+      }
 
       return new Response(tile.data, { headers });
     }
