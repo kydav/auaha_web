@@ -1,4 +1,4 @@
-import { PMTiles } from "@protomaps/pmtiles";
+import { PMTiles, TileType } from "@protomaps/pmtiles";
 
 // Serve tile requests from R2-backed PMTiles; everything else falls through to static assets.
 // Tile URL pattern: /tiles/co/{z}/{x}/{y}.mvt
@@ -40,19 +40,23 @@ export default {
       const source = makeR2Source(env.TILES, "co_parcels.pmtiles");
       const pmtiles = new PMTiles(source);
 
+      const header = await pmtiles.getHeader();
       const tile = await pmtiles.getZxy(z, x, y);
       if (!tile || tile.data.byteLength === 0) {
         return new Response(null, { status: 204 });
       }
 
-      return new Response(tile.data, {
-        headers: {
-          "Content-Type": "application/x-protobuf",
-          "Content-Encoding": "gzip",
-          "Access-Control-Allow-Origin": "*",
-          "Cache-Control": "public, max-age=86400",
-        },
-      });
+      const headers = {
+        "Content-Type": header.tileType === TileType.Mvt
+          ? "application/vnd.mapbox-vector-tile"
+          : "application/x-protobuf",
+        "Access-Control-Allow-Origin": "*",
+        "Cache-Control": "public, max-age=86400",
+      };
+      // Tiles stored with gzip compression; let the client decompress.
+      if (header.internalCompression === 2) headers["Content-Encoding"] = "gzip";
+
+      return new Response(tile.data, { headers });
     }
 
     // Fall through to static assets
