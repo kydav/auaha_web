@@ -378,9 +378,67 @@
       text-decoration: underline;
     }
 
+    #screenshots {
+      padding: 5rem 0;
+      background: var(--surface);
+    }
+
+    #screenshots .container {
+      padding: 0 1.5rem;
+    }
+
+    .screenshots-scroll {
+      display: flex;
+      gap: 1.75rem;
+      justify-content: center;
+      overflow-x: auto;
+      padding: 1.5rem 2rem 2.5rem;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .screenshots-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .phone-frame {
+      flex: 0 0 auto;
+      width: 210px;
+      text-align: center;
+    }
+
+    .phone-shell {
+      background: #0d1117;
+      border: 2.5px solid rgba(255, 255, 255, 0.12);
+      border-radius: 46px;
+      padding: 11px;
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+      overflow: hidden;
+    }
+
+    .phone-shell img {
+      width: 100%;
+      display: block;
+      border-radius: 36px;
+    }
+
+    .phone-caption {
+      margin-top: 1.1rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
     @media (max-width: 600px) {
       .nav-links {
         display: none;
+      }
+
+      .screenshots-scroll {
+        justify-content: flex-start;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
       }
     }
   </style>
@@ -393,6 +451,7 @@
     <ul class="nav-links">
       <li><a href="#features">Features</a></li>
       <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#screenshots">Screenshots</a></li>
       <li><a href="#download">Download</a></li>
       <li><a href="/threshold/support">Support</a></li>
       <li><a href="/threshold/privacy">Privacy</a></li>
@@ -511,6 +570,40 @@
           <h3>Export &amp; Share</h3>
           <p>Export the completed agreement as a PDF and share it with your client and brokerage.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="screenshots">
+    <div class="container">
+      <p class="section-label">In Action</p>
+      <h2>See It in Action</h2>
+      <p class="section-sub">A clean, guided workflow built for the field — from setup to signed agreement.</p>
+    </div>
+    <div class="screenshots-scroll">
+      <div class="phone-frame">
+        <div class="phone-shell">
+          <img src="/threshold/screenshots/agreements.png" alt="Agreements list with PDF share sheet" loading="lazy" />
+        </div>
+        <p class="phone-caption">Manage &amp; Share Agreements</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-shell">
+          <img src="/threshold/screenshots/profile.png" alt="Agent profile setup" loading="lazy" />
+        </div>
+        <p class="phone-caption">Set Up Your Agent Profile</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-shell">
+          <img src="/threshold/screenshots/compensation.png" alt="Compensation entry screen" loading="lazy" />
+        </div>
+        <p class="phone-caption">Enter Compensation Terms</p>
+      </div>
+      <div class="phone-frame">
+        <div class="phone-shell">
+          <img src="/threshold/screenshots/signatures.png" alt="Collect agent and buyer signatures" loading="lazy" />
+        </div>
+        <p class="phone-caption">Collect Signatures On-Screen</p>
       </div>
     </div>
   </section>

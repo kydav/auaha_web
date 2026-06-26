@@ -279,73 +279,26 @@
     }
 
     .phone-outer {
-      background: var(--card);
-      border: 2px solid var(--border);
-      border-radius: 36px;
-      padding: 12px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-      position: relative;
-    }
-
-    .phone-outer::before {
-      content: '';
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 60px;
-      height: 6px;
-      background: var(--border);
-      border-radius: 99px;
+      background: #0d1117;
+      border: 2.5px solid rgba(56, 189, 248, 0.15);
+      border-radius: 46px;
+      padding: 11px;
+      box-shadow: 0 28px 70px rgba(0, 0, 0, 0.55), inset 0 0 0 1px rgba(56, 189, 248, 0.04);
+      overflow: hidden;
     }
 
     .phone-screen {
-      background: var(--surface);
-      border-radius: 28px;
-      aspect-ratio: 9/19;
+      border-radius: 36px;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
     }
 
     .phone-screen img {
       width: 100%;
-      height: 100%;
-
-      border-radius: 28px;
+      display: block;
+      border-radius: 36px;
     }
 
-    .screen-placeholder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    .screen-placeholder-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: rgba(56, 189, 248, 0.12);
-      border: 1px dashed rgba(56, 189, 248, 0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-    }
-
-    .screen-placeholder p {
-      font-size: 0.72rem;
-      color: var(--muted);
-      line-height: 1.4;
-    }
-
-    .screenshot-caption {
+.screenshot-caption {
       text-align: center;
       margin-top: 1rem;
       font-size: 0.85rem;
@@ -543,7 +496,7 @@
         <div class="phone-frame">
           <div class="phone-outer">
             <div class="phone-screen">
-              <img src="company_search.png" alt="Search screen" />
+              <img src="company_search.png" alt="Search screen" loading="lazy" />
             </div>
           </div>
           <p class="screenshot-caption">Search</p>
@@ -553,7 +506,7 @@
         <div class="phone-frame">
           <div class="phone-outer">
             <div class="phone-screen">
-              <img src="image_search.png" alt="Image screen" />
+              <img src="image_search.png" alt="Select logo screen" loading="lazy" />
             </div>
           </div>
           <p class="screenshot-caption">Pick a Logo</p>
@@ -563,7 +516,7 @@
         <div class="phone-frame">
           <div class="phone-outer">
             <div class="phone-screen">
-              <img src="create_contact.png" alt="Create contact screen" />
+              <img src="create_contact.png" alt="Create contact screen" loading="lazy" />
             </div>
           </div>
           <p class="screenshot-caption">Create the contact</p>
@@ -573,7 +526,7 @@
         <div class="phone-frame">
           <div class="phone-outer">
             <div class="phone-screen">
-              <img src="message_list.png" alt="Message list screen" />
+              <img src="message_list.png" alt="Messages app with company logos" loading="lazy" />
             </div>
           </div>
           <p class="screenshot-caption">Your Messages</p>
