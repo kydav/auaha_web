@@ -1,14 +1,22 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "auaha",
+  "main": "src/index.js",
   "compatibility_date": "2026-06-01",
   "observability": {
     "enabled": true
   },
   "assets": {
-    "directory": "."
+    "directory": ".",
+    "binding": "ASSETS"
   },
   "compatibility_flags": [
     "nodejs_compat"
+  ],
+  "r2_buckets": [
+    {
+      "binding": "TILES",
+      "bucket_name": "co-parcels"
+    }
   ]
 }
