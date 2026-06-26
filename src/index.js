@@ -5,13 +5,15 @@ import { PMTiles } from "pmtiles";
 
 const TILE_RE = /^\/tiles\/co\/(\d+)\/(\d+)\/(\d+)\.mvt$/;
 
+// pmtiles v4 requires a source with getKey() + getBytes(offset, length).
+// getZxy() automatically decompresses tile data before returning it.
 function makeR2Source(bucket, key) {
   return {
+    getKey: () => key,
     getBytes: async (offset, length) => {
       const obj = await bucket.get(key, { range: { offset, length } });
       if (!obj) throw new Error(`R2 object not found: ${key}`);
-      const data = new Uint8Array(await obj.arrayBuffer());
-      return { data };
+      return { data: await obj.arrayBuffer() };
     },
   };
 }
@@ -20,7 +22,6 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    // CORS preflight
     if (request.method === "OPTIONS") {
       return new Response(null, {
         headers: {
@@ -40,27 +41,21 @@ export default {
       const source = makeR2Source(env.TILES, "co_parcels.pmtiles");
       const pmtiles = new PMTiles(source);
 
-      const header = await pmtiles.getHeader();
+      // getZxy() returns already-decompressed MVT bytes — do NOT set Content-Encoding.
       const tile = await pmtiles.getZxy(z, x, y);
       if (!tile || tile.data.byteLength === 0) {
         return new Response(null, { status: 204 });
       }
 
-      const headers = {
-        // tippecanoe always produces MVT tiles
-        "Content-Type": "application/vnd.mapbox-vector-tile",
-        "Access-Control-Allow-Origin": "*",
-        "Cache-Control": "public, max-age=86400",
-      };
-      // internalCompression === 2 means gzip (PMTiles spec)
-      if (header.internalCompression === 2) {
-        headers["Content-Encoding"] = "gzip";
-      }
-
-      return new Response(tile.data, { headers });
+      return new Response(tile.data, {
+        headers: {
+          "Content-Type": "application/vnd.mapbox-vector-tile",
+          "Access-Control-Allow-Origin": "*",
+          "Cache-Control": "public, max-age=86400",
+        },
+      });
     }
 
-    // Fall through to static assets
     return env.ASSETS.fetch(request);
   },
 };
