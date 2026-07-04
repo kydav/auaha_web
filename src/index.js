@@ -64,6 +64,58 @@ export default {
       }
     }
 
+    // Apple App Site Association — enables Password AutoFill for Threshold and Prior
+    if (url.pathname === '/.well-known/apple-app-site-association') {
+      const aasa = {
+        webcredentials: {
+          apps: [
+            'GMAMAXJ88G.app.auaha.threshold',
+            'GMAMAXJ88G.app.auaha.prior',
+          ],
+        },
+      };
+      return new Response(JSON.stringify(aasa), {
+        headers: {
+          'Content-Type': 'application/json',
+          'Cache-Control': 'public, max-age=3600',
+        },
+      });
+    }
+
+    // Android Digital Asset Links — enables Password AutoFill for Threshold and Prior
+    // Replace the SHA256 placeholders with your release keystore fingerprints:
+    //   keytool -list -v -keystore your.jks -alias your-alias | grep "SHA256:"
+    if (url.pathname === '/.well-known/assetlinks.json') {
+      const assetLinks = [
+        {
+          relation: ['delegate_permission/common.handle_all_urls'],
+          target: {
+            namespace: 'android_app',
+            package_name: 'app.auaha.threshold',
+            sha256_cert_fingerprints: [
+              'REPLACE_WITH_THRESHOLD_RELEASE_KEYSTORE_SHA256',
+            ],
+          },
+        },
+        {
+          relation: ['delegate_permission/common.handle_all_urls'],
+          target: {
+            namespace: 'android_app',
+            package_name: 'app.auaha.prior',
+            sha256_cert_fingerprints: [
+              'REPLACE_WITH_PRIOR_RELEASE_KEYSTORE_SHA256',
+            ],
+          },
+        },
+      ];
+      return new Response(JSON.stringify(assetLinks), {
+        headers: {
+          'Content-Type': 'application/json',
+          'Cache-Control': 'public, max-age=3600',
+        },
+      });
+    }
+
     return env.ASSETS.fetch(request);
   },
 };
