@@ -71,6 +71,7 @@ export default {
           apps: [
             'GMAMAXJ88G.app.auaha.threshold',
             'GMAMAXJ88G.app.auaha.prior',
+            'GMAMAXJ88G.app.auaha.functionalparenting',
           ],
         },
       };
@@ -104,6 +105,16 @@ export default {
             package_name: 'app.auaha.prior',
             sha256_cert_fingerprints: [
               'REPLACE_WITH_PRIOR_RELEASE_KEYSTORE_SHA256',
+            ],
+          },
+        },
+        {
+          relation: ['delegate_permission/common.handle_all_urls'],
+          target: {
+            namespace: 'android_app',
+            package_name: 'app.auaha.functionalparenting',
+            sha256_cert_fingerprints: [
+              'E1:86:9C:1F:6F:07:F6:9B:67:41:45:40:F2:21:7A:E8:C3:D9:AD:94:CD:B6:D8:E6:42:02:9F:76:5C:FB:44:27',
             ],
           },
         },
