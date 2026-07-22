@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Can I Show This House? Buyer-Agreement Compliance Check | Threshold</title>
+  <meta name="description"
+    content="A free, 30-second check for real estate agents: do you need a signed buyer agreement before you show this home? Answer a few questions and find out — plus what the agreement must include." />
+  <link rel="canonical" href="https://auaha.app/threshold/can-i-show-this-house/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Can I Show This House? A Buyer-Agreement Compliance Check" />
+  <meta property="og:description"
+    content="Free tool for real estate agents: find out in 30 seconds whether you need a signed buyer agreement before showing a home." />
+  <meta property="og:url" content="https://auaha.app/threshold/can-i-show-this-house/" />
+  <meta property="og:site_name" content="Threshold" />
+  <meta property="og:image" content="https://auaha.app/apple-touch-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Can I Show This House? A Buyer-Agreement Compliance Check" />
+  <meta name="twitter:description"
+    content="Free tool for real estate agents: do you need a signed buyer agreement before showing this home?" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need a signed buyer agreement before showing a home?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you work through an MLS, yes — since August 17, 2024 you must have a written buyer agreement signed before you tour a home with a buyer, whether in person or on a live virtual tour. It must state a specific, objective compensation amount."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the buyer-agreement rule apply to open houses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Hosting an open house, or a buyer simply attending one, does not require a signed buyer agreement. You need one once you agree to represent that buyer and tour homes together."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What has to be in the written buyer agreement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A specific and objective compensation amount agreed with the buyer (not open-ended), the scope and time period of representation, and the buyer's signature — dated before the first showing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this apply to for-sale-by-owner homes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The nationwide requirement is tied to MLS participation, so a true for-sale-by-owner property found outside the MLS may not trigger it. Your state law and brokerage policy may still require an agreement, so confirm with your broker."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0f1e;--surface:#111827;--card:#1a2235;--accent:#6366f1;--accent2:#a78bfa;--text:#f1f5f9;--muted:#94a3b8;--border:#1e2d45;--ok:#34d399;--warn:#fbbf24;--stop:#f87171}
+    html{scroll-behavior:smooth}
+    body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:var(--accent)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:rgba(10,15,30,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-size:1.4rem;font-weight:700;letter-spacing:-.5px;color:var(--text);text-decoration:none}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem;transition:color .2s}
+    .nav-links a:hover{color:var(--accent)}
+    .container{max-width:760px;margin:0 auto;padding:0 1.5rem}
+    .breadcrumb{font-size:.82rem;color:var(--muted);padding-top:6.5rem}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--accent)}
+    header.hero{padding:1.5rem 0 1rem;text-align:center}
+    .badge{display:inline-block;background:rgba(99,102,241,.12);color:var(--accent);border:1px solid rgba(99,102,241,.25);border-radius:99px;padding:.3rem 1rem;font-size:.82rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:1.25rem}
+    h1{font-size:clamp(2rem,5vw,2.9rem);font-weight:800;line-height:1.12;letter-spacing:-1px;margin-bottom:1rem}
+    h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .lede{font-size:1.1rem;color:var(--muted);max-width:560px;margin:0 auto}
+    .tool{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:2rem 1.75rem;margin:2rem 0}
+    .progress{display:flex;gap:6px;margin-bottom:1.5rem}
+    .progress i{height:6px;flex:1;border-radius:3px;background:var(--border);transition:background .2s}
+    .progress i.done{background:var(--accent)}
+    .q{font-size:1.3rem;font-weight:800;letter-spacing:-.3px;margin-bottom:1.25rem}
+    .opt{display:flex;align-items:center;justify-content:space-between;gap:1rem;width:100%;text-align:left;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1rem 1.15rem;margin-bottom:.75rem;color:var(--text);font-size:1rem;font-family:inherit;cursor:pointer;transition:all .18s}
+    .opt:hover{border-color:var(--accent);background:rgba(99,102,241,.08);transform:translateY(-1px)}
+    .opt .chev{color:var(--muted);flex-shrink:0}
+    .result{border-radius:14px;padding:1.5rem;border:1px solid var(--border)}
+    .result.ok{background:rgba(52,211,153,.08);border-color:rgba(52,211,153,.35)}
+    .result.caution{background:rgba(251,191,36,.08);border-color:rgba(251,191,36,.35)}
+    .result.stop{background:rgba(248,113,113,.09);border-color:rgba(248,113,113,.4)}
+    .result .tag{font-size:.78rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-bottom:.6rem}
+    .result.ok .tag{color:var(--ok)}
+    .result.caution .tag{color:var(--warn)}
+    .result.stop .tag{color:var(--stop)}
+    .result h2{font-size:1.4rem;font-weight:800;margin-bottom:.5rem;letter-spacing:-.3px}
+    .result p{color:var(--text);opacity:.9}
+    .actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.3rem;border-radius:10px;font-weight:700;font-size:.95rem;text-decoration:none;cursor:pointer;border:1px solid transparent;font-family:inherit}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{background:#4f52e0}
+    .btn-ghost{background:transparent;border-color:var(--border);color:var(--text)}
+    .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+    section.block{padding:2.5rem 0;border-top:1px solid var(--border)}
+    h2.s{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;letter-spacing:-.5px;margin-bottom:1rem}
+    h3{font-size:1.05rem;font-weight:700;margin:1.25rem 0 .35rem}
+    p.body{color:var(--muted)}
+    ul.checks{list-style:none;margin-top:1rem}
+    ul.checks li{position:relative;padding-left:1.7rem;margin-bottom:.7rem;color:var(--muted)}
+    ul.checks li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:800}
+    ul.checks li b{color:var(--text);font-weight:600}
+    .links{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1rem}
+    .links a{display:inline-block;padding:.55rem 1.05rem;border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:.9rem;font-weight:600;transition:all .2s;background:rgba(255,255,255,.03)}
+    .links a:hover{border-color:var(--accent);color:var(--accent)}
+    .disclaimer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--border);padding:1.75rem 0;line-height:1.5}
+    footer{border-top:1px solid var(--border);padding:2rem 1.5rem;text-align:center;color:var(--muted);font-size:.875rem}
+    footer a{color:var(--accent);text-decoration:none}
+    footer a:hover{text-decoration:underline}
+    @media(max-width:600px){.nav-links{display:none}}
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="/" class="logo">Auaha<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/threshold/">Threshold</a></li>
+      <li><a href="/threshold/support">Support</a></li>
+      <li><a href="/threshold/privacy">Privacy</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <p class="breadcrumb">
+      <a href="/">Home</a> &nbsp;›&nbsp; <a href="/threshold/">Threshold</a> &nbsp;›&nbsp; Can I Show This House?
+    </p>
+
+    <header class="hero">
+      <div class="badge">Free tool for agents</div>
+      <h1>Can I Show <span>This House?</span></h1>
+      <p class="lede">A 30-second buyer-agreement compliance check. Answer a few questions and find out whether
+        you're clear to show — or need a signature first.</p>
+    </header>
+
+    <div class="tool" id="tool" role="region" aria-label="Compliance check">
+      <div class="progress" id="progress" aria-hidden="true"></div>
+      <div id="stage"></div>
+    </div>
+
+    <noscript>
+      <p class="body" style="margin-bottom:1.5rem">This quick check needs JavaScript. The short version: if you work
+        through an MLS, you need a written buyer agreement — signed and stating a specific compensation amount — before
+        you tour a home with a buyer, in person or virtually. Open houses and simply sharing listings don't require one.
+      </p>
+    </noscript>
+
+    <section class="block">
+      <h2 class="s">How the rule works</h2>
+      <p class="body">Since <b>August 17, 2024</b>, real estate agents who work through a Multiple Listing Service must
+        have a written buyer agreement in place <b>before</b> touring a home with a buyer — in person or on a live
+        virtual tour. It's part of the nationwide changes that followed the NAR settlement.</p>
+      <h3>You generally need a signed agreement when…</h3>
+      <ul class="checks">
+        <li><b>You're touring a specific home together</b> — the trigger is showing property, in person or virtually.</li>
+        <li><b>You're representing the buyer</b> as an MLS participant or on an MLS-listed home.</li>
+      </ul>
+      <h3>You generally don't need one just to…</h3>
+      <ul class="checks">
+        <li><b>Host an open house</b>, or let a buyer attend one you're hosting.</li>
+        <li><b>Talk, email, or send listings</b> before you tour a home together.</li>
+      </ul>
+      <h3>What the agreement must include</h3>
+      <ul class="checks">
+        <li><b>A specific, objective compensation amount</b> agreed with the buyer — not open-ended.</li>
+        <li><b>Scope and time period</b> of your representation.</li>
+        <li><b>The buyer's signature</b>, dated before the first showing.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2 class="s">Get it signed in the field</h2>
+      <p class="body">Threshold puts your state's buyer representation agreement on your phone, so you can complete it,
+        capture signatures on-screen, and export a PDF — before you open the door. It works offline and covers
+        Colorado, Oklahoma, Louisiana, and Wisconsin.</p>
+      <div class="links">
+        <a href="/threshold/colorado-buyer-broker-agreement/">Colorado</a>
+        <a href="/threshold/oklahoma-buyer-broker-agreement/">Oklahoma</a>
+        <a href="/threshold/louisiana-buyer-broker-agreement/">Louisiana</a>
+        <a href="/threshold/wisconsin-buyer-broker-agreement/">Wisconsin</a>
+      </div>
+    </section>
+
+    <p class="disclaimer">
+      This tool is general information for real estate professionals, not legal advice. Rules vary by state and
+      brokerage and change over time — always confirm your obligations with your broker and your state real estate
+      commission.
+    </p>
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2026 Auaha App Development LLC &nbsp;·&nbsp;
+      <a href="/">Auaha.app</a> &nbsp;·&nbsp;
+      <a href="/threshold/">Threshold</a> &nbsp;·&nbsp;
+      <a href="/threshold/support">Support</a> &nbsp;·&nbsp;
+      <a href="/threshold/privacy">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="mailto:hello@auaha.app">hello@auaha.app</a>
+    </p>
+  </footer>
+
+  <script>
+    var APP_STORE = "https://apps.apple.com/us/app/threshold-contracts/id6780699847";
+    var PLAY_STORE = "https://play.google.com/store/apps/details?id=app.auaha.threshold";
+
+    var TREE = {
+      start: {
+        q: "What are you about to do with this buyer?",
+        options: [
+          { label: "Show them a specific home (in person or a live virtual tour)", next: "mls" },
+          { label: "Host an open house, or they're attending one", next: "openhouse" },
+          { label: "Just talk, email, or send them listings", next: "talk" }
+        ]
+      },
+      openhouse: {
+        result: "ok", title: "You're generally fine.",
+        body: "Hosting an open house — or a buyer simply attending one — doesn't require a signed buyer agreement. The moment you agree to represent them and tour homes together, get a written agreement signed first."
+      },
+      talk: {
+        result: "ok", title: "No agreement needed yet.",
+        body: "Sharing listings, emailing, or talking doesn't require a signed buyer agreement. You need one in place before you tour a specific home together."
+      },
+      mls: {
+        q: "Is the home MLS-listed, or are you acting as a REALTOR® / MLS participant?",
+        options: [
+          { label: "Yes — it's MLS-listed or I'm an MLS participant", next: "hasAgreement" },
+          { label: "No — a true for-sale-by-owner I'm not finding through the MLS", next: "fsbo" }
+        ]
+      },
+      fsbo: {
+        result: "caution", title: "The nationwide rule may not apply — but check.",
+        body: "The 2024 requirement is tied to MLS participation, so a true for-sale-by-owner property found outside the MLS may not trigger it. Your state law and brokerage policy still might, and many agents get an agreement regardless. Confirm with your broker before you tour."
+      },
+      hasAgreement: {
+        q: "Do you already have a signed written buyer agreement with THIS buyer, in effect and covering this tour?",
+        options: [
+          { label: "Yes — signed, dated, and it states my compensation", next: "clear" },
+          { label: "No, not yet", next: "stop" },
+          { label: "Not sure, or it may be expired", next: "unsure" }
+        ]
+      },
+      clear: {
+        result: "ok", title: "You're clear to show.",
+        body: "You have a signed buyer agreement in place. Keep the signed copy accessible in case your brokerage or MLS asks to see it."
+      },
+      unsure: {
+        result: "stop", title: "Treat it as “no.”",
+        body: "If you're not certain there's a current, signed agreement covering this buyer and this tour, put one in place before you show the home. It's faster than the risk."
+      },
+      stop: {
+        result: "stop", title: "Get it signed first.",
+        body: "You need a written buyer agreement signed before you tour this home. It must state a specific, objective compensation amount and be signed by the buyer before the showing — not after. Threshold lets you complete and sign it on your phone in a couple of minutes."
+      }
+    };
+
+    var stage = document.getElementById("stage");
+    var progressEl = document.getElementById("progress");
+    var path = ["start"];
+
+    function depth() {
+      // Longest path to a result is 3 questions.
+      return 3;
+    }
+
+    function renderProgress() {
+      var total = depth();
+      var answered = path.length - 1;
+      var html = "";
+      for (var i = 0; i < total; i++) {
+        html += '<i class="' + (i < answered ? "done" : "") + '"></i>';
+      }
+      progressEl.innerHTML = html;
+    }
+
+    function go(id) {
+      path.push(id);
+      render();
+    }
+
+    function restart() {
+      path = ["start"];
+      render();
+    }
+
+    function render() {
+      var node = TREE[path[path.length - 1]];
+      renderProgress();
+      var html = "";
+      if (node.q) {
+        html += '<div class="q">' + node.q + "</div>";
+        for (var i = 0; i < node.options.length; i++) {
+          var o = node.options[i];
+          html += '<button class="opt" data-next="' + o.next + '">' +
+            "<span>" + o.label + "</span>" +
+            '<span class="chev">→</span></button>';
+        }
+        if (path.length > 1) {
+          html += '<div class="actions"><button class="btn btn-ghost" id="back">← Back</button></div>';
+        }
+      } else {
+        html += '<div class="result ' + node.result + '">' +
+          '<div class="tag">' +
+          (node.result === "ok" ? "Clear to show" : node.result === "caution" ? "Check first" : "Not yet") +
+          "</div>" +
+          "<h2>" + node.title + "</h2>" +
+          "<p>" + node.body + "</p></div>";
+        html += '<div class="actions">';
+        if (node.result === "stop") {
+          html += '<a class="btn btn-primary" href="' + APP_STORE + '" rel="nofollow">Get Threshold (iOS)</a>';
+          html += '<a class="btn btn-ghost" href="' + PLAY_STORE + '" rel="nofollow">Android</a>';
+        }
+        html += '<button class="btn btn-ghost" id="restart">Start over</button>';
+        html += "</div>";
+      }
+      stage.innerHTML = html;
+
+      var opts = stage.querySelectorAll(".opt");
+      for (var j = 0; j < opts.length; j++) {
+        opts[j].addEventListener("click", function () { go(this.getAttribute("data-next")); });
+      }
+      var back = document.getElementById("back");
+      if (back) back.addEventListener("click", function () { path.pop(); render(); });
+      var rs = document.getElementById("restart");
+      if (rs) rs.addEventListener("click", restart);
+    }
+
+    render();
+  </script>
+
+</body>
+
+</html>

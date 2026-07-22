@@ -310,6 +310,7 @@ for (const state of data.states) {
 const urls = [
   { loc: `${SITE}/`, pri: "1.0" },
   { loc: `${SITE}/threshold/`, pri: "0.9" },
+  { loc: `${SITE}/threshold/can-i-show-this-house/`, pri: "0.8" },
   ...data.states.map((s) => ({
     loc: `${SITE}/threshold/${s.slug}/`,
     pri: "0.8",
