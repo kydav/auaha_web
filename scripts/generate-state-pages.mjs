@@ -314,6 +314,7 @@ for (const state of data.states) {
 const urls = [
   { loc: `${SITE}/`, pri: "1.0" },
   { loc: `${SITE}/threshold/`, pri: "0.9" },
+  { loc: `${SITE}/threshold/free-tools/`, pri: "0.9" },
   { loc: `${SITE}/threshold/can-i-show-this-house/`, pri: "0.8" },
   { loc: `${SITE}/threshold/buyer-transaction-compliance-checklist/`, pri: "0.8" },
   { loc: `${SITE}/threshold/buyer-compensation-explainer/`, pri: "0.8" },
