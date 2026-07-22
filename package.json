@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "gen:states": "node scripts/generate-state-pages.mjs",
     "deploy": "wrangler deploy"
   },
   "dependencies": {

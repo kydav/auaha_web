@@ -1,0 +1,119 @@
+{
+  "site": "https://auaha.app",
+  "appStoreUrl": "https://apps.apple.com/us/app/threshold-contracts/id6780699847",
+  "playStoreUrl": "https://play.google.com/store/apps/details?id=app.auaha.threshold",
+  "states": [
+    {
+      "name": "Colorado",
+      "abbr": "CO",
+      "slug": "colorado-buyer-broker-agreement",
+      "commission": "Colorado Real Estate Commission",
+      "formName": "Exclusive Right-to-Buy Brokerage Contract",
+      "formShort": "Exclusive Right-to-Buy contract",
+      "intro": "If you sell real estate in Colorado, a written buyer agreement isn't optional. Before you show a buyer a home, Colorado license law and the 2024 nationwide rules require a signed brokerage agreement that defines your relationship and your compensation. Threshold puts Colorado's Exclusive Right-to-Buy Brokerage Contract on your phone so you can complete and sign it in the field — at the coffee shop, in the car, or on the doorstep.",
+      "changed": "Colorado has long required a defined, written brokerage relationship before an agent represents a buyer. Since August 17, 2024, agents who work through an MLS also must have a signed buyer agreement in place before touring a home — in person or virtually. That makes getting the Exclusive Right-to-Buy contract signed early a routine part of every Colorado buyer relationship.",
+      "faqs": [
+        {
+          "q": "Do Colorado real estate agents need a written buyer agreement?",
+          "a": "Yes. Colorado requires a defined, written brokerage relationship for buyer representation, and since August 17, 2024 agents working through an MLS must have a signed buyer agreement before touring a home. Threshold makes it quick to complete and sign that agreement on the spot."
+        },
+        {
+          "q": "Which Colorado buyer agreement form does Threshold use?",
+          "a": "Threshold is built around the Colorado Real Estate Commission's Exclusive Right-to-Buy Brokerage Contract — the standard buyer agency form Colorado brokerages use. Fields are guided so nothing required is left blank."
+        },
+        {
+          "q": "Can I sign a buyer agreement on my phone in Colorado?",
+          "a": "Yes. You and your buyer can complete every required field and capture signatures on-screen, then export a PDF to send to your brokerage or client. No printer or scanner needed."
+        },
+        {
+          "q": "Does the agreement have to state my compensation?",
+          "a": "Yes. The written buyer agreement must state a specific, objective compensation amount agreed with your buyer — it can't be open-ended. Threshold has a dedicated compensation step so the figure is captured clearly every time."
+        }
+      ]
+    },
+    {
+      "name": "Oklahoma",
+      "abbr": "OK",
+      "slug": "oklahoma-buyer-broker-agreement",
+      "commission": "Oklahoma Real Estate Commission",
+      "formName": "written buyer broker agreement under the Broker Relationships Act",
+      "formShort": "buyer broker agreement",
+      "intro": "Oklahoma's Broker Relationships Act governs how you work with buyers, and under the 2024 nationwide rules a written buyer agreement must be signed before you tour a home. Threshold gives Oklahoma agents a guided buyer broker agreement they can fill out and sign anywhere — no paperwork, no delays between meeting a buyer and getting them under agreement.",
+      "changed": "Oklahoma agents work under the Broker Relationships Act, which sets out the duties you owe a buyer. Since August 17, 2024, agents working through an MLS also need a signed written buyer agreement before showing a home. Threshold helps you capture that agreement in the moment so a showing never gets held up by paperwork.",
+      "faqs": [
+        {
+          "q": "Do Oklahoma real estate agents need a written buyer agreement?",
+          "a": "Under the 2024 nationwide rules, agents working through an MLS must have a signed written buyer agreement before touring a home, in addition to the duties set out in Oklahoma's Broker Relationships Act. Threshold makes completing and signing that agreement fast."
+        },
+        {
+          "q": "What buyer agreement does Threshold support for Oklahoma?",
+          "a": "Threshold provides a guided written buyer broker agreement for Oklahoma agents, with fields walked through step by step so the required terms — including compensation — are captured every time."
+        },
+        {
+          "q": "Can I complete and sign the agreement on my phone in Oklahoma?",
+          "a": "Yes. Fill out the agreement with your buyer, collect signatures on-screen, and export a PDF to your brokerage or client — all from your phone, even without a connection."
+        },
+        {
+          "q": "Does the buyer agreement need to spell out compensation?",
+          "a": "Yes. The written buyer agreement must state a specific, objective compensation amount agreed with your buyer. Threshold's compensation step keeps that clear and consistent."
+        }
+      ]
+    },
+    {
+      "name": "Louisiana",
+      "abbr": "LA",
+      "slug": "louisiana-buyer-broker-agreement",
+      "commission": "Louisiana Real Estate Commission",
+      "formName": "written buyer representation agreement",
+      "formShort": "buyer representation agreement",
+      "intro": "Louisiana requires clear agency disclosure, and under the 2024 nationwide rules a signed buyer representation agreement must be in place before you tour a property. Threshold gives Louisiana agents the buyer representation agreement on their phone — guided, signable, and exportable — so you can get a buyer under agreement the moment they're ready.",
+      "changed": "Louisiana agents already work within the Louisiana Real Estate Commission's agency rules. Since August 17, 2024, agents working through an MLS also need a signed buyer representation agreement before showing a home. Threshold lets you handle disclosure and the written agreement together, right when you meet the buyer.",
+      "faqs": [
+        {
+          "q": "Do Louisiana real estate agents need a written buyer agreement?",
+          "a": "Under the 2024 nationwide rules, agents working through an MLS must have a signed buyer representation agreement before touring a home, alongside Louisiana's existing agency-disclosure requirements. Threshold makes that agreement quick to complete and sign."
+        },
+        {
+          "q": "What buyer agreement does Threshold support for Louisiana?",
+          "a": "Threshold provides a guided written buyer representation agreement for Louisiana agents, consistent with Louisiana Real Estate Commission agency rules, with every required field walked through step by step."
+        },
+        {
+          "q": "Can I sign the buyer agreement on my phone in Louisiana?",
+          "a": "Yes. Complete the agreement with your buyer, capture signatures on-screen, and export a PDF for your brokerage or client — no printing or scanning."
+        },
+        {
+          "q": "Does the agreement have to state compensation?",
+          "a": "Yes. The written buyer agreement must state a specific, objective compensation amount agreed with your buyer. Threshold captures it in a dedicated compensation step so it's never left ambiguous."
+        }
+      ]
+    },
+    {
+      "name": "Wisconsin",
+      "abbr": "WI",
+      "slug": "wisconsin-buyer-broker-agreement",
+      "commission": "Wisconsin Department of Safety and Professional Services",
+      "formName": "WB-36 Buyer Agency/Tenant Representation Agreement",
+      "formShort": "WB-36 agreement",
+      "intro": "Wisconsin agents use the state-approved WB-36 Buyer Agency/Tenant Representation Agreement, and under the 2024 nationwide rules it needs to be signed before you tour a home. Threshold puts the WB-36 workflow on your phone so you can complete and sign it in the field — no paper forms, no scrambling for a signature before a showing.",
+      "changed": "Wisconsin uses standardized, state-approved WB forms — for buyer representation, that's the WB-36. Since August 17, 2024, agents working through an MLS need that agreement signed before showing a home. Threshold guides you through the WB-36 so it's ready the moment a buyer decides to work with you.",
+      "faqs": [
+        {
+          "q": "Do Wisconsin real estate agents need a written buyer agreement?",
+          "a": "Yes. Wisconsin agents use the state-approved WB-36 Buyer Agency/Tenant Representation Agreement, and under the 2024 nationwide rules it must be signed before touring a home when working through an MLS. Threshold makes completing the WB-36 fast."
+        },
+        {
+          "q": "Does Threshold support the Wisconsin WB-36 form?",
+          "a": "Yes. Threshold is built around the WB-36 Buyer Agency/Tenant Representation Agreement, guiding you through each required field so nothing is missed before you and your buyer sign."
+        },
+        {
+          "q": "Can I fill out and sign the WB-36 on my phone?",
+          "a": "Yes. Complete the WB-36 with your buyer, capture signatures on-screen, and export a PDF for your brokerage or client — all from your phone, even offline."
+        },
+        {
+          "q": "Does the WB-36 need to state compensation?",
+          "a": "Yes. The written buyer agreement must state a specific, objective compensation amount agreed with your buyer. Threshold's compensation step keeps that clear on every WB-36 you complete."
+        }
+      ]
+    }
+  ]
+}
