@@ -271,6 +271,10 @@ ${faqHtml}
       <div class="state-links">
         ${otherStates(state)}
       </div>
+      <p style="margin-top:1rem">
+        In a different state? See the
+        <a href="/threshold/buyer-broker-agreement-by-state/">buyer broker agreement requirements by state&nbsp;→</a>
+      </p>
     </section>
 
     <p class="disclaimer">
@@ -313,6 +317,7 @@ const urls = [
   { loc: `${SITE}/threshold/can-i-show-this-house/`, pri: "0.8" },
   { loc: `${SITE}/threshold/buyer-transaction-compliance-checklist/`, pri: "0.8" },
   { loc: `${SITE}/threshold/buyer-compensation-explainer/`, pri: "0.8" },
+  { loc: `${SITE}/threshold/buyer-broker-agreement-by-state/`, pri: "0.8" },
   ...data.states.map((s) => ({
     loc: `${SITE}/threshold/${s.slug}/`,
     pri: "0.8",

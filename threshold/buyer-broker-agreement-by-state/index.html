@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buyer Broker Agreement Requirements by State (Interactive Map) | Threshold</title>
+  <meta name="description"
+    content="An interactive map of buyer broker agreement requirements by state. See the nationwide rule for MLS agents, find your state, and learn where to confirm the exact form you must use." />
+  <link rel="canonical" href="https://auaha.app/threshold/buyer-broker-agreement-by-state/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Buyer Broker Agreement Requirements by State (Interactive Map)" />
+  <meta property="og:description"
+    content="Find buyer broker agreement requirements for your state. Nationwide rule for MLS agents plus where to confirm your state's form." />
+  <meta property="og:url" content="https://auaha.app/threshold/buyer-broker-agreement-by-state/" />
+  <meta property="og:site_name" content="Threshold" />
+  <meta property="og:image" content="https://auaha.app/apple-touch-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Buyer Broker Agreement Requirements by State (Interactive Map)" />
+  <meta name="twitter:description"
+    content="Find buyer broker agreement requirements for your state — interactive map for agents." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Which states require a written buyer agreement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nationwide, since August 17, 2024, agents who work through an MLS must have a signed written buyer agreement before touring a home with a buyer, stating a specific and objective compensation amount. Individual states, boards, and brokerages may add their own requirements on top of that."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Threshold support my state?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Threshold currently includes buyer representation forms for Colorado, Oklahoma, Louisiana, and Wisconsin. In other states, check with your state REALTOR® association, local board or MLS, or your brokerage for the form you must use."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can my brokerage or local board require its own buyer agreement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. State associations, local boards or MLSs, and individual brokerages can create their own buyer-broker agreement and mandate its use, so always confirm the exact form and rules that apply to you."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0f1e;--surface:#111827;--card:#1a2235;--accent:#6366f1;--accent2:#a78bfa;--text:#f1f5f9;--muted:#94a3b8;--border:#1e2d45;--ok:#34d399}
+    html{scroll-behavior:smooth}
+    body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:var(--accent)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:rgba(10,15,30,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-size:1.4rem;font-weight:700;letter-spacing:-.5px;color:var(--text);text-decoration:none}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem;transition:color .2s}
+    .nav-links a:hover{color:var(--accent)}
+    .container{max-width:840px;margin:0 auto;padding:0 1.5rem}
+    .breadcrumb{font-size:.82rem;color:var(--muted);padding-top:6.5rem}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--accent)}
+    header.hero{padding:1.5rem 0 1rem}
+    .badge{display:inline-block;background:rgba(99,102,241,.12);color:var(--accent);border:1px solid rgba(99,102,241,.25);border-radius:99px;padding:.3rem 1rem;font-size:.82rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:1.25rem}
+    h1{font-size:clamp(2rem,5vw,2.9rem);font-weight:800;line-height:1.12;letter-spacing:-1px;margin-bottom:1rem}
+    h1 span{background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .lede{font-size:1.1rem;color:var(--muted);max-width:600px}
+    .layout{display:grid;grid-template-columns:1.15fr 1fr;gap:1.5rem;margin:2rem 0}
+    @media(max-width:760px){.layout{grid-template-columns:1fr}}
+    .map-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.25rem}
+    .map-scroll{overflow-x:auto}
+    .map{display:grid;grid-template-columns:repeat(12,1fr);gap:4px;min-width:420px}
+    .tile{grid-column:auto;aspect-ratio:1;border-radius:6px;border:1px solid var(--border);background:var(--surface);color:var(--muted);font-size:.66rem;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .12s,border-color .12s;font-family:inherit;padding:0}
+    .tile.sup{background:rgba(99,102,241,.24);border-color:rgba(99,102,241,.55);color:#fff}
+    .tile:hover{border-color:var(--accent);transform:scale(1.12);z-index:2}
+    .tile.active{outline:2px solid var(--accent2);outline-offset:1px;z-index:3}
+    .legend{display:flex;gap:1.25rem;margin-top:1rem;font-size:.8rem;color:var(--muted);flex-wrap:wrap}
+    .legend span{display:inline-flex;align-items:center;gap:.4rem}
+    .sw{width:13px;height:13px;border-radius:4px;border:1px solid var(--border)}
+    .sw.sup{background:rgba(99,102,241,.55);border-color:rgba(99,102,241,.55)}
+    .sw.oth{background:var(--surface)}
+    .panel{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.5rem;align-self:start}
+    .panel .st{font-size:1.5rem;font-weight:800;letter-spacing:-.4px;margin-bottom:.15rem}
+    .panel .kick{font-size:.78rem;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
+    .panel p{color:var(--muted);font-size:.95rem;margin-bottom:.9rem}
+    .panel .rule{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:.9rem 1rem;font-size:.9rem;color:var(--text);margin-bottom:1rem}
+    .pill{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:.25rem .7rem;border-radius:99px;margin-bottom:.9rem}
+    .pill.sup{background:rgba(52,211,153,.14);color:var(--ok);border:1px solid rgba(52,211,153,.35)}
+    .pill.oth{background:rgba(148,163,184,.14);color:var(--muted);border:1px solid var(--border)}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.2rem;border-radius:10px;font-weight:700;font-size:.92rem;text-decoration:none;cursor:pointer;border:1px solid transparent;font-family:inherit}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-primary:hover{background:#4f52e0}
+    .search{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:.7rem .9rem;color:var(--text);font-size:.95rem;font-family:inherit;margin-bottom:1rem}
+    .search:focus{outline:none;border-color:var(--accent)}
+    section.block{padding:2.5rem 0;border-top:1px solid var(--border)}
+    h2.s{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;letter-spacing:-.5px;margin-bottom:1rem}
+    p.body{color:var(--muted)}
+    ul.checks{list-style:none;margin-top:1rem}
+    ul.checks li{position:relative;padding-left:1.7rem;margin-bottom:.7rem;color:var(--muted)}
+    ul.checks li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:800}
+    ul.checks li b{color:var(--text);font-weight:600}
+    .allstates{columns:3;column-gap:1.5rem;margin-top:1rem;font-size:.92rem}
+    @media(max-width:600px){.allstates{columns:2}}
+    .allstates a,.allstates span{display:block;padding:.2rem 0;color:var(--muted);text-decoration:none}
+    .allstates a{color:var(--accent);font-weight:600}
+    .allstates a:hover{text-decoration:underline}
+    .links{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1rem}
+    .links a{display:inline-block;padding:.55rem 1.05rem;border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:.9rem;font-weight:600;transition:all .2s;background:rgba(255,255,255,.03)}
+    .links a:hover{border-color:var(--accent);color:var(--accent)}
+    .disclaimer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--border);padding:1.75rem 0;line-height:1.5}
+    footer{border-top:1px solid var(--border);padding:2rem 1.5rem;text-align:center;color:var(--muted);font-size:.875rem}
+    footer a{color:var(--accent);text-decoration:none}
+    footer a:hover{text-decoration:underline}
+    @media(max-width:600px){.nav-links{display:none}}
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="/" class="logo">Auaha<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/threshold/">Threshold</a></li>
+      <li><a href="/threshold/can-i-show-this-house/">Compliance Check</a></li>
+      <li><a href="/threshold/support">Support</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <p class="breadcrumb">
+      <a href="/">Home</a> &nbsp;›&nbsp; <a href="/threshold/">Threshold</a> &nbsp;›&nbsp; Requirements by State
+    </p>
+
+    <header class="hero">
+      <div class="badge">Free tool for agents</div>
+      <h1>Buyer Broker Agreement <span>Requirements by State</span></h1>
+      <p class="lede">Tap your state for the buyer-agreement rule that applies and where to confirm the exact form
+        you must use. One rule is now nationwide — the paperwork is still local.</p>
+    </header>
+
+    <div class="layout">
+      <div class="map-card">
+        <div class="map-scroll">
+          <div class="map" id="map" role="group" aria-label="United States — select a state"></div>
+        </div>
+        <div class="legend">
+          <span><i class="sw sup"></i> Supported in Threshold</span>
+          <span><i class="sw oth"></i> Other states</span>
+        </div>
+      </div>
+
+      <aside class="panel" id="panel" aria-live="polite">
+        <input class="search" id="search" type="text" placeholder="Or type your state…" autocomplete="off" />
+        <div id="detail">
+          <div class="kick">Start here</div>
+          <div class="st">Select your state</div>
+          <div class="rule">Nationwide since <b>Aug 17, 2024</b>: if you work through an MLS, you need a signed written
+            buyer agreement — stating a specific, objective compensation amount — <b>before</b> you tour a home with a
+            buyer.</div>
+          <p>Pick a state on the map to see whether Threshold supports it and where to confirm the exact form.</p>
+        </div>
+      </aside>
+    </div>
+
+    <section class="block">
+      <h2 class="s">One nationwide rule, local paperwork</h2>
+      <p class="body">Since <b>August 17, 2024</b>, agents who participate in a Multiple Listing Service must have a
+        written buyer agreement signed before touring a home with a buyer — in person or on a live virtual tour — and it
+        must state a specific, objective compensation amount. That baseline applies across the country.</p>
+      <p class="body">What still varies is the <b>form</b>. Your state real estate commission, your state REALTOR®
+        association, your local board or MLS, and your brokerage can each require a particular buyer-broker agreement
+        and mandate its use. Threshold builds those forms in for the states it supports; everywhere else, confirm the
+        right document with the bodies that govern you.</p>
+      <ul class="checks">
+        <li><b>Signed before touring</b> — the trigger is showing a specific home.</li>
+        <li><b>A specific compensation amount</b> — objective and agreed, not open-ended.</li>
+        <li><b>The form is local</b> — check your state association, board/MLS, or brokerage for which one to use.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2 class="s">All states</h2>
+      <p class="body">Threshold currently supports the linked states below. In every other state, confirm your required
+        buyer-broker agreement with your state REALTOR® association, local board or MLS, or your brokerage.</p>
+      <div class="allstates" id="allstates"></div>
+      <noscript>
+        <p class="body">Supported in Threshold:
+          <a href="/threshold/colorado-buyer-broker-agreement/">Colorado</a>,
+          <a href="/threshold/oklahoma-buyer-broker-agreement/">Oklahoma</a>,
+          <a href="/threshold/louisiana-buyer-broker-agreement/">Louisiana</a>, and
+          <a href="/threshold/wisconsin-buyer-broker-agreement/">Wisconsin</a>. In other states, confirm your required
+          buyer-broker agreement with your state REALTOR® association, local board or MLS, or your brokerage.</p>
+      </noscript>
+      <div class="links" style="margin-top:1.5rem">
+        <a href="/threshold/can-i-show-this-house/">Can I Show This House?</a>
+        <a href="/threshold/buyer-transaction-compliance-checklist/">Compliance Checklist</a>
+        <a href="/threshold/buyer-compensation-explainer/">Compensation Explainer</a>
+      </div>
+    </section>
+
+    <p class="disclaimer">
+      This tool is general information for real estate professionals, not legal advice. Requirements and approved forms
+      vary by state, board, and brokerage and change over time. Always confirm the buyer-broker agreement you must use
+      with your state real estate commission, your state or local REALTOR® association, and your brokerage.
+    </p>
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2026 Auaha App Development LLC &nbsp;·&nbsp;
+      <a href="/">Auaha.app</a> &nbsp;·&nbsp;
+      <a href="/threshold/">Threshold</a> &nbsp;·&nbsp;
+      <a href="/threshold/support">Support</a> &nbsp;·&nbsp;
+      <a href="/threshold/privacy">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="mailto:hello@auaha.app">hello@auaha.app</a>
+    </p>
+  </footer>
+
+  <script>
+    var STATES = [
+      ["AK","Alaska",0,0],["ME","Maine",11,0],["VT","Vermont",9,1],["NH","New Hampshire",10,1],
+      ["MA","Massachusetts",11,1],["WA","Washington",1,2],["MT","Montana",2,2],["ND","North Dakota",3,2],
+      ["SD","South Dakota",4,2],["MN","Minnesota",5,2],["WI","Wisconsin",6,2],["MI","Michigan",7,2],
+      ["NY","New York",9,2],["CT","Connecticut",10,2],["RI","Rhode Island",11,2],["OR","Oregon",1,3],
+      ["ID","Idaho",2,3],["WY","Wyoming",3,3],["NE","Nebraska",4,3],["IA","Iowa",5,3],["IL","Illinois",6,3],
+      ["IN","Indiana",7,3],["OH","Ohio",8,3],["PA","Pennsylvania",9,3],["NJ","New Jersey",10,3],
+      ["CA","California",0,4],["NV","Nevada",1,4],["UT","Utah",2,4],["CO","Colorado",3,4],["KS","Kansas",4,4],
+      ["MO","Missouri",5,4],["KY","Kentucky",6,4],["WV","West Virginia",7,4],["DC","District of Columbia",8,4],
+      ["MD","Maryland",9,4],["DE","Delaware",10,4],["AZ","Arizona",2,5],["NM","New Mexico",3,5],
+      ["OK","Oklahoma",4,5],["AR","Arkansas",5,5],["TN","Tennessee",6,5],["VA","Virginia",7,5],
+      ["NC","North Carolina",8,5],["TX","Texas",3,6],["LA","Louisiana",4,6],["MS","Mississippi",5,6],
+      ["AL","Alabama",6,6],["GA","Georgia",7,6],["SC","South Carolina",8,6],["HI","Hawaii",0,7],["FL","Florida",7,7]
+    ];
+
+    var SUPPORTED = {
+      CO: "colorado-buyer-broker-agreement",
+      OK: "oklahoma-buyer-broker-agreement",
+      LA: "louisiana-buyer-broker-agreement",
+      WI: "wisconsin-buyer-broker-agreement"
+    };
+
+    var RULE = 'Nationwide since <b>Aug 17, 2024</b>: MLS agents need a signed written buyer agreement — stating a ' +
+      'specific, objective compensation amount — <b>before</b> touring a home with a buyer.';
+
+    var mapEl = document.getElementById("map");
+    var detailEl = document.getElementById("detail");
+    var searchEl = document.getElementById("search");
+    var byKey = {};
+    var activeBtn = null;
+
+    for (var i = 0; i < STATES.length; i++) {
+      var s = STATES[i], key = s[0], name = s[1], x = s[2], y = s[3];
+      byKey[key] = s;
+      var b = document.createElement("button");
+      b.className = "tile" + (SUPPORTED[key] ? " sup" : "");
+      b.style.gridColumn = (x + 1);
+      b.style.gridRow = (y + 1);
+      b.textContent = key;
+      b.setAttribute("aria-label", name);
+      b.setAttribute("data-key", key);
+      b.addEventListener("click", (function (k, el) {
+        return function () { select(k, el); };
+      })(key, b));
+      mapEl.appendChild(b);
+    }
+
+    function select(key, btn) {
+      var s = byKey[key];
+      if (!s) return;
+      if (activeBtn) activeBtn.classList.remove("active");
+      if (btn) { btn.classList.add("active"); activeBtn = btn; }
+      var name = s[1];
+      var html = "";
+      if (SUPPORTED[key]) {
+        html += '<span class="pill sup">Supported in Threshold</span>';
+        html += '<div class="st">' + name + "</div>";
+        html += '<div class="rule">' + RULE + "</div>";
+        html += "<p>Threshold includes " + name + "'s buyer representation agreement — complete it, sign on-screen, " +
+          "and export a PDF from your phone.</p>";
+        html += '<a class="btn btn-primary" href="/threshold/' + SUPPORTED[key] + '/">Open the ' + name + ' guide →</a>';
+      } else {
+        html += '<span class="pill oth">Not yet in Threshold</span>';
+        html += '<div class="st">' + name + "</div>";
+        html += '<div class="rule">' + RULE + "</div>";
+        html += "<p>Threshold doesn't include " + name + "'s buyer-agreement forms yet. Your state REALTOR® " +
+          "association, local board or MLS, or your brokerage may require their own buyer-broker agreement and can " +
+          "mandate a specific form — check with them for the exact document and rules in " + name + ".</p>";
+      }
+      detailEl.innerHTML = html;
+    }
+
+    searchEl.addEventListener("input", function () {
+      var q = this.value.trim().toLowerCase();
+      if (!q) return;
+      for (var i = 0; i < STATES.length; i++) {
+        var s = STATES[i];
+        if (s[1].toLowerCase().indexOf(q) === 0 || s[0].toLowerCase() === q) {
+          select(s[0], mapEl.querySelector('[data-key="' + s[0] + '"]'));
+          return;
+        }
+      }
+    });
+    searchEl.addEventListener("keydown", function (e) {
+      if (e.key !== "Enter") return;
+      var q = this.value.trim().toLowerCase();
+      for (var i = 0; i < STATES.length; i++) {
+        var s = STATES[i];
+        if (s[1].toLowerCase().indexOf(q) === 0 || s[0].toLowerCase() === q) {
+          select(s[0], mapEl.querySelector('[data-key="' + s[0] + '"]'));
+          return;
+        }
+      }
+    });
+
+    // Alphabetical "All states" list (crawlable-friendly, built for quick access).
+    var alpha = STATES.slice().sort(function (a, b) { return a[1] < b[1] ? -1 : 1; });
+    var listHtml = "";
+    for (var j = 0; j < alpha.length; j++) {
+      var a = alpha[j];
+      if (SUPPORTED[a[0]]) {
+        listHtml += '<a href="/threshold/' + SUPPORTED[a[0]] + '/">' + a[1] + " →</a>";
+      } else {
+        listHtml += "<span>" + a[1] + "</span>";
+      }
+    }
+    document.getElementById("allstates").innerHTML = listHtml;
+  </script>
+
+</body>
+
+</html>
