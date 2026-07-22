@@ -154,6 +154,13 @@
     .state-links{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
     .state-links a{display:inline-block;padding:.55rem 1.1rem;border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:.92rem;font-weight:600;transition:all .2s;background:rgba(255,255,255,.03)}
     .state-links a:hover{border-color:var(--accent);color:var(--accent)}
+    .guide{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;text-decoration:none;background:linear-gradient(135deg,rgba(99,102,241,.14),rgba(167,139,250,.08));border:1px solid rgba(99,102,241,.32);border-radius:14px;padding:1.4rem 1.5rem;margin:.5rem 0 1rem}
+    .guide-txt{max-width:60%}
+    .guide-txt b{color:var(--text);font-size:1.02rem}
+    .guide-txt span{display:block;color:var(--muted);font-size:.9rem;margin-top:.2rem}
+    .guide-btn{display:inline-flex;align-items:center;background:var(--accent);color:#fff;padding:.7rem 1.3rem;border-radius:10px;font-weight:700;font-size:.95rem;white-space:nowrap;transition:all .2s}
+    .guide:hover .guide-btn{background:#4f52e0;transform:translateY(-1px)}
+    @media(max-width:600px){.guide-txt{max-width:100%}}
     .disclaimer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--border);padding:1.75rem 0;line-height:1.5}
     footer{border-top:1px solid var(--border);padding:2rem 1.5rem;text-align:center;color:var(--muted);font-size:.875rem}
     footer a{color:var(--accent);text-decoration:none}
@@ -200,6 +207,14 @@
         </a>
       </div>
     </section>
+
+    <a class="guide" href="/threshold/wisconsin-buyer-broker-agreement/wisconsin-buyer-agreement-compliance-guide.pdf" download>
+      <span class="guide-txt">
+        <b>Free: Wisconsin Buyer Agreement Compliance Guide (PDF)</b>
+        <span>The 2024 rules, the WB-36 agreement, a compliance checklist, and FAQ — one file to keep.</span>
+      </span>
+      <span class="guide-btn">↓ &nbsp;Download the guide</span>
+    </a>
 
     <section class="block">
       <h2>What changed for Wisconsin agents</h2>
