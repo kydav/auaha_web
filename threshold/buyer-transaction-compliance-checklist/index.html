@@ -106,11 +106,16 @@
     footer a:hover{text-decoration:underline}
     @media(max-width:600px){.nav-links{display:none}}
     @media print{
-      nav,.bar-wrap,.toolbar,.breadcrumb,footer,.block,.badge{display:none!important}
-      body{background:#fff;color:#000}
-      .item,.grp h2 .n{border-color:#ccc}
-      .item .txt b,.item .txt span,h1,.grp h2{color:#000!important}
-      h1 span{-webkit-text-fill-color:#000}
+      nav,.bar-wrap,.toolbar,.breadcrumb,footer,.block,.badge,.done-banner{display:none!important}
+      body{background:#fff!important;color:#000!important}
+      h1,.lede,.grp h2{color:#000!important}
+      h1 span{-webkit-text-fill-color:#000!important}
+      .grp h2 .n{background:#fff!important;border-color:#999!important;color:#000!important}
+      .item,.item.checked{background:#fff!important;border:1px solid #999!important;break-inside:avoid}
+      .item .txt b,.item.checked .txt b{color:#000!important;text-decoration:none!important}
+      .item .txt span{color:#333!important}
+      .box,.item.checked .box{background:#fff!important;border:2px solid #333!important}
+      .item.checked .box svg{opacity:1!important}
     }
   </style>
 </head>
