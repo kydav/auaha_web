@@ -329,6 +329,7 @@ const urls = [
   { loc: `${SITE}/functionalparenting/`, pri: "0.6" },
   { loc: `${SITE}/prior/`, pri: "0.6" },
   { loc: `${SITE}/proteingrid/`, pri: "0.6" },
+  { loc: `${SITE}/contactphotos/`, pri: "0.5" },
 ];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
