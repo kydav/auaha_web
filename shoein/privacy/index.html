@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Shoein' by Auaha</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #1a1613; --surface: #221c17; --card: #2a231c;
+      --accent: #e08521; --text: #f7f4ef; --muted: #b9ab98; --border: #3a3129;
+    }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; border-bottom: 1px solid var(--border); background: rgba(26,22,19,0.9); }
+    .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 1.25rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+    .nav-links a:hover { color: var(--accent); }
+    main { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .chip { display: inline-block; background: rgba(224,133,33,0.12); color: var(--accent); border: 1px solid rgba(224,133,33,0.28); border-radius: 99px; padding: 0.25rem 0.9rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1rem; }
+    h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
+    h2 { font-size: 1.15rem; font-weight: 700; margin: 2.25rem 0 0.6rem; color: var(--text); }
+    p { color: var(--muted); margin-bottom: 0.9rem; }
+    ul { color: var(--muted); margin: 0.5rem 0 0.9rem 1.25rem; }
+    ul li { margin-bottom: 0.4rem; }
+    a { color: var(--accent); }
+    .callout { background: var(--card); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 8px; padding: 1rem 1.25rem; margin: 1.25rem 0; color: var(--muted); }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; text-align: center; color: var(--muted); font-size: 0.875rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">Auaha<span>.</span></a>
+    <div class="nav-links">
+      <a href="/shoein">← Shoein'</a>
+      <a href="/shoein/terms">Terms</a>
+      <a href="/shoein/support">Support</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="chip">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Applies to: Shoein' &nbsp;·&nbsp; Last updated: August 5, 2026 &nbsp;·&nbsp; Auaha App Development LLC</p>
+
+    <p>This Privacy Policy explains how Auaha App Development LLC ("we," "us," or "our") handles information in connection with the Shoein' mobile application ("the App"), a client-and-horse management tool for farriers. We are committed to protecting your privacy and collecting as little information as possible.</p>
+
+    <h2>1. Information We Collect</h2>
+    <p>Shoein' collects the minimum information needed to provide its services:</p>
+    <ul>
+      <li><strong>Account information:</strong> Your name and email address, used to create and authenticate your account through Firebase Authentication.</li>
+      <li><strong>Business records you create:</strong> The client and horse information you enter — including client names, phone numbers, email addresses, physical addresses, notes, and each horse's breed, notes, and service dates. This is your business data, stored privately under your account.</li>
+    </ul>
+
+    <h2>2. Information About Your Clients</h2>
+    <div class="callout">
+      <p style="margin:0">Shoein' is a tool for managing <strong>your own</strong> client and horse records. When you enter a client's contact details, you are responsible for having a legitimate business reason to store that information and for handling it responsibly.</p>
+    </div>
+    <p>The client and horse records you create are visible only to you, under your authenticated account. We do not use them for any purpose other than providing the App to you, and we never sell them or share them for advertising.</p>
+
+    <h2>3. Information We Do Not Collect</h2>
+    <ul>
+      <li>We do not sell or rent your information, and we do not share it with third parties for their own advertising.</li>
+      <li>We do not use your information to serve advertisements in the App.</li>
+      <li>We do not access your device's contacts or photo library.</li>
+      <li>We do not track your device's location in the background.</li>
+    </ul>
+
+    <h2>4. Maps &amp; Address Lookup</h2>
+    <p>When you save a client's address, the App converts it into map coordinates ("geocoding") using your device's built-in platform geocoding service (provided by Apple or Google, depending on your device) so it can show the location as a pin. Map tiles are provided by <strong>OpenStreetMap</strong>. Using these features may involve sending the address you entered to those services so they can return the corresponding map location and imagery. The App does not continuously track your location.</p>
+
+    <h2>5. Secure Transmission &amp; Storage</h2>
+    <p>All communication between the App and our servers is encrypted in transit using industry-standard <strong>HTTPS/TLS</strong>. Your account and records are stored with <strong>Google Firebase</strong> (Firebase Authentication and Cloud Firestore), where data is encrypted both in transit and at rest. Firestore security rules restrict access so that each account can only read and write its own data. We apply reasonable technical and organizational safeguards to protect your information. No method of transmission or storage is ever 100% secure, but we work to protect your data using current best practices.</p>
+    <p>Your account is protected by Firebase Authentication. We recommend choosing a strong, unique password.</p>
+
+    <h2>6. Third-Party Services</h2>
+    <p>Shoein' relies on the following third-party services, each governed by its own privacy policy:</p>
+    <ul>
+      <li><strong>Google Firebase (Google LLC):</strong> authentication and secure cloud storage (Cloud Firestore). See the <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security</a> documentation and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+      <li><strong>OpenStreetMap Foundation:</strong> provides the map tiles displayed in the App. See the <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">OpenStreetMap Privacy Policy</a>.</li>
+      <li><strong>Apple / Google platform geocoding:</strong> your device's operating system converts saved addresses into map coordinates. This is governed by <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple's</a> or <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's</a> privacy policy, depending on your device.</li>
+    </ul>
+
+    <h2>7. Data Retention and Deletion</h2>
+    <p>We retain your account and records for as long as your account is active. You can delete individual clients and horses in the App at any time. To delete your entire account and its associated data, email <a href="mailto:hello@auaha.app">hello@auaha.app</a> with the subject "Account Deletion Request." We will process deletion requests within 30 days.</p>
+
+    <h2>8. Children</h2>
+    <p>The App is a business tool intended for use by adults (farriers and their staff). It is not directed to children, and we do not knowingly collect personal information from children under 13.</p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will note significant changes by updating the date at the top of this page. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>10. Contact Us</h2>
+    <p>If you have questions about this Privacy Policy or how we handle your data, contact us at <a href="mailto:hello@auaha.app">hello@auaha.app</a>.</p>
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2026 Auaha App Development LLC &nbsp;·&nbsp;
+      <a href="/">Auaha.app</a> &nbsp;·&nbsp;
+      <a href="/shoein">Shoein'</a> &nbsp;·&nbsp;
+      <a href="/shoein/terms">Terms of Service</a> &nbsp;·&nbsp;
+      <a href="/shoein/support">Support</a>
+    </p>
+  </footer>
+</body>
+</html>

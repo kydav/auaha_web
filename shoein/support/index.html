@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Shoein' by Auaha</title>
+  <meta name="description" content="Get help with Shoein', the client and horse management app for farriers. FAQs, troubleshooting, and contact information." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #1a1613; --surface: #221c17; --card: #2a231c;
+      --accent: #e08521; --accent2: #fbbf24; --text: #f7f4ef; --muted: #b9ab98; --border: #3a3129;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; border-bottom: 1px solid var(--border); background: rgba(26,22,19,0.9); }
+    .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 1.25rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+    main { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .chip { display: inline-block; background: rgba(224,133,33,0.12); color: var(--accent); border: 1px solid rgba(224,133,33,0.28); border-radius: 99px; padding: 0.25rem 0.9rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1rem; }
+    h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
+    .contact-card { background: var(--card); border: 1px solid rgba(224,133,33,0.3); border-radius: 12px; padding: 1.75rem 2rem; margin-bottom: 3rem; display: flex; align-items: center; gap: 1.25rem; }
+    .contact-card-icon { font-size: 2rem; flex-shrink: 0; }
+    .contact-card h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .contact-card p { color: var(--muted); font-size: 0.9rem; margin: 0; }
+    .contact-card a { color: var(--accent); font-weight: 600; }
+    h2.section { font-size: 1.3rem; font-weight: 800; margin: 2.5rem 0 1.25rem; color: var(--text); }
+    .faq { margin-bottom: 0.75rem; }
+    .faq-q { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; font-weight: 600; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; transition: border-color 0.2s; }
+    .faq-q:hover { border-color: var(--accent); }
+    .faq-q.open { border-color: var(--accent); border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+    .faq-q .chevron { transition: transform 0.2s; color: var(--muted); font-style: normal; }
+    .faq-q.open .chevron { transform: rotate(180deg); }
+    .faq-a { display: none; background: var(--surface); border: 1px solid var(--accent); border-top: none; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; padding: 1rem 1.25rem; color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+    .faq-a.open { display: block; }
+    .faq-a a { color: var(--accent); }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; text-align: center; color: var(--muted); font-size: 0.875rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">Auaha<span>.</span></a>
+    <div class="nav-links">
+      <a href="/shoein">← Shoein'</a>
+      <a href="/shoein/privacy">Privacy</a>
+      <a href="/shoein/terms">Terms</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="chip">Support</div>
+    <h1>Shoein' Support</h1>
+    <p class="subtitle">Help and answers for farriers using Shoein'.</p>
+
+    <div class="contact-card">
+      <div class="contact-card-icon">✉️</div>
+      <div>
+        <h2>Contact Us</h2>
+        <p>Can't find your answer below? Email us at <a href="mailto:hello@auaha.app">hello@auaha.app</a> and we'll get back to you as soon as we can.</p>
+      </div>
+    </div>
+
+    <h2 class="section">Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">Who is Shoein' for? <i class="chevron">▾</i></div>
+      <div class="faq-a">Shoein' is built for farriers who want their whole book in one place — clients, horses, addresses, and service history — instead of scattered across texts, notebooks, and memory.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">How do I create an account? <i class="chevron">▾</i></div>
+      <div class="faq-a">Open the app and tap "Create a free account." Enter your name, email, and a password, and you're in. Your book syncs securely to your account.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">How do I add a client and their horses? <i class="chevron">▾</i></div>
+      <div class="faq-a">Tap the add button on the Clients screen and enter the client's name, phone, email, address, and any notes. Open a client to add their horses — each with a breed, notes, and a last service date.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">How does the "due" badge work? <i class="chevron">▾</i></div>
+      <div class="faq-a">Each horse tracks its last service date. When a horse is approaching or past a typical cycle (about 42 days), Shoein' flags it with a badge so you can see at a glance who's coming up or overdue.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">How does the map work? <i class="chevron">▾</i></div>
+      <div class="faq-a">When you save a client's address, Shoein' looks up its location and drops a pin on the map, so you can see where your clients are and plan your day. Map imagery is provided by OpenStreetMap.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">Can I call, text, or navigate to a client? <i class="chevron">▾</i></div>
+      <div class="faq-a">Yes. Open a client's detail screen and tap to call or text their number, or tap Directions to open your phone's maps app with their address ready to go.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">Is my information private and secure? <i class="chevron">▾</i></div>
+      <div class="faq-a">Yes. Everything is sent over an encrypted <strong>HTTPS</strong> connection and stored securely with Google Firebase, encrypted in transit and at rest. Security rules ensure only your account can access your book. We don't show ads and we never sell your data. See our <a href="/shoein/privacy">Privacy Policy</a> for the full details.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">Is Shoein' free? <i class="chevron">▾</i></div>
+      <div class="faq-a">Yes — Shoein' is currently free to use. If paid features are added in the future, pricing will always be shown clearly before you buy.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">How do I delete my account? <i class="chevron">▾</i></div>
+      <div class="faq-a">You can delete individual clients and horses in the app at any time. To delete your entire account and its data, email us at <a href="mailto:hello@auaha.app">hello@auaha.app</a> with the subject "Account Deletion Request." We'll process it within 30 days.</div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-q" onclick="toggle(this)">The app is crashing or acting up — what should I do? <i class="chevron">▾</i></div>
+      <div class="faq-a">First, close and reopen the app. If that doesn't help, try uninstalling and reinstalling. Still stuck? Email <a href="mailto:hello@auaha.app">hello@auaha.app</a> with a description of the problem and your device and OS version. Screenshots or a screen recording help a lot.</div>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2026 Auaha App Development LLC &nbsp;·&nbsp;
+      <a href="/">Auaha.app</a> &nbsp;·&nbsp;
+      <a href="/shoein">Shoein'</a> &nbsp;·&nbsp;
+      <a href="/shoein/privacy">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="/shoein/terms">Terms of Service</a>
+    </p>
+  </footer>
+
+  <script>
+    function toggle(el) {
+      const answer = el.nextElementSibling;
+      el.classList.toggle('open');
+      answer.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
