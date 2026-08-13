@@ -30,20 +30,8 @@ const PLAY_SVG = `<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://
 
 const storeButtons = () => `
       <div class="store-buttons">
-        <a href="${data.appStoreUrl}" class="store-btn" rel="nofollow">
-          ${APPLE_SVG}
-          <span class="store-btn-text">
-            <span class="store-btn-sub">Download on the</span>
-            <span class="store-btn-name">App Store</span>
-          </span>
-        </a>
-        <a href="${data.playStoreUrl}" class="store-btn" rel="nofollow">
-          ${PLAY_SVG}
-          <span class="store-btn-text">
-            <span class="store-btn-sub">Get it on</span>
-            <span class="store-btn-name">Google Play</span>
-          </span>
-        </a>
+        <a href="${data.appStoreUrl}" class="store-badge" rel="nofollow"><img src="/icons/app-store-badge.svg" alt="Download on the App Store" style="height:48px;width:auto;display:block" /></a>
+        <a href="${data.playStoreUrl}" class="store-badge" rel="nofollow"><img src="/icons/google-play-badge.svg" alt="Get it on Google Play" style="height:48px;width:auto;display:block" /></a>
       </div>`;
 
 const STYLE = `
