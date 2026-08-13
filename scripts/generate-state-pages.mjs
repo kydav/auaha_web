@@ -12,6 +12,9 @@ import { fileURLToPath } from "node:url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 const data = JSON.parse(readFileSync(resolve(__dirname, "states.json"), "utf8"));
+const shoein = JSON.parse(
+  readFileSync(resolve(__dirname, "shoein-topics.json"), "utf8")
+);
 
 const SITE = data.site.replace(/\/$/, "");
 const TODAY = new Date().toISOString().slice(0, 10);
@@ -326,6 +329,14 @@ const urls = [
   { loc: `${SITE}/threshold/support`, pri: "0.4" },
   { loc: `${SITE}/threshold/privacy`, pri: "0.3" },
   { loc: `${SITE}/threshold/terms`, pri: "0.3" },
+  { loc: `${SITE}/shoein/`, pri: "0.8" },
+  ...shoein.topics.map((t) => ({
+    loc: `${SITE}/shoein/${t.slug}/`,
+    pri: "0.7",
+  })),
+  { loc: `${SITE}/shoein/support`, pri: "0.4" },
+  { loc: `${SITE}/shoein/privacy`, pri: "0.3" },
+  { loc: `${SITE}/shoein/terms`, pri: "0.3" },
   { loc: `${SITE}/functionalparenting/`, pri: "0.6" },
   { loc: `${SITE}/prior/`, pri: "0.6" },
   { loc: `${SITE}/proteingrid/`, pri: "0.6" },

@@ -1,0 +1,317 @@
+{
+  "site": "https://auaha.app",
+  "topics": [
+    {
+      "slug": "how-often-should-a-horse-be-shod-or-trimmed",
+      "metaTitle": "How Often Should a Horse Be Shod or Trimmed?",
+      "metaDescription": "Most horses need a farrier every 6 to 8 weeks. Here's how shoeing and trimming cycles work, what changes the timing, and how to know when a horse is due.",
+      "badge": "Farrier Guide",
+      "h1": "How often should a horse be",
+      "h1span": "shod or trimmed?",
+      "keyword": "horse shoeing and trimming schedule",
+      "intro": "As a rule of thumb, most horses need a farrier every six to eight weeks — but hoof growth, the season, and the horse's workload all move that number. Here's how to think about the cycle and stay ahead of it.",
+      "sections": [
+        {
+          "h2": "The typical cycle: 6 to 8 weeks",
+          "body": [
+            "A hoof grows roughly a quarter to three-eighths of an inch per month, so left unattended it steadily gets long, out of balance, and prone to chipping or flare. Trimming and resetting on a regular cycle keeps the hoof balanced and the horse comfortable.",
+            "Six to eight weeks is the standard window for both shod and barefoot horses. Shod horses need resets before the shoe shifts or the hoof outgrows it; barefoot horses need trims to keep the wall and sole in balance."
+          ]
+        },
+        {
+          "h2": "What moves the timing",
+          "checks": [
+            { "b": "Season.", "t": "Hooves grow faster in warm months and slower in winter, so a horse on an 8-week winter cycle may need 5 to 6 weeks in summer." },
+            { "b": "Workload and discipline.", "t": "Performance horses, and any horse on hard or abrasive ground, often need more frequent attention." },
+            { "b": "Hoof quality and conformation.", "t": "Cracks, flares, thin walls, or corrective work can shorten the cycle." },
+            { "b": "Barefoot vs shod.", "t": "Barefoot horses can sometimes stretch the cycle slightly if they're wearing evenly, but they still need regular trims." }
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "What happens if you wait too long between farrier visits?", "a": "Overgrown hooves throw the foot out of balance, which stresses tendons and joints and raises the risk of cracks, flares, and lost shoes. Staying on a regular cycle is far easier on the horse than catching up after a long gap." },
+        { "q": "Do barefoot horses still need a farrier?", "a": "Yes. Barefoot horses need regular trims — usually on the same 6-to-8-week rhythm — to keep the hoof balanced, even if they don't wear shoes." },
+        { "q": "How do I remember when each horse is due?", "a": "Track each horse's last service date and let it flag the next one. Shoein' keeps every horse's last-service date and shows a due badge when a cycle is coming up or overdue." }
+      ]
+    },
+    {
+      "slug": "farrier-scheduling-and-route-planning",
+      "metaTitle": "Farrier Scheduling & Route Planning: Never Miss a Cycle",
+      "metaDescription": "Keeping a full farrier book on schedule is its own skill. How to plan an efficient route, track who's due, and stop losing clients to missed cycles.",
+      "badge": "For Farriers",
+      "h1": "Scheduling and route planning that",
+      "h1span": "keeps your book full",
+      "keyword": "farrier scheduling and route planning",
+      "intro": "A full book only pays if you keep it on cycle. The farriers who stay busy aren't just good under a horse — they're organized about who's due, where they are, and how the day routes together.",
+      "sections": [
+        {
+          "h2": "Work the cycle, not the calendar",
+          "body": [
+            "The most reliable book runs on cycles, not one-off appointments. When you finish a horse, you already know it's due again in six to eight weeks — the trick is capturing that and surfacing it before the client has to call you.",
+            "Missed cycles are how farriers quietly lose clients: the reset slips a few weeks, the horse throws a shoe, and someone else gets the call. Tracking last-service dates turns that from memory into a system."
+          ]
+        },
+        {
+          "h2": "Plan the drive, not just the day",
+          "checks": [
+            { "b": "Group by area.", "t": "Cluster clients who are due in the same region so you're not crossing the county twice in a day." },
+            { "b": "See it on a map.", "t": "A pin for every client's address makes it obvious how to order the day and where the gaps are." },
+            { "b": "One tap to call, text, or navigate.", "t": "Confirming the next stop shouldn't mean digging through old texts for an address." }
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "How do farriers keep track of who's due?", "a": "The reliable approach is to record each horse's last service date and let a due indicator flag the next cycle, rather than relying on memory or scrolling through a text thread. Shoein' was built around exactly this — a due badge for every horse that's coming up or overdue." },
+        { "q": "How can I make my farrier route more efficient?", "a": "Group clients who are due around the same time by geography, and view their addresses on a map so you can order stops logically. Small routing improvements add up to real time and fuel savings over a week." },
+        { "q": "What's the best way to organize a farrier client list?", "a": "Keep every client's contact info, address, horses, and last-service date in one place you can reach from the truck. Shoein' keeps your whole book — clients, horses, and cycle tracking — in your pocket." }
+      ]
+    },
+    {
+      "slug": "how-to-start-a-farrier-business",
+      "metaTitle": "How to Start a Farrier Business",
+      "metaDescription": "Turning horseshoeing skill into a business: pricing, building a client base, the gear and truck setup, and keeping your book organized from day one.",
+      "badge": "For Farriers",
+      "h1": "How to start a",
+      "h1span": "farrier business",
+      "keyword": "how to start a farrier business",
+      "intro": "Being good under a horse is the craft; running a farrier business is a second skill. Here's what it takes to turn shoeing into a steady book of clients — and to keep that book from becoming a mess of texts and sticky notes.",
+      "sections": [
+        {
+          "h2": "The foundation",
+          "checks": [
+            { "b": "Get trained and confident.", "t": "Most farriers come up through a horseshoeing school and an apprenticeship under an experienced farrier before going out on their own." },
+            { "b": "Set up the truck.", "t": "A reliable rig, a full tool kit, an anvil, and a forge if you hot-shoe — your shop travels with you." },
+            { "b": "Sort the business basics.", "t": "Register your business, sort insurance, and set clear pricing before you take your first paying client." }
+          ]
+        },
+        {
+          "h2": "Build and keep a client base",
+          "body": [
+            "Early clients come from barns, vets, trainers, and word of mouth — do good, reliable work and referrals follow. The harder part is retention: keeping every client on cycle so your calendar fills itself.",
+            "From day one, keep an organized book: who your clients are, their horses, where they are, and when each is due. The farriers who stay booked are the ones clients never have to chase."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "Is a farrier business profitable?", "a": "It can be a solid living. Income depends on your rates, how many horses you can do well in a day, and how full you keep your schedule — which is why staying on cycle and organized matters as much as the shoeing itself." },
+        { "q": "How do new farriers find clients?", "a": "Referrals from barns, trainers, and vets are the main source, along with word of mouth from happy clients. Reliability and keeping horses on a consistent cycle is what turns a first visit into a standing client." },
+        { "q": "What's the easiest way to stay organized as a new farrier?", "a": "Start with a single system for your whole book instead of texts and notebooks. Shoein' keeps clients, horses, addresses, and last-service dates in one place from your very first client." }
+      ]
+    },
+    {
+      "slug": "how-to-become-a-farrier",
+      "metaTitle": "How to Become a Farrier: Schooling & Apprenticeship",
+      "metaDescription": "The path to becoming a farrier: horseshoeing schools, apprenticeships, certification, and what to expect. A practical overview for anyone getting started.",
+      "badge": "Getting Started",
+      "h1": "How to become a",
+      "h1span": "farrier",
+      "keyword": "how to become a farrier",
+      "intro": "There's no single required license to shoe horses in the United States, but the farriers who last are well-trained. Most come up through a mix of formal schooling, apprenticeship, and — often — voluntary certification.",
+      "sections": [
+        {
+          "h2": "The usual path",
+          "checks": [
+            { "b": "Horseshoeing school.", "t": "Programs run from a few weeks to nearly a year, covering anatomy, trimming, forging, and shoeing under supervision." },
+            { "b": "Apprenticeship.", "t": "Working under an established farrier is where most of the real learning happens — reading feet, handling horses, and building speed." },
+            { "b": "Certification (optional but valued).", "t": "In the U.S., groups like the American Farrier's Association offer voluntary certifications that signal skill to clients and barns." }
+          ]
+        },
+        {
+          "h2": "What the work actually demands",
+          "body": [
+            "Farriery is physical, skilled trade work: you're on your feet, bent under horses, in all weather, reading each foot and shaping to it. Good horsemanship matters as much as forge skill — you're working with a thousand-pound animal.",
+            "It's also a small business. The moment you go out on your own, you're scheduling, pricing, driving routes, and keeping a book of clients — so it pays to get organized early."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "Do you need a license to be a farrier in the US?", "a": "There's no federal or state license required to shoe horses in the United States. Certification through organizations like the American Farrier's Association is voluntary but widely respected. (Note: other countries such as the UK do legally regulate farriery.)" },
+        { "q": "How long does it take to become a farrier?", "a": "Formal schooling ranges from a few weeks to close to a year, but building real competence usually takes an apprenticeship and a year or more of hands-on work beyond school." },
+        { "q": "Is farriery hard on your body?", "a": "It's demanding, physical work — plan for good technique, fitness, and gear to protect your back and joints over a long career." }
+      ]
+    },
+    {
+      "slug": "how-much-do-farriers-charge",
+      "metaTitle": "How Much Do Farriers Charge? A Pricing Guide",
+      "metaDescription": "What farriers charge for a trim, a full set of shoes, and specialty work — the factors that move pricing, and how to set rates that keep you profitable.",
+      "badge": "Farrier Guide",
+      "h1": "How much do",
+      "h1span": "farriers charge?",
+      "keyword": "how much do farriers charge",
+      "intro": "Farrier pricing varies widely by region, specialty, and the horse in front of you. These ballpark ranges give a sense of the market — but your local rates and your own costs should set your numbers.",
+      "sections": [
+        {
+          "h2": "Ballpark ranges",
+          "checks": [
+            { "b": "Trim only.", "t": "A straightforward barefoot trim commonly runs in the ballpark of $30 to $50." },
+            { "b": "Full set of shoes.", "t": "Four new shoes often lands somewhere around $120 to $200+, depending on the region and the work involved." },
+            { "b": "Specialty and therapeutic work.", "t": "Corrective shoeing, bar shoes, glue-ons, and pads cost more — reflecting the skill, materials, and time." }
+          ]
+        },
+        {
+          "h2": "What moves your price",
+          "body": [
+            "Region and cost of living, the horse's behavior and hoof condition, travel distance, and your own experience all factor in. Therapeutic and corrective work commands more because it takes more skill and time.",
+            "Whatever you charge, know your costs — fuel, materials, insurance, and your time — and price so a full day is actually profitable. Keeping clients on cycle is what turns a fair rate into a steady income."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "Why do farrier prices vary so much?", "a": "Rates depend on your region, the type of work (a simple trim vs. corrective shoeing), travel, materials, and experience. Prices in this guide are general ballparks — always check what's typical in your area." },
+        { "q": "Should farriers charge a travel fee?", "a": "Many do, especially for distant or single-horse stops. Grouping clients by area and routing efficiently is another way to protect your margins without raising every price." },
+        { "q": "How do farriers keep pricing and clients straight?", "a": "Keeping notes on each client and horse — including what you did and when — makes pricing and follow-ups consistent. Shoein' stores your clients, horses, and service history in one place." }
+      ]
+    },
+    {
+      "slug": "hot-shoeing-vs-cold-shoeing",
+      "metaTitle": "Hot Shoeing vs Cold Shoeing: What's the Difference?",
+      "metaDescription": "Hot shoeing vs cold shoeing explained — how each works, the pros and cons, and when a farrier chooses one over the other.",
+      "badge": "Horseshoeing 101",
+      "h1": "Hot shoeing vs",
+      "h1span": "cold shoeing",
+      "keyword": "hot shoeing vs cold shoeing",
+      "intro": "Both hot and cold shoeing get a shoe onto a hoof — the difference is whether the farrier heats the shoe in a forge to shape and fit it. Each has its place.",
+      "sections": [
+        {
+          "h2": "Hot shoeing",
+          "body": [
+            "In hot shoeing, the farrier heats the shoe in a forge, shapes it to the individual foot on the anvil, and briefly sets the hot shoe against the trimmed hoof. That searing shows exactly where the shoe contacts the foot, so the farrier can fit it precisely.",
+            "The upside is a custom, close fit and easier shaping; the trade-off is that it needs a forge and more time on site."
+          ]
+        },
+        {
+          "h2": "Cold shoeing",
+          "body": [
+            "Cold shoeing shapes the shoe without heat, using the anvil and hammer to adjust a keg shoe to the foot. It's faster and more portable, with no forge required.",
+            "For many horses with good, regular feet, cold shoeing is perfectly effective. Complex or corrective fits are where hot shoeing's precision tends to win out."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "Is hot shoeing better than cold shoeing?", "a": "Neither is universally 'better.' Hot shoeing allows a more precise, custom fit and easier shaping; cold shoeing is faster and more portable. A skilled farrier chooses based on the horse and the situation." },
+        { "q": "Does hot shoeing hurt the horse?", "a": "No. The hoof wall is like a thick fingernail with no feeling at the surface, and the hot shoe is only held against the trimmed wall briefly. Done correctly, the horse feels nothing." },
+        { "q": "Do all farriers hot shoe?", "a": "No — it requires a forge and setup. Many farriers cold shoe routinely and hot shoe when a job calls for a precise or corrective fit." }
+      ]
+    },
+    {
+      "slug": "barefoot-trimming-vs-shoeing",
+      "metaTitle": "Barefoot Trimming vs Shoeing: Which Is Right?",
+      "metaDescription": "Should a horse be barefoot or shod? The case for each, what it depends on, and why regular farrier care matters either way.",
+      "badge": "Horseshoeing 101",
+      "h1": "Barefoot trimming vs",
+      "h1span": "shoeing",
+      "keyword": "barefoot trimming vs shoeing",
+      "intro": "Not every horse needs shoes. Whether a horse does best barefoot or shod depends on its workload, terrain, hoof quality, and health — and either way, it needs a farrier on a regular cycle.",
+      "sections": [
+        {
+          "h2": "When barefoot works",
+          "body": [
+            "Many horses live happily barefoot, especially those with strong, healthy hooves in light-to-moderate work on forgiving ground. Going barefoot lets the hoof flex and wear naturally, and it's simpler and cheaper — but it still requires regular, skilled trims to stay balanced.",
+            "A good barefoot trim is not 'no maintenance' — it's the same cycle, just without the shoe."
+          ]
+        },
+        {
+          "h2": "When shoes earn their keep",
+          "checks": [
+            { "b": "Protection.", "t": "Hard, rocky, or abrasive terrain and heavy work can wear a hoof faster than it grows." },
+            { "b": "Traction.", "t": "Certain disciplines and conditions call for the grip shoes provide." },
+            { "b": "Therapeutic support.", "t": "Corrective and therapeutic shoeing can support horses with specific hoof or limb issues, on a vet's and farrier's guidance." }
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "Is it better for a horse to be barefoot or shod?", "a": "It depends on the individual horse — its work, terrain, hoof quality, and any health needs. Many horses do well barefoot; others need shoes for protection, traction, or therapeutic support. Your farrier (and vet, when relevant) can advise for a specific horse." },
+        { "q": "Do barefoot horses need a farrier?", "a": "Yes — barefoot horses need regular trims on roughly the same 6-to-8-week cycle to keep the hoof balanced and healthy." },
+        { "q": "Can a horse transition from shod to barefoot?", "a": "Often, yes, with a planned transition and good trimming — but it should be done thoughtfully with your farrier, since it depends on the horse's feet and workload." }
+      ]
+    },
+    {
+      "slug": "signs-your-horse-needs-a-farrier",
+      "metaTitle": "Signs Your Horse Needs the Farrier",
+      "metaDescription": "How to tell when a horse is due or overdue for the farrier — from long or chipped hooves to a loose shoe or changes in the way the horse moves.",
+      "badge": "For Horse Owners",
+      "h1": "Signs your horse needs",
+      "h1span": "the farrier",
+      "keyword": "signs your horse needs a farrier",
+      "intro": "The cleanest way to stay ahead is a regular cycle, but it helps to recognize the signs a horse is due or overdue — sometimes life gets busy and the feet tell you first.",
+      "sections": [
+        {
+          "h2": "What to look for",
+          "checks": [
+            { "b": "Long or flared hooves.", "t": "Walls that look long, splayed, or are chipping and cracking are a clear sign it's time." },
+            { "b": "A loose, shifted, or lost shoe.", "t": "A clicking shoe, a risen clinch, or a sprung shoe needs a farrier promptly." },
+            { "b": "Changes in movement.", "t": "Stumbling, shortened stride, or tenderness can trace back to overgrown or unbalanced feet." },
+            { "b": "It's simply been 6 to 8 weeks.", "t": "The most reliable sign is the calendar — most horses are due within that window." }
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "How do I know if my horse is overdue for the farrier?", "a": "Long or flared walls, chips and cracks, a loose or lost shoe, and changes in how the horse moves are common signs. If it's been more than 6 to 8 weeks, it's likely due regardless." },
+        { "q": "Is a lost shoe an emergency?", "a": "It's usually not a crisis, but it should be handled promptly — a horse can bruise or chip the exposed foot, and a partly attached shoe can injure the leg. Call your farrier soon." },
+        { "q": "How can owners and farriers stay on schedule?", "a": "Regular cycles beat waiting for symptoms. Farriers using Shoein' track each horse's last-service date and get a due badge when the next cycle is coming up." }
+      ]
+    },
+    {
+      "slug": "essential-farrier-tools",
+      "metaTitle": "Essential Farrier Tools: The Working Kit",
+      "metaDescription": "The core tools every farrier carries — from rasp and nippers to clinchers, anvil, and forge — and what each one does in a trim or shoeing.",
+      "badge": "For Farriers",
+      "h1": "The essential",
+      "h1span": "farrier tool kit",
+      "keyword": "essential farrier tools",
+      "intro": "A farrier's shop travels in the truck. Here are the core tools behind a trim and a shoeing, and what each one is for.",
+      "sections": [
+        {
+          "h2": "The trimming and shoeing kit",
+          "checks": [
+            { "b": "Hoof nippers.", "t": "Trim excess hoof wall to length." },
+            { "b": "Hoof knife.", "t": "Clean and pare the sole, frog, and bars." },
+            { "b": "Rasp.", "t": "Level and finish the trim, and smooth the wall." },
+            { "b": "Pull-offs.", "t": "Remove old shoes." },
+            { "b": "Driving hammer & clinchers.", "t": "Drive and set the nails, then clinch them to hold the shoe." },
+            { "b": "Hoof stand.", "t": "Support the foot while you finish and clinch." }
+          ]
+        },
+        {
+          "h2": "For shaping and hot work",
+          "body": [
+            "An anvil and shaping hammer let a farrier adjust shoes to the foot. A forge is added for hot shoeing — heating shoes to shape and fit them precisely.",
+            "Round it out with protective gear like an apron or chaps, plus a supply of shoes and nails in the sizes you use most."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "What tools does a farrier need to start?", "a": "At minimum: nippers, a hoof knife, a rasp, pull-offs, a driving hammer, clinchers, and a hoof stand, plus shoes and nails. An anvil and forge come in for shaping and hot shoeing." },
+        { "q": "Do farriers need a forge?", "a": "Only for hot shoeing. Many farriers cold shoe with an anvil and hammer, and add a forge when they want to shape or fit shoes hot." },
+        { "q": "How do farriers keep track of their gear and clients?", "a": "The tools live in the truck; the book lives on the phone. Shoein' keeps your clients, horses, and schedule organized so the business side is as tidy as your kit." }
+      ]
+    },
+    {
+      "slug": "types-of-horseshoes",
+      "metaTitle": "Types of Horseshoes and What They're For",
+      "metaDescription": "A plain-English guide to common horseshoe types — keg, rim, bar, aluminum, and therapeutic shoes — and when a farrier reaches for each.",
+      "badge": "Horseshoeing 101",
+      "h1": "Types of horseshoes and",
+      "h1span": "what they're for",
+      "keyword": "types of horseshoes",
+      "intro": "Not all horseshoes are the same. The right shoe depends on the horse's job, footing, and any hoof or soundness needs. Here are the common types in plain terms.",
+      "sections": [
+        {
+          "h2": "Common shoe types",
+          "checks": [
+            { "b": "Keg (standard) shoes.", "t": "The everyday, ready-made shoe that covers most horses in normal work." },
+            { "b": "Rim shoes.", "t": "A grooved shoe that adds traction for certain sports." },
+            { "b": "Bar shoes.", "t": "Egg-bar and heart-bar shoes add support behind the foot for stability or therapeutic needs." },
+            { "b": "Aluminum shoes.", "t": "Lighter shoes often used in racing and performance." },
+            { "b": "Therapeutic & wedge shoes.", "t": "Used with pads or angles to support specific hoof or limb conditions, on veterinary guidance." }
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "How does a farrier choose the right horseshoe?", "a": "It comes down to the horse's discipline, the footing it works on, its hoof conformation, and any soundness or therapeutic needs — often in coordination with a vet for corrective cases." },
+        { "q": "What's the most common type of horseshoe?", "a": "The standard keg shoe covers most horses in ordinary work. Specialty shoes come in for traction, performance, or therapeutic support." },
+        { "q": "Why would a horse need special shoes?", "a": "For extra traction, lighter weight in performance, or support and correction for a hoof or limb issue. A farrier matches the shoe to the horse's needs." }
+      ]
+    }
+  ]
+}
