@@ -70,6 +70,14 @@ const STYLE = `
     footer{border-top:1px solid var(--border);padding:2rem 1.5rem;text-align:center;color:var(--muted);font-size:.875rem}
     footer a{color:var(--accent);text-decoration:none}
     footer a:hover{text-decoration:underline}
+    .table-wrap{overflow-x:auto;margin-top:1rem}
+    table.compare{width:100%;border-collapse:collapse;font-size:.92rem;min-width:460px}
+    table.compare th,table.compare td{border:1px solid var(--border);padding:.7rem .9rem;text-align:left;vertical-align:top}
+    table.compare thead th{background:rgba(224,133,33,.12);color:var(--text);font-weight:700}
+    table.compare .rowhead{color:var(--text);font-weight:600;background:rgba(255,255,255,.02)}
+    table.compare td{color:var(--muted)}
+    table.compare td:nth-child(2){color:var(--text);font-weight:600}
+    .compare-note{margin-top:1rem;font-size:.82rem}
     @media(max-width:600px){.nav-links{display:none}}`;
 
 function sectionHtml(sec) {
@@ -90,6 +98,39 @@ ${items}
   return `    <section class="block">
       <h2>${esc(sec.h2)}</h2>
 ${paras}
+    </section>`;
+}
+
+function comparisonHtml(topic) {
+  if (!topic.comparison) return "";
+  const c = topic.comparison;
+  const head = c.headers
+    .map((h, i) => `<th${i === 0 ? ' class="rowhead"' : ""}>${esc(h)}</th>`)
+    .join("");
+  const rows = c.rows
+    .map(
+      (r) =>
+        `<tr>${r
+          .map((cell, i) =>
+            i === 0
+              ? `<th class="rowhead">${esc(cell)}</th>`
+              : `<td>${esc(cell)}</td>`
+          )
+          .join("")}</tr>`
+    )
+    .join("\n          ");
+  return `
+    <section class="block">
+      <h2>${esc(c.h2 || "How Shoein' compares")}</h2>
+      <div class="table-wrap">
+        <table class="compare">
+          <thead><tr>${head}</tr></thead>
+          <tbody>
+          ${rows}
+          </tbody>
+        </table>
+      </div>
+      ${c.note ? `<p class="compare-note">${esc(c.note)}</p>` : ""}
     </section>`;
 }
 
@@ -216,6 +257,7 @@ ${jsonLd(topic, url)}
       <p class="lede">${esc(topic.intro)}</p>
       <a class="hero-cta" href="/shoein/">Meet Shoein' — the farrier's app &nbsp;→</a>
     </section>
+${comparisonHtml(topic)}
 
 ${sections}
 

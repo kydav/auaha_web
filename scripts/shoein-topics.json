@@ -312,6 +312,227 @@
         { "q": "What's the most common type of horseshoe?", "a": "The standard keg shoe covers most horses in ordinary work. Specialty shoes come in for traction, performance, or therapeutic support." },
         { "q": "Why would a horse need special shoes?", "a": "For extra traction, lighter weight in performance, or support and correction for a hoof or limb issue. A farrier matches the shoe to the horse's needs." }
       ]
+    },
+    {
+      "slug": "best-farrier-app",
+      "metaTitle": "Best Farrier App in 2026: How to Choose",
+      "metaDescription": "The best farrier app is the one you'll actually use from the truck. Here's how to choose — the criteria that matter, and where Shoein' fits for a simple, free book.",
+      "badge": "Farrier Apps",
+      "h1": "How to choose the",
+      "h1span": "best farrier app",
+      "keyword": "best farrier app",
+      "intro": "The best farrier app is the one you'll actually keep current between horses. Here's an honest way to choose — the criteria that matter for a working farrier, and where Shoein' fits.",
+      "comparison": {
+        "h2": "What to look for in a farrier app",
+        "headers": ["What to look for", "Shoein'", "Heavier all-in-one apps"],
+        "rows": [
+          ["Fast to use between horses", "Built to be simple", "Often feature-dense"],
+          ["Clients and horses in one book", "Yes — the core of the app", "Yes"],
+          ["Never-miss-a-cycle reminders", "A due badge on every horse", "Usually yes"],
+          ["A map of your route", "Every address drops a pin", "Sometimes"],
+          ["One-tap call, text, directions", "Yes, from each card", "Varies"],
+          ["Price", "Free to start", "Often $30–40/month"],
+          ["Invoicing and accounting", "Not the focus yet", "Usually included"]
+        ],
+        "note": "Comparison based on publicly available information; features and pricing change, so check each app's current details."
+      },
+      "sections": [
+        {
+          "h2": "Pick for how you actually work",
+          "body": [
+            "If you want an all-in-one back office — invoicing, accounting sync, route AI — the heavier platforms deliver that, at a monthly cost and a bit of a learning curve. If what you really need is your book organized (every client and horse, who's due next, and how to reach them), a simple, fast app wins, because you'll actually keep it up to date.",
+            "That's the gap Shoein' is built for: the core farrier book, done exceptionally well, free to start. It's a newer app launching soon, focused on being the fastest way to keep your whole book in your pocket rather than the most feature-stuffed."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "What is the best farrier app?", "a": "It depends on how you work. For an all-in-one back office with invoicing, accounting, and route AI, the heavier paid platforms fit. For a simple, fast book of clients, horses, and cycle reminders you'll actually keep current, Shoein' is built for exactly that — and it's free to start." },
+        { "q": "What should I look for in a farrier app?", "a": "Speed of use from the truck, clients and horses in one place, reminders so you never miss a cycle, a map of your addresses, one-tap contact, and a price that fits your book. Match the tool to how you actually work rather than to the longest feature list." },
+        { "q": "Is there a simple farrier app that isn't overkill?", "a": "Yes — Shoein' is deliberately focused on the core book (clients, horses, cycle tracking, map, one-tap contact) instead of a sprawling back office, so it stays fast to use and free to start." }
+      ]
+    },
+    {
+      "slug": "best-free-farrier-app",
+      "metaTitle": "Best Free Farrier App",
+      "metaDescription": "Looking for a free farrier app to keep your clients, horses, and shoeing cycles organized? Here's what to expect from free options, and why Shoein' is free to start.",
+      "badge": "Farrier Apps",
+      "h1": "The best",
+      "h1span": "free farrier app",
+      "keyword": "best free farrier app",
+      "intro": "You shouldn't have to pay a monthly subscription just to keep your book straight. Here's what to look for in a free farrier app — and how Shoein' keeps the core free to start.",
+      "comparison": {
+        "h2": "Free vs paid farrier apps",
+        "headers": ["", "Shoein'", "Typical paid apps"],
+        "rows": [
+          ["Cost to start", "Free", "$30–40/month"],
+          ["Clients and horses", "Included", "Included"],
+          ["Cycle reminders", "Included (due badge)", "Usually included"],
+          ["Map of your route", "Included", "Sometimes"],
+          ["Invoicing / accounting", "Not yet", "Usually included"],
+          ["Ads", "None", "Varies"]
+        ],
+        "note": "Comparison based on publicly available information; check current pricing and features before deciding."
+      },
+      "sections": [
+        {
+          "h2": "What 'free' should get you",
+          "body": [
+            "A free farrier app should still cover the essentials: every client and horse in one place, reminders so no one slips past their cycle, and a way to reach clients and navigate your day. The paid platforms add invoicing, accounting sync, and route AI — useful if you need a full back office, but not required just to stay organized.",
+            "Shoein' is built to keep that core free to start, with no ads and your book kept private. It's launching soon for iOS and Android."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "What is the best free farrier app?", "a": "If you want something free to start that keeps clients, horses, and shoeing-cycle reminders in one place — with a map and one-tap contact — Shoein' is built for exactly that. Heavier paid platforms exist if you also need invoicing and accounting." },
+        { "q": "Are free farrier apps any good?", "a": "A good free app covers the core: your client and horse book, cycle reminders, and getting around your day. You mainly pay for extras like invoicing, accounting integration, and route optimization." },
+        { "q": "Does Shoein' cost money?", "a": "Shoein' is free to start — the core book of clients, horses, cycle tracking, and map is what you get without a subscription." }
+      ]
+    },
+    {
+      "slug": "farrier-client-management-app",
+      "metaTitle": "Best Farrier Client & Horse Management App",
+      "metaDescription": "Stop digging through texts and notebooks. A farrier client management app keeps every client, horse, address, and last-service date in one place — here's how Shoein' does it.",
+      "badge": "Farrier Apps",
+      "h1": "A farrier client &",
+      "h1span": "horse management app",
+      "keyword": "farrier client management app",
+      "intro": "Your book is your business. A client management app keeps every client, their horses, their address, and when each is due in one place you can reach from the truck — instead of scattered across texts, notebooks, and memory.",
+      "comparison": {
+        "h2": "What good client management looks like",
+        "headers": ["Capability", "Shoein'", "Texts & notebooks"],
+        "rows": [
+          ["Find any client in seconds", "Searchable book", "Scrolling and guessing"],
+          ["Every horse under its owner", "Yes, with notes", "Scattered"],
+          ["Know who's due", "Due badge per horse", "From memory"],
+          ["Addresses on a map", "A pin for each client", "Copy-paste each time"],
+          ["Call, text, directions", "One tap from the card", "Dig for the number"]
+        ],
+        "note": "For a specific horse, always rely on your own judgment and your veterinarian."
+      },
+      "sections": [
+        {
+          "h2": "Why it matters",
+          "body": [
+            "The farriers who stay booked aren't just good under a horse — they're organized. When your whole book is in one place, you stop losing clients to missed cycles, you route your day efficiently, and you look professional every time you follow up.",
+            "Shoein' is built around exactly this: clients and horses together, last-service tracking with a due badge, addresses on a map, and one-tap contact — the farrier's book, in your pocket."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "How do farriers keep track of clients and horses?", "a": "The reliable approach is one system for the whole book — clients, their horses, addresses, and last-service dates — instead of texts and notebooks. Shoein' keeps all of it in one searchable place with cycle reminders." },
+        { "q": "What's the best app for managing a farrier client list?", "a": "Look for searchable client and horse records, cycle reminders, a map of addresses, and one-tap contact. Shoein' is built specifically for a farrier's client and horse book." },
+        { "q": "How do I stop losing clients to missed cycles?", "a": "Track each horse's last service date and let the app flag the next one. Shoein' shows a due badge on every horse that's coming up or overdue, so no one slips through." }
+      ]
+    },
+    {
+      "slug": "best-farrier-app-for-solo-farriers",
+      "metaTitle": "Best Farrier App for Solo Farriers",
+      "metaDescription": "Solo farriers don't need enterprise software — they need their book organized and fast to use. Here's what matters for a one-person operation, and where Shoein' fits.",
+      "badge": "Farrier Apps",
+      "h1": "The best farrier app for",
+      "h1span": "solo farriers",
+      "keyword": "best farrier app for solo farriers",
+      "intro": "When you're the whole operation, the last thing you need is heavy software to babysit. A solo farrier's app should keep your book straight and get out of the way — here's what to look for.",
+      "comparison": {
+        "h2": "What a solo farrier actually needs",
+        "headers": ["Need", "Shoein'", "Heavier platforms"],
+        "rows": [
+          ["Quick to use, one-handed", "Yes", "Often more complex"],
+          ["Your whole book in one place", "Yes", "Yes"],
+          ["Cycle reminders", "Due badge", "Usually yes"],
+          ["Route/map for the day", "Yes", "Sometimes"],
+          ["No monthly overhead", "Free to start", "$30–40/month"],
+          ["Team features you won't use", "Skipped on purpose", "Often included"]
+        ],
+        "note": "Comparison based on publicly available information; verify current details for any app."
+      },
+      "sections": [
+        {
+          "h2": "Simple wins for a one-person shop",
+          "body": [
+            "Solo farriers live and die by staying on cycle and running an efficient route — not by back-office features built for multi-person shops. An app that's fast and focused means you'll actually keep it current, which is the whole point.",
+            "Shoein' is built for the solo farrier: your clients and horses, who's due, and your route — nothing you have to manage, and free to start."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "What's the best farrier app for a one-person business?", "a": "One that keeps your book organized and is fast to use between horses, without back-office overhead you don't need. Shoein' is built for exactly that — clients, horses, cycle reminders, and a map — free to start." },
+        { "q": "Do solo farriers need farrier software?", "a": "You don't need enterprise software, but a simple app beats texts and notebooks for staying on cycle and routing your day. The key is picking something you'll actually keep up to date." },
+        { "q": "Is Shoein' good for solo farriers?", "a": "Yes — it's designed around a single farrier's book: clients, horses, last-service tracking, and a route map, kept simple and free to start." }
+      ]
+    },
+    {
+      "slug": "best-farrier-app-for-iphone",
+      "metaTitle": "Best Farrier App for iPhone (and Android)",
+      "metaDescription": "Looking for a farrier app for iPhone or Android? Here's what to look for in a mobile-first farrier app, and how Shoein' keeps your whole book in your pocket.",
+      "badge": "Farrier Apps",
+      "h1": "The best farrier app for",
+      "h1span": "iPhone & Android",
+      "keyword": "best farrier app for iphone",
+      "intro": "A farrier app lives in your pocket, so how it works on the phone is everything. Here's what to look for in a mobile-first farrier app for iPhone or Android.",
+      "comparison": {
+        "h2": "What matters on the phone",
+        "headers": ["On mobile", "Shoein'", "What to check"],
+        "rows": [
+          ["Fast between horses", "Built for it", "Try it one-handed"],
+          ["iPhone and Android", "Both (launching)", "Confirm your platform"],
+          ["Map + directions", "Built in", "Native maps handoff"],
+          ["Call / text in a tap", "From each card", "No copy-paste"],
+          ["Your book synced", "Securely to your account", "Where data is stored"]
+        ],
+        "note": "Comparison based on publicly available information; verify current platform support."
+      },
+      "sections": [
+        {
+          "h2": "Mobile-first, not an afterthought",
+          "body": [
+            "The best farrier apps are designed for the phone first — quick to open, quick to use with a hand full of tools, and reliable out in the field. A clunky mobile experience is one you'll stop using.",
+            "Shoein' is built mobile-first for iPhone and Android: your clients and horses, cycle reminders, and a map of your route, all a tap away. It's launching soon on both stores."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "What is the best farrier app for iPhone?", "a": "Look for a mobile-first app that's fast to use in the field, keeps your book in one place, and offers a map with one-tap contact. Shoein' is built for iPhone and Android and is free to start." },
+        { "q": "Is there a farrier app for Android?", "a": "Yes — Shoein' is launching for both iPhone and Android, with the same book of clients, horses, cycle tracking, and route map on each." },
+        { "q": "Does a farrier app work in the field?", "a": "The best ones are built to be quick and reliable on the phone. Shoein' keeps your whole book on your device so it's ready when you're out on a route." }
+      ]
+    },
+    {
+      "slug": "shoein-vs-farrieriq",
+      "metaTitle": "Shoein' vs FarrierIQ: An Honest Comparison",
+      "metaDescription": "Shoein' vs FarrierIQ — a data-heavy paid platform versus a simple, free-to-start farrier book. Here's the honest contrast to help you choose.",
+      "badge": "Comparison",
+      "h1": "Shoein' vs",
+      "h1span": "FarrierIQ",
+      "keyword": "shoein vs farrieriq",
+      "intro": "FarrierIQ is a feature-heavy, paid farrier platform. Shoein' takes the opposite approach — a simple, free-to-start book built for the truck. Neither is 'better' for everyone; here's the honest contrast so you can pick the right fit.",
+      "comparison": {
+        "h2": "Side by side",
+        "headers": ["", "Shoein'", "FarrierIQ"],
+        "rows": [
+          ["Best for", "A simple, organized book", "Data-heavy all-in-one ops"],
+          ["Price", "Free to start", "$39/month (per their site)"],
+          ["Focus", "Clients, horses, cycle reminders, map", "Route AI, invoicing, QuickBooks, hoof data"],
+          ["Learning curve", "Minimal", "More to set up"],
+          ["Invoicing & accounting", "Not the focus yet", "Included"],
+          ["Availability", "iPhone & Android (launching)", "iPhone & Android"]
+        ],
+        "note": "Based on FarrierIQ's publicly listed information as of 2026; verify current pricing and features on their site."
+      },
+      "sections": [
+        {
+          "h2": "How to choose",
+          "body": [
+            "If you want a full back office — automated invoicing, accounting sync, and AI route optimization — and you're happy to pay monthly and spend time setting it up, a heavier platform like FarrierIQ is aimed at that.",
+            "If what you actually need is your book organized and fast to use — every client and horse, who's due next, and how to reach them — Shoein' is built for that, and it's free to start. Pick based on whether you want an all-in-one system or a simple, focused book you'll keep current."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "Is Shoein' or FarrierIQ better?", "a": "Neither is universally better. FarrierIQ is a paid, feature-heavy platform for farriers who want an all-in-one back office. Shoein' is a simple, free-to-start book focused on clients, horses, cycle reminders, and your route. Choose based on how much you want to manage." },
+        { "q": "How much does FarrierIQ cost?", "a": "FarrierIQ lists a paid plan around $39/month on its site (verify current pricing there). Shoein' is free to start." },
+        { "q": "What's a simpler alternative to FarrierIQ?", "a": "If FarrierIQ feels like more than you need, Shoein' focuses on the core farrier book — clients, horses, cycle tracking, map, and one-tap contact — kept simple and free to start." }
+      ]
     }
   ]
 }
