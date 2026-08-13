@@ -15,6 +15,9 @@ const data = JSON.parse(readFileSync(resolve(__dirname, "states.json"), "utf8"))
 const shoein = JSON.parse(
   readFileSync(resolve(__dirname, "shoein-topics.json"), "utf8")
 );
+const agency = JSON.parse(
+  readFileSync(resolve(__dirname, "agency-topics.json"), "utf8")
+);
 
 const SITE = data.site.replace(/\/$/, "");
 const TODAY = new Date().toISOString().slice(0, 10);
@@ -304,6 +307,11 @@ for (const state of data.states) {
 // ── sitemap.xml ─────────────────────────────────────────────────────────────
 const urls = [
   { loc: `${SITE}/`, pri: "1.0" },
+  { loc: `${SITE}/app-development/`, pri: "0.9" },
+  ...agency.topics.map((t) => ({
+    loc: `${SITE}/app-development/${t.slug}/`,
+    pri: "0.7",
+  })),
   { loc: `${SITE}/threshold/`, pri: "0.9" },
   { loc: `${SITE}/threshold/free-tools/`, pri: "0.9" },
   { loc: `${SITE}/threshold/can-i-show-this-house/`, pri: "0.8" },

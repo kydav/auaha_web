@@ -1,0 +1,283 @@
+{
+  "site": "https://auaha.app",
+  "business": {
+    "name": "Auaha App Development",
+    "legalName": "Auaha App Development LLC",
+    "email": "hello@auaha.app",
+    "region": "Utah",
+    "url": "https://auaha.app/"
+  },
+  "hub": {
+    "metaTitle": "App Development Services",
+    "metaDescription": "Auaha App Development is a Utah-based studio building cross-platform iOS and Android apps for startups and small businesses — from idea to launch.",
+    "badge": "App Development",
+    "h1": "App development, from",
+    "h1span": "idea to launch",
+    "intro": "Auaha is a Utah-based app development studio. We build cross-platform mobile apps — one codebase for iOS and Android — for startups, small businesses, and entrepreneurs who want a technical partner they can actually talk to."
+  },
+  "topics": [
+    {
+      "slug": "utah-app-development-company",
+      "metaTitle": "Utah App Development Company",
+      "metaDescription": "Auaha is a Utah-based app development company building cross-platform iOS and Android apps for startups and small businesses — from idea to launch and beyond.",
+      "badge": "Utah App Development",
+      "h1": "A Utah",
+      "h1span": "app development company",
+      "keyword": "Utah app development company",
+      "intro": "Auaha App Development is a Utah-based studio that builds high-quality mobile apps for iOS and Android. We work with startups, small businesses, and entrepreneurs who want a technical partner they can reach directly — not an offshore ticket queue.",
+      "sections": [
+        {
+          "h2": "Why a local Utah studio",
+          "checks": [
+            { "b": "Direct access to the developer.", "t": "You talk to the person building your app, not an account manager relaying messages." },
+            { "b": "Same time zone.", "t": "Working in Mountain Time means faster back-and-forth and no overnight lag." },
+            { "b": "A real partner.", "t": "We work with you from the first idea through launch and the updates after." }
+          ]
+        },
+        {
+          "h2": "What we build",
+          "body": [
+            "Cross-platform mobile apps for iOS and Android from a single codebase, backed by reliable cloud infrastructure. From a fully-specced product to a napkin sketch, we help turn it into something people actually use.",
+            "We've shipped real apps to the App Store — for real estate professionals, water-rights research, and everyday users — so you're working with a studio that ships, not just pitches."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "Where is Auaha based?", "a": "Auaha App Development is based in Utah and works with clients locally and remotely. Being Utah-based means Mountain Time communication and direct access to the developer building your app." },
+        { "q": "What kind of apps does Auaha build?", "a": "Cross-platform iOS and Android apps for startups and small businesses — from MVPs to full products — with cloud backends. We've shipped apps to the App Store across several industries." },
+        { "q": "How do I start a project?", "a": "Email hello@auaha.app with a short description of your idea. We'll get back to you within one business day to talk through it." }
+      ]
+    },
+    {
+      "slug": "cross-platform-app-development",
+      "metaTitle": "Cross-Platform App Development",
+      "metaDescription": "Cross-platform app development lets you ship to iOS and Android from one codebase — faster and more affordable than building twice. Here's how Auaha does it.",
+      "badge": "Cross-Platform",
+      "h1": "Cross-platform",
+      "h1span": "app development",
+      "keyword": "cross-platform app development",
+      "intro": "Building the same app twice — once for iOS, once for Android — is slow and expensive. Cross-platform development uses a single codebase to ship to both, which means lower cost, faster delivery, and a consistent experience.",
+      "sections": [
+        {
+          "h2": "The advantages",
+          "checks": [
+            { "b": "One codebase, both platforms.", "t": "iOS and Android from the same source, instead of two separate builds and two bills." },
+            { "b": "Faster and more affordable.", "t": "Less duplicate work means a quicker path to launch and a lower budget." },
+            { "b": "Consistent experience.", "t": "Your app looks and behaves the same on every device, with one place to fix bugs and add features." }
+          ]
+        },
+        {
+          "h2": "How we build it",
+          "body": [
+            "Auaha builds cross-platform apps with Flutter, a mature framework backed by Google that produces fast, natively-compiled apps for iOS and Android from one codebase. We pair it with reliable cloud backends for auth, data, and sync.",
+            "For the vast majority of apps, cross-platform is the right call. When a project genuinely needs platform-specific native work, we'll tell you that up front."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "What is cross-platform app development?", "a": "It's building a single codebase that runs on both iOS and Android, rather than developing two separate native apps. It lowers cost, speeds up delivery, and keeps the experience consistent across devices." },
+        { "q": "Is cross-platform as good as native?", "a": "For most apps, yes — modern frameworks like Flutter produce fast, natively-compiled apps. Native still has its place for certain hardware-intensive or platform-specific needs, and we'll flag it when that applies to your project." },
+        { "q": "Does cross-platform save money?", "a": "Usually, yes. One codebase for both platforms means less duplicate development and a single place to maintain and improve the app." }
+      ]
+    },
+    {
+      "slug": "flutter-app-development",
+      "metaTitle": "Flutter App Development",
+      "metaDescription": "Auaha builds fast, cross-platform iOS and Android apps with Flutter — one codebase, native performance. Here's why Flutter and how we use it.",
+      "badge": "Flutter",
+      "h1": "Flutter",
+      "h1span": "app development",
+      "keyword": "Flutter app development",
+      "intro": "Flutter is a modern, Google-backed framework for building natively-compiled apps for iOS and Android from a single codebase. It's what Auaha builds with — and why we can ship polished apps to both platforms efficiently.",
+      "sections": [
+        {
+          "h2": "Why Flutter",
+          "checks": [
+            { "b": "Native performance.", "t": "Flutter compiles to native code, so apps are fast and smooth — not sluggish web wrappers." },
+            { "b": "One codebase, both stores.", "t": "iOS and Android from the same source, which keeps cost and timelines down." },
+            { "b": "Beautiful, consistent UI.", "t": "Pixel-level control means your app looks the way it should on every device." },
+            { "b": "Mature and well-supported.", "t": "Backed by Google with a large ecosystem, so it's a safe long-term foundation." }
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "What is Flutter?", "a": "Flutter is an open-source framework from Google for building natively-compiled mobile apps for iOS and Android from a single codebase. It's known for fast performance and precise, consistent UI." },
+        { "q": "Is Flutter good for production apps?", "a": "Yes — Flutter is used in production by companies large and small. Auaha has shipped real Flutter apps to the App Store." },
+        { "q": "Can Flutter apps use device features?", "a": "Yes — camera, location, notifications, secure storage, and more are all supported through Flutter's plugin ecosystem." }
+      ]
+    },
+    {
+      "slug": "mvp-development-for-startups",
+      "metaTitle": "MVP Development for Startups",
+      "metaDescription": "Validate your idea without building the whole thing. Auaha builds lean MVPs for startups — the core of your app, shipped fast, so you can learn from real users.",
+      "badge": "MVP Development",
+      "h1": "MVP development",
+      "h1span": "for startups",
+      "keyword": "MVP development for startups",
+      "intro": "You don't need to build everything to find out if an idea works. A minimum viable product ships the core of your app fast, so you can get it in front of real users, learn, and decide what to build next with evidence instead of guesses.",
+      "sections": [
+        {
+          "h2": "How we approach an MVP",
+          "checks": [
+            { "b": "Find the core.", "t": "We help you cut to the one or two things your app must do, and leave the rest for later." },
+            { "b": "Ship fast.", "t": "Cross-platform build means a working iOS and Android app sooner and for less." },
+            { "b": "Learn and iterate.", "t": "Get it in front of users, see what actually matters, and build the next version on real feedback." }
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "What is an MVP?", "a": "A minimum viable product is the simplest version of your app that delivers real value — enough to put in front of users and learn from, without the cost and time of building every feature up front." },
+        { "q": "How long does an MVP take?", "a": "It depends on scope, but keeping an MVP focused on the core is exactly what makes it fast. We scope it with you so you know the timeline before we start." },
+        { "q": "Can you grow the MVP later?", "a": "Yes — a well-built MVP is the foundation for the full product. We build it to grow, then add features as your app proves itself." }
+      ]
+    },
+    {
+      "slug": "ios-and-android-app-development",
+      "metaTitle": "iOS & Android App Development",
+      "metaDescription": "Auaha builds for iOS and Android together, from one codebase — so you launch on both the App Store and Google Play without paying to build twice.",
+      "badge": "iOS & Android",
+      "h1": "iOS & Android",
+      "h1span": "app development",
+      "keyword": "iOS and Android app development",
+      "intro": "Your users are on both iPhone and Android, so your app should be too. Auaha builds for both platforms from a single codebase, so you launch on the App Store and Google Play without doubling the budget.",
+      "sections": [
+        {
+          "h2": "Both platforms, one build",
+          "body": [
+            "Instead of hiring separate iOS and Android teams, a cross-platform build gives you both from one source. That means a consistent experience for every user and a single place to fix bugs and ship new features.",
+            "We handle the full path on each platform — build, store setup, and release — so getting onto the App Store and Google Play isn't something you have to figure out alone."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "Can one app work on both iPhone and Android?", "a": "Yes — a cross-platform app is built from a single codebase that runs natively on both iOS and Android, so you reach every user without building two separate apps." },
+        { "q": "Do you handle App Store and Google Play submission?", "a": "Yes — we handle the build, store setup, and release process for both the Apple App Store and Google Play." },
+        { "q": "Will the app feel native on both?", "a": "Yes — we build with Flutter, which compiles to native code, so the app is fast and feels right on both platforms." }
+      ]
+    },
+    {
+      "slug": "hire-an-app-developer-in-utah",
+      "metaTitle": "Hire an App Developer in Utah",
+      "metaDescription": "Looking to hire an app developer in Utah? Auaha is a Utah-based studio you can talk to directly — cross-platform iOS and Android apps, from idea to launch.",
+      "badge": "Hire a Developer",
+      "h1": "Hire an app developer",
+      "h1span": "in Utah",
+      "keyword": "hire an app developer in Utah",
+      "intro": "Hiring the right app developer is mostly about trust and communication. Auaha is a Utah-based studio where you work directly with the person building your app — no offshore handoffs, no telephone game.",
+      "sections": [
+        {
+          "h2": "What you get",
+          "checks": [
+            { "b": "A direct line.", "t": "Talk to the developer building your app, in your time zone." },
+            { "b": "A track record.", "t": "Real apps shipped to the App Store, not just mockups and promises." },
+            { "b": "End-to-end delivery.", "t": "From idea and design through build, launch, and the updates after." }
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "How do I hire an app developer in Utah?", "a": "Reach out to Auaha at hello@auaha.app with a short description of your project. We're a Utah-based studio and we'll get back to you within one business day to talk it through." },
+        { "q": "Why hire local instead of offshore?", "a": "Local means same-time-zone communication and direct access to your developer, which usually means fewer misunderstandings and a smoother project than a distant, layered team." },
+        { "q": "Do you work with clients outside Utah?", "a": "Yes — we're Utah-based but work with clients remotely as well. The Utah base mainly means Mountain Time communication and a real, reachable partner." }
+      ]
+    },
+    {
+      "slug": "app-development-for-small-business",
+      "metaTitle": "App Development for Small Businesses",
+      "metaDescription": "Practical, affordable app development for small businesses. Auaha builds cross-platform iOS and Android apps that solve a real problem — without enterprise overhead.",
+      "badge": "Small Business",
+      "h1": "App development for",
+      "h1span": "small businesses",
+      "keyword": "app development for small business",
+      "intro": "A great app doesn't have to mean an enterprise budget. Auaha builds focused, cross-platform apps for small businesses — the tool that actually solves your problem, built affordably and without the bloat.",
+      "sections": [
+        {
+          "h2": "Built for how small businesses work",
+          "checks": [
+            { "b": "Focused on the real problem.", "t": "We build the app that solves your specific need, not a feature list you'll never use." },
+            { "b": "Affordable by design.", "t": "Cross-platform means one build for both platforms, which keeps the budget realistic." },
+            { "b": "A partner, not a vendor.", "t": "We work with you and stick around after launch to keep it running." }
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "How much does a small business app cost?", "a": "It depends on scope — the fastest way to control cost is to focus the first version on the core problem. We scope it with you up front so there are no surprises. Email hello@auaha.app to talk it through." },
+        { "q": "Do small businesses really need an app?", "a": "Only if it solves a real problem — for scheduling, client management, or a service your customers use. We'll help you decide whether an app is the right tool before you invest in one." },
+        { "q": "Can you build something simple to start?", "a": "Yes — starting focused is usually the smart move. We build a lean first version, then grow it as it proves its value." }
+      ]
+    },
+    {
+      "slug": "startup-app-development",
+      "metaTitle": "Startup App Development",
+      "metaDescription": "From napkin idea to launched product. Auaha is a technical partner for startups — cross-platform MVPs and apps built to validate fast and grow.",
+      "badge": "For Startups",
+      "h1": "Startup",
+      "h1span": "app development",
+      "keyword": "startup app development",
+      "intro": "Startups live and die by moving fast and learning faster. Auaha is the technical partner that takes you from idea to a real, launched app — starting lean so you can validate before you scale.",
+      "sections": [
+        {
+          "h2": "A technical partner for founders",
+          "body": [
+            "Whether you have a fully-specced product or just a napkin idea, we help shape it into something real. We start with the core, ship a cross-platform MVP, and grow it based on what actual users do.",
+            "You get direct access to the developer building your product — no layers, no black boxes — so you can move at startup speed."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "I have an idea but no spec — can you still help?", "a": "Yes. A lot of our projects start as a rough idea. We help shape it into a clear plan and a lean first version you can put in front of users." },
+        { "q": "What's the fastest way to launch a startup app?", "a": "Start with an MVP — the core of the idea, built cross-platform so it ships to both iOS and Android at once. Validate with real users, then grow." },
+        { "q": "Can you be our technical co-partner?", "a": "We act as your technical partner through build and launch. Reach out at hello@auaha.app and tell us where you're headed." }
+      ]
+    },
+    {
+      "slug": "mobile-app-development-company",
+      "metaTitle": "Mobile App Development Company",
+      "metaDescription": "Auaha is a mobile app development company building cross-platform iOS and Android apps from idea to launch — Utah-based, with real apps shipped to the App Store.",
+      "badge": "Mobile Apps",
+      "h1": "A mobile",
+      "h1span": "app development company",
+      "keyword": "mobile app development company",
+      "intro": "Auaha is a mobile app development company that builds cross-platform iOS and Android apps for startups and small businesses. Utah-based, focused on quality, and with real apps already shipped to the App Store.",
+      "sections": [
+        {
+          "h2": "From concept to deployment",
+          "body": [
+            "We handle the full spectrum — discovery, design, build, launch, and support. You get a cross-platform app built on a solid cloud backend, delivered to both app stores.",
+            "Most importantly, you work directly with the developer building it. That means clear communication and no guesswork about what you're getting."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "What does a mobile app development company do?", "a": "It designs, builds, launches, and maintains mobile apps. Auaha does all of that for iOS and Android with a cross-platform approach, from the first idea through post-launch updates." },
+        { "q": "How do I choose an app development company?", "a": "Look for a track record of shipped apps, clear communication, and direct access to the people building your product. Auaha offers all three as a small, focused Utah studio." },
+        { "q": "Do you provide support after launch?", "a": "Yes — we stick around after launch to keep the app running and to build the next round of features as your product grows." }
+      ]
+    },
+    {
+      "slug": "from-idea-to-app",
+      "metaTitle": "From Idea to App: How It Works",
+      "metaDescription": "Have an app idea but not sure how to build it? Here's how Auaha takes a concept from discovery to a launched, cross-platform iOS and Android app.",
+      "badge": "The Process",
+      "h1": "From idea",
+      "h1span": "to launched app",
+      "keyword": "how to turn an idea into an app",
+      "intro": "You have an idea for an app — here's how it actually becomes a real product. Auaha's process is designed to deliver great software without the guesswork, whether you start with a full spec or a sketch.",
+      "sections": [
+        {
+          "h2": "Our process",
+          "checks": [
+            { "b": "1. Discovery.", "t": "We learn your goals, users, and requirements before any code is written." },
+            { "b": "2. Design & plan.", "t": "We map the architecture and UX so you know exactly what you're getting." },
+            { "b": "3. Build.", "t": "Iterative development with regular updates — no black boxes, no surprises." },
+            { "b": "4. Launch & support.", "t": "We deploy to both app stores and stick around to keep it running." }
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "I have an app idea — what's the first step?", "a": "Write down what problem it solves and for whom, then reach out. We start with a discovery conversation to turn the idea into a clear plan before any building begins." },
+        { "q": "How do I know what my app should include?", "a": "We help you find the core — the one or two things it must do — and start there. That keeps the first version focused, affordable, and fast to launch." },
+        { "q": "How long does it take to build an app?", "a": "It depends on scope, which is why we scope it with you up front. Starting with a focused first version is the fastest path to a launched app." }
+      ]
+    }
+  ]
+}

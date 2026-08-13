@@ -6,7 +6,8 @@
     "gen:states": "node scripts/generate-state-pages.mjs",
     "gen:guides": "node scripts/generate-guides.mjs",
     "gen:shoein": "node scripts/generate-shoein-pages.mjs",
-    "gen": "npm run gen:states && npm run gen:guides && npm run gen:shoein",
+    "gen:agency": "node scripts/generate-agency-pages.mjs",
+    "gen": "npm run gen:states && npm run gen:guides && npm run gen:shoein && npm run gen:agency",
     "deploy": "wrangler deploy"
   },
   "dependencies": {
