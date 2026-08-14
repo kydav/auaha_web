@@ -199,8 +199,8 @@ ${jsonLd(state, url)}
     <a href="/" class="logo">Auaha<span>.</span></a>
     <ul class="nav-links">
       <li><a href="/threshold/">Threshold</a></li>
-      <li><a href="/threshold/support">Support</a></li>
-      <li><a href="/threshold/privacy">Privacy</a></li>
+      <li><a href="/threshold/support/">Support</a></li>
+      <li><a href="/threshold/privacy/">Privacy</a></li>
     </ul>
   </nav>
 
@@ -283,9 +283,9 @@ ${faqHtml}
       &copy; 2026 Auaha App Development LLC &nbsp;·&nbsp;
       <a href="/">Auaha.app</a> &nbsp;·&nbsp;
       <a href="/threshold/">Threshold</a> &nbsp;·&nbsp;
-      <a href="/threshold/support">Support</a> &nbsp;·&nbsp;
-      <a href="/threshold/privacy">Privacy Policy</a> &nbsp;·&nbsp;
-      <a href="/threshold/terms">Terms of Service</a> &nbsp;·&nbsp;
+      <a href="/threshold/support/">Support</a> &nbsp;·&nbsp;
+      <a href="/threshold/privacy/">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="/threshold/terms/">Terms of Service</a> &nbsp;·&nbsp;
       <a href="mailto:hello@auaha.app">hello@auaha.app</a>
     </p>
   </footer>
@@ -322,17 +322,17 @@ const urls = [
     loc: `${SITE}/threshold/${s.slug}/`,
     pri: "0.8",
   })),
-  { loc: `${SITE}/threshold/support`, pri: "0.4" },
-  { loc: `${SITE}/threshold/privacy`, pri: "0.3" },
-  { loc: `${SITE}/threshold/terms`, pri: "0.3" },
+  { loc: `${SITE}/threshold/support/`, pri: "0.4" },
+  { loc: `${SITE}/threshold/privacy/`, pri: "0.3" },
+  { loc: `${SITE}/threshold/terms/`, pri: "0.3" },
   { loc: `${SITE}/shoein/`, pri: "0.8" },
   ...shoein.topics.map((t) => ({
     loc: `${SITE}/shoein/${t.slug}/`,
     pri: "0.7",
   })),
-  { loc: `${SITE}/shoein/support`, pri: "0.4" },
-  { loc: `${SITE}/shoein/privacy`, pri: "0.3" },
-  { loc: `${SITE}/shoein/terms`, pri: "0.3" },
+  { loc: `${SITE}/shoein/support/`, pri: "0.4" },
+  { loc: `${SITE}/shoein/privacy/`, pri: "0.3" },
+  { loc: `${SITE}/shoein/terms/`, pri: "0.3" },
   { loc: `${SITE}/functionalparenting/`, pri: "0.6" },
   { loc: `${SITE}/prior/`, pri: "0.6" },
   { loc: `${SITE}/proteingrid/`, pri: "0.6" },

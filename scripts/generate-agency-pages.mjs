@@ -104,8 +104,8 @@ const FOOTER = `
       <a href="/">Auaha.app</a> &nbsp;·&nbsp;
       <a href="/app-development/">App Development</a> &nbsp;·&nbsp;
       <a href="mailto:${BIZ.email}">${esc(BIZ.email)}</a> &nbsp;·&nbsp;
-      <a href="/privacy">Privacy</a> &nbsp;·&nbsp;
-      <a href="/terms">Terms</a>
+      <a href="/privacy/">Privacy</a> &nbsp;·&nbsp;
+      <a href="/terms/">Terms</a>
     </p>
   </footer>`;
 
