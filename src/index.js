@@ -40,6 +40,17 @@ export default {
         u.pathname = "/shoein" + path;
         return env.ASSETS.fetch(new Request(u, request));
       }
+      // Default favicon/touch-icon requests → the Shoein'-branded versions.
+      const favMap = {
+        "/favicon.ico": "/icons/shoein-favicon.ico",
+        "/apple-touch-icon.png": "/icons/shoein-apple-touch.png",
+        "/apple-touch-icon-precomposed.png": "/icons/shoein-apple-touch.png",
+      };
+      if (favMap[path]) {
+        const u = new URL(url);
+        u.pathname = favMap[path];
+        return env.ASSETS.fetch(new Request(u, request));
+      }
       if (/\.[a-z0-9]+$/i.test(path)) {
         return env.ASSETS.fetch(request);
       }
