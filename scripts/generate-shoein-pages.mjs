@@ -140,7 +140,7 @@ function related(current) {
     .slice(0, 6)
     .map(
       (t) =>
-        `<a href="/shoein/${t.slug}/">${esc(t.metaTitle.replace(/[:—].*$/, "").trim())}</a>`
+        `<a href="/${t.slug}/">${esc(t.metaTitle.replace(/[:—].*$/, "").trim())}</a>`
     )
     .join("\n        ");
 }
@@ -173,15 +173,14 @@ function jsonLd(topic, url) {
     operatingSystem: "iOS, Android",
     description:
       "Shoein' keeps every farrier client and horse in one place — addresses on a map, one-tap call, text, and directions, and last-service tracking so you never miss a cycle.",
-    url: `${SITE}/shoein/`,
+    url: `${SITE}/`,
   };
   const crumbs = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
-      { "@type": "ListItem", position: 2, name: "Shoein'", item: `${SITE}/shoein/` },
-      { "@type": "ListItem", position: 3, name: topic.metaTitle, item: url },
+      { "@type": "ListItem", position: 2, name: topic.metaTitle, item: url },
     ],
   };
   return [article, faq, software, crumbs]
@@ -193,7 +192,7 @@ function jsonLd(topic, url) {
 }
 
 function page(topic) {
-  const url = `${SITE}/shoein/${topic.slug}/`;
+  const url = `${SITE}/${topic.slug}/`;
   const title = `${topic.metaTitle} | Shoein'`;
   const desc = topic.metaDescription;
 
@@ -238,24 +237,24 @@ ${jsonLd(topic, url)}
 <body>
 
   <nav>
-    <a href="/" class="logo">Auaha<span>.</span></a>
+    <a href="/" class="logo">Shoein<span>'</span></a>
     <ul class="nav-links">
-      <li><a href="/shoein/">Shoein'</a></li>
-      <li><a href="/shoein/support/">Support</a></li>
-      <li><a href="/shoein/privacy/">Privacy</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/support/">Support</a></li>
+      <li><a href="/privacy/">Privacy</a></li>
     </ul>
   </nav>
 
   <main class="container">
     <p class="breadcrumb">
-      <a href="/">Home</a> &nbsp;›&nbsp; <a href="/shoein/">Shoein'</a> &nbsp;›&nbsp; ${esc(topic.metaTitle)}
+      <a href="/">Home</a> &nbsp;›&nbsp; ${esc(topic.metaTitle)}
     </p>
 
     <section class="hero">
       <div class="badge">${esc(topic.badge)}</div>
       <h1>${esc(topic.h1)} <span>${esc(topic.h1span)}</span></h1>
       <p class="lede">${esc(topic.intro)}</p>
-      <a class="hero-cta" href="/shoein/">Meet Shoein' — the farrier's app &nbsp;→</a>
+      <a class="hero-cta" href="/">Meet Shoein' — the farrier's app &nbsp;→</a>
     </section>
 ${comparisonHtml(topic)}
 
@@ -269,7 +268,7 @@ ${faqHtml}
     <div class="cta">
       <h2>Keep your whole book in your pocket</h2>
       <p>Shoein' keeps every client and horse in one place — addresses on a map, one-tap call and directions, and a due badge so you never miss a cycle.</p>
-      <a class="cta-btn" href="/shoein/">See Shoein' &nbsp;→</a>
+      <a class="cta-btn" href="/">See Shoein' &nbsp;→</a>
       <p class="cta-note">Built for farriers &nbsp;·&nbsp; Coming soon to iOS &amp; Android</p>
     </div>
 
@@ -289,11 +288,11 @@ ${faqHtml}
   <footer>
     <p>
       &copy; 2026 Auaha App Development LLC &nbsp;·&nbsp;
-      <a href="/">Auaha.app</a> &nbsp;·&nbsp;
-      <a href="/shoein/">Shoein'</a> &nbsp;·&nbsp;
-      <a href="/shoein/support/">Support</a> &nbsp;·&nbsp;
-      <a href="/shoein/privacy/">Privacy Policy</a> &nbsp;·&nbsp;
-      <a href="/shoein/terms/">Terms of Service</a> &nbsp;·&nbsp;
+      <a href="https://auaha.app/">Auaha.app</a> &nbsp;·&nbsp;
+      <a href="/">Home</a> &nbsp;·&nbsp;
+      <a href="/support/">Support</a> &nbsp;·&nbsp;
+      <a href="/privacy/">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="/terms/">Terms of Service</a> &nbsp;·&nbsp;
       <a href="mailto:hello@auaha.app">hello@auaha.app</a>
     </p>
   </footer>
@@ -310,4 +309,30 @@ for (const topic of data.topics) {
   writeFileSync(resolve(dir, "index.html"), page(topic));
   console.log(`✓ shoein/${topic.slug}/index.html`);
 }
+// ── sitemap.xml + robots.txt for shoein.app (served from the /shoein/ tree) ──
+const today = new Date().toISOString().slice(0, 10);
+const smUrls = [
+  { loc: `${SITE}/`, pri: "1.0" },
+  ...data.topics.map((t) => ({ loc: `${SITE}/${t.slug}/`, pri: "0.7" })),
+  { loc: `${SITE}/support/`, pri: "0.4" },
+  { loc: `${SITE}/privacy/`, pri: "0.3" },
+  { loc: `${SITE}/terms/`, pri: "0.3" },
+];
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${smUrls
+  .map(
+    (u) =>
+      `  <url>\n    <loc>${u.loc}</loc>\n    <lastmod>${today}</lastmod>\n    <priority>${u.pri}</priority>\n  </url>`
+  )
+  .join("\n")}
+</urlset>
+`;
+writeFileSync(resolve(root, "shoein", "sitemap.xml"), sitemap);
+writeFileSync(
+  resolve(root, "shoein", "robots.txt"),
+  `User-agent: *\nAllow: /\n\nSitemap: ${SITE}/sitemap.xml\n`
+);
+console.log("✓ shoein/sitemap.xml + robots.txt");
+
 console.log(`\nDone — ${data.topics.length} Shoein' SEO pages generated.`);

@@ -27,6 +27,39 @@ export default {
       });
     }
 
+    const host = url.hostname;
+    const path = url.pathname;
+
+    // ── Shoein' brand domain ────────────────────────────────────────────────
+    // shoein.app serves the /shoein/* pages at its root. Shared assets
+    // (icons, badges, favicons — anything with a file extension) come from the
+    // repo root as-is; sitemap.xml/robots.txt come from the /shoein/ tree.
+    if (host === "shoein.app" || host === "www.shoein.app") {
+      if (path === "/sitemap.xml" || path === "/robots.txt") {
+        const u = new URL(url);
+        u.pathname = "/shoein" + path;
+        return env.ASSETS.fetch(new Request(u, request));
+      }
+      if (/\.[a-z0-9]+$/i.test(path)) {
+        return env.ASSETS.fetch(request);
+      }
+      const u = new URL(url);
+      u.pathname = path === "/" ? "/shoein/" : "/shoein" + path;
+      return env.ASSETS.fetch(new Request(u, request));
+    }
+
+    // Old auaha.app/shoein/* → 301 to the new shoein.app home.
+    if (
+      (host === "auaha.app" || host === "www.auaha.app") &&
+      (path === "/shoein" || path.startsWith("/shoein/"))
+    ) {
+      const rest = path.replace(/^\/shoein/, "") || "/";
+      return Response.redirect(
+        "https://shoein.app" + (rest === "" ? "/" : rest) + url.search,
+        301
+      );
+    }
+
     const match = url.pathname.match(TILE_RE);
     if (match) {
       const z = parseInt(match[1], 10);
