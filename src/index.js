@@ -54,6 +54,13 @@ export default {
       if (/\.[a-z0-9]+$/i.test(path)) {
         return env.ASSETS.fetch(request);
       }
+      // Enforce a trailing slash on page paths first, so Cloudflare's directory
+      // redirect never fires on the internal /shoein/ path and leaks it.
+      if (path !== "/" && !path.endsWith("/")) {
+        const slashUrl = new URL(url);
+        slashUrl.pathname = path + "/";
+        return Response.redirect(slashUrl.toString(), 301);
+      }
       const u = new URL(url);
       u.pathname = path === "/" ? "/shoein/" : "/shoein" + path;
       return env.ASSETS.fetch(new Request(u, request));
@@ -64,11 +71,12 @@ export default {
       (host === "auaha.app" || host === "www.auaha.app") &&
       (path === "/shoein" || path.startsWith("/shoein/"))
     ) {
-      const rest = path.replace(/^\/shoein/, "") || "/";
-      return Response.redirect(
-        "https://shoein.app" + (rest === "" ? "/" : rest) + url.search,
-        301
-      );
+      let rest = path.replace(/^\/shoein/, "") || "/";
+      // Normalize to a trailing slash for page paths (avoids a second hop).
+      if (rest !== "/" && !rest.endsWith("/") && !/\.[a-z0-9]+$/i.test(rest)) {
+        rest += "/";
+      }
+      return Response.redirect("https://shoein.app" + rest + url.search, 301);
     }
 
     const match = url.pathname.match(TILE_RE);
