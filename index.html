@@ -354,6 +354,23 @@
       gap: 0.3rem;
     }
 
+    .apps-group { margin-top: 3.5rem; }
+    .apps-group:first-of-type { margin-top: 0; }
+
+    .apps-group-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.3px;
+      margin-bottom: 0.35rem;
+    }
+
+    .apps-group-desc {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 1.5rem;
+    }
+
     /* CONTACT */
     #contact { text-align: center; }
 
@@ -451,63 +468,76 @@
     <div class="container">
       <p class="section-label">Our Apps</p>
       <h2>What We've Built</h2>
-      <p class="section-sub">Production apps used by real people — from real estate professionals to everyday iPhone users.</p>
-      <div class="apps-grid">
+      <p class="section-sub">Production apps used by real people — our own products, and custom apps we've built for clients.</p>
 
-        <a href="/threshold/" class="app-card">
-          <img src="/icons/threshold.png" alt="Threshold icon" class="app-icon" />
-          <div>
-            <div class="app-name">Threshold</div>
-            <div class="app-desc">Buyer representation agreements for real estate agents — sign state-approved forms on-device, from anywhere.</div>
-          </div>
-          <span class="app-link">Learn more →</span>
-        </a>
+      <div class="apps-group">
+        <h3 class="apps-group-title">Our Own Apps</h3>
+        <p class="apps-group-desc">Products we design, build, and ship under Auaha.</p>
+        <div class="apps-grid">
 
-        <a href="/prior/" class="app-card">
-          <img src="/icons/prior.png" alt="Prior icon" class="app-icon" />
-          <div>
-            <div class="app-name">Prior</div>
-            <div class="app-desc">Water rights lookup by address, map tap, or parcel number — covering Utah and Colorado real estate.</div>
-          </div>
-          <span class="app-link">Learn more →</span>
-        </a>
+          <a href="/threshold/" class="app-card">
+            <img src="/icons/threshold.png" alt="Threshold icon" class="app-icon" />
+            <div>
+              <div class="app-name">Threshold</div>
+              <div class="app-desc">Buyer representation agreements for real estate agents — sign state-approved forms on-device, from anywhere.</div>
+            </div>
+            <span class="app-link">Learn more →</span>
+          </a>
 
-        <a href="/proteingrid/" class="app-card">
-          <img src="/icons/proteingrid.png" alt="ProteinGrid icon" class="app-icon" />
-          <div>
-            <div class="app-name">ProteinGrid</div>
-            <div class="app-desc">Simple daily protein tracking. Hit your goal every day without the complexity of a full diet app.</div>
-          </div>
-          <span class="app-link">Learn more →</span>
-        </a>
+          <a href="/prior/" class="app-card">
+            <img src="/icons/prior.png" alt="Prior icon" class="app-icon" />
+            <div>
+              <div class="app-name">Prior</div>
+              <div class="app-desc">Water rights lookup by address, map tap, or parcel number — covering Utah and Colorado real estate.</div>
+            </div>
+            <span class="app-link">Learn more →</span>
+          </a>
 
-        <a href="/contactphotos/" class="app-card">
-          <img src="/icons/contactphotos.png" alt="Contact Photos icon" class="app-icon" />
-          <div>
-            <div class="app-name">Contact Photos</div>
-            <div class="app-desc">Identify who's texting you. Search company logos and contact photos to put a face to an unknown number.</div>
-          </div>
-          <span class="app-link">Learn more →</span>
-        </a>
+          <a href="https://shoein.app" class="app-card">
+            <img src="/icons/shoein.png" alt="Shoein' icon" class="app-icon" />
+            <div>
+              <div class="app-name">Shoein'</div>
+              <div class="app-desc">Client &amp; horse management for farriers — every client, every horse, and last-service tracking so you never miss a cycle.</div>
+            </div>
+            <span class="app-link">Learn more →</span>
+          </a>
 
-        <a href="/functionalparenting/" class="app-card">
-          <img src="/icons/functionalparenting.png" alt="Functional Parenting icon" class="app-icon" />
-          <div>
-            <div class="app-name">Functional Parenting</div>
-            <div class="app-desc">Calmer moments and stronger relationships — developed for Taylor Thomas Coaching </div>
-          </div>
-          <span class="app-link">Learn more →</span>
-        </a>
+          <a href="/proteingrid/" class="app-card">
+            <img src="/icons/proteingrid.png" alt="ProteinGrid icon" class="app-icon" />
+            <div>
+              <div class="app-name">ProteinGrid</div>
+              <div class="app-desc">Simple daily protein tracking. Hit your goal every day without the complexity of a full diet app.</div>
+            </div>
+            <span class="app-link">Learn more →</span>
+          </a>
 
-        <a href="https://shoein.app" class="app-card">
-          <img src="/icons/shoein.png" alt="Shoein' icon" class="app-icon" />
-          <div>
-            <div class="app-name">Shoein'</div>
-            <div class="app-desc">Client &amp; horse management for farriers — every client, every horse, and last-service tracking so you never miss a cycle.</div>
-          </div>
-          <span class="app-link">Learn more →</span>
-        </a>
+          <a href="/contactphotos/" class="app-card">
+            <img src="/icons/contactphotos.png" alt="Contact Photos icon" class="app-icon" />
+            <div>
+              <div class="app-name">Contact Photos</div>
+              <div class="app-desc">Identify who's texting you. Search company logos and contact photos to put a face to an unknown number.</div>
+            </div>
+            <span class="app-link">Learn more →</span>
+          </a>
 
+        </div>
+      </div>
+
+      <div class="apps-group">
+        <h3 class="apps-group-title">Built for Clients</h3>
+        <p class="apps-group-desc">Custom apps we've designed and built for other businesses.</p>
+        <div class="apps-grid">
+
+          <a href="/functionalparenting/" class="app-card">
+            <img src="/icons/functionalparenting.png" alt="Functional Parenting icon" class="app-icon" />
+            <div>
+              <div class="app-name">Functional Parenting</div>
+              <div class="app-desc">Calmer moments and stronger relationships — built for Taylor Thomas Coaching.</div>
+            </div>
+            <span class="app-link">Learn more →</span>
+          </a>
+
+        </div>
       </div>
     </div>
   </section>
