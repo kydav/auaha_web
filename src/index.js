@@ -30,6 +30,20 @@ export default {
     const host = url.hostname;
     const path = url.pathname;
 
+    // ── Canonical scheme ────────────────────────────────────────────────────
+    // Send http → https once, so Search Console stops seeing an http twin of
+    // every page. Guarded on the URL's own scheme, so it can never loop.
+    // cf-visitor is a second opinion: if the edge says the visitor already came
+    // in over https, never redirect, so a proxy quirk can't produce a loop.
+    const visitorIsHttps = (request.headers.get("cf-visitor") || "").includes(
+      '"scheme":"https"',
+    );
+    if (url.protocol === "http:" && !visitorIsHttps) {
+      const httpsUrl = new URL(url);
+      httpsUrl.protocol = "https:";
+      return Response.redirect(httpsUrl.toString(), 301);
+    }
+
     // ── Shoein' brand domain ────────────────────────────────────────────────
     // shoein.app serves the /shoein/* pages at its root. Shared assets
     // (icons, badges, favicons — anything with a file extension) come from the
@@ -77,6 +91,20 @@ export default {
         rest += "/";
       }
       return Response.redirect("https://shoein.app" + rest + url.search, 301);
+    }
+
+    // Legacy root-level legal pages (Contact Photos' original store links).
+    // These were meta-refresh stubs; a 301 consolidates them properly.
+    const LEGACY_LEGAL = new Map([
+      ["/privacy", "/contactphotos/privacy/"],
+      ["/terms", "/contactphotos/terms/"],
+    ]);
+    const legacyTarget = LEGACY_LEGAL.get(path.replace(/\/$/, ""));
+    if (legacyTarget) {
+      return Response.redirect(
+        "https://auaha.app" + legacyTarget + url.search,
+        301,
+      );
     }
 
     const match = url.pathname.match(TILE_RE);
@@ -177,6 +205,20 @@ export default {
           'Cache-Control': 'public, max-age=3600',
         },
       });
+    }
+
+    // Enforce a trailing slash on page paths with our own 301. Cloudflare's
+    // asset layer would do this with a 307, which Search Console reports as a
+    // temporary "Page with redirect" and consolidates less cleanly.
+    if (
+      path !== "/" &&
+      !path.endsWith("/") &&
+      !path.startsWith("/.well-known/") &&
+      !/\.[a-z0-9]+$/i.test(path)
+    ) {
+      const slashUrl = new URL(url);
+      slashUrl.pathname = path + "/";
+      return Response.redirect(slashUrl.toString(), 301);
     }
 
     return env.ASSETS.fetch(request);

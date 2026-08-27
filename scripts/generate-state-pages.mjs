@@ -315,17 +315,27 @@ const urls = [
   { loc: `${SITE}/threshold/buyer-transaction-compliance-checklist/`, pri: "0.8" },
   { loc: `${SITE}/threshold/buyer-compensation-explainer/`, pri: "0.8" },
   { loc: `${SITE}/threshold/buyer-broker-agreement-by-state/`, pri: "0.8" },
+  // Hand-written Threshold articles (not generated — keep in sync by hand).
+  { loc: `${SITE}/threshold/who-pays-the-buyers-agent/`, pri: "0.8" },
+  { loc: `${SITE}/threshold/commission-splits-are-negotiable/`, pri: "0.8" },
+  { loc: `${SITE}/threshold/buyer-commission-offer-term/`, pri: "0.8" },
   ...data.states.map((s) => ({
     loc: `${SITE}/threshold/${s.slug}/`,
     pri: "0.8",
   })),
-  { loc: `${SITE}/threshold/support/`, pri: "0.4" },
-  { loc: `${SITE}/threshold/privacy/`, pri: "0.3" },
-  { loc: `${SITE}/threshold/terms/`, pri: "0.3" },
   { loc: `${SITE}/functionalparenting/`, pri: "0.6" },
   { loc: `${SITE}/prior/`, pri: "0.6" },
   { loc: `${SITE}/proteingrid/`, pri: "0.6" },
   { loc: `${SITE}/contactphotos/`, pri: "0.5" },
+  // Per-app support/legal pages. Listing them is a canonical signal — without
+  // it Search Console reports them as "duplicate without user-selected
+  // canonical". (Shoein's live on shoein.app and are in its own sitemap.)
+  ...["threshold", "functionalparenting", "prior", "proteingrid", "contactphotos"]
+    .flatMap((app) => [
+      { loc: `${SITE}/${app}/support/`, pri: "0.4" },
+      { loc: `${SITE}/${app}/privacy/`, pri: "0.3" },
+      { loc: `${SITE}/${app}/terms/`, pri: "0.3" },
+    ]),
 ];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
