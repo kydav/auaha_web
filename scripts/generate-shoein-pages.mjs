@@ -18,6 +18,12 @@ const data = JSON.parse(
 );
 
 const SITE = data.site.replace(/\/$/, "");
+// Article dates for rich results. These are cluster-wide defaults; add
+// "published" / "modified" to a topic in shoein-topics.json to override one.
+// Bump MODIFIED when page content actually changes — not on every regeneration,
+// which would tell Google the whole cluster is fresh when nothing moved.
+const DEFAULT_PUBLISHED = "2026-08-13";
+const DEFAULT_MODIFIED = "2026-08-21";
 
 const esc = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -134,15 +140,42 @@ function comparisonHtml(topic) {
     </section>`;
 }
 
+// Three pages in this cluster are hand-written rather than generated, so the
+// generator has no topic entry for them. They're still linked from the topics
+// below so internal authority keeps flowing their way — without this the
+// generator would silently strip those links on every run. Add to both maps
+// when a new hand-written page joins the cluster.
+const EXTRA_PAGES = {
+  "raising-your-farrier-rates": "Know Your Numbers Before You Raise Your Rates",
+  "farrier-record-keeping": "Record-Keeping That Protects Your Profit",
+  "farrier-new-client-checklist": "The New-Client Checklist",
+};
+
+const EXTRA_LINKS = {
+  "how-to-start-a-farrier-business": [
+    "raising-your-farrier-rates",
+    "farrier-record-keeping",
+    "farrier-new-client-checklist",
+  ],
+  "how-much-do-farriers-charge": [
+    "raising-your-farrier-rates",
+    "farrier-record-keeping",
+  ],
+  "farrier-client-management-app": ["farrier-new-client-checklist"],
+};
+
 function related(current) {
-  return data.topics
+  const extras = (EXTRA_LINKS[current.slug] || []).map(
+    (slug) => `<a href="/${slug}/">${esc(EXTRA_PAGES[slug])}</a>`
+  );
+  const topics = data.topics
     .filter((t) => t.slug !== current.slug)
     .slice(0, 6)
     .map(
       (t) =>
         `<a href="/${t.slug}/">${esc(t.metaTitle.replace(/[:—].*$/, "").trim())}</a>`
-    )
-    .join("\n        ");
+    );
+  return [...extras, ...topics].join("\n        ");
 }
 
 function jsonLd(topic, url) {
@@ -154,7 +187,17 @@ function jsonLd(topic, url) {
     about: topic.keyword,
     mainEntityOfPage: url,
     author: { "@type": "Organization", name: "Auaha App Development LLC" },
-    publisher: { "@type": "Organization", name: "Shoein'" },
+    publisher: {
+      "@type": "Organization",
+      name: "Shoein'",
+      url: `${SITE}/`,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE}/icons/shoein-apple-touch.png`,
+      },
+    },
+    datePublished: topic.published || DEFAULT_PUBLISHED,
+    dateModified: topic.modified || DEFAULT_MODIFIED,
   };
   const faq = {
     "@context": "https://schema.org",
@@ -219,7 +262,7 @@ function page(topic) {
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(desc)}" />
   <link rel="canonical" href="${url}" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="${esc(title)}" />
   <meta property="og:description" content="${esc(desc)}" />
