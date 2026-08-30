@@ -21,6 +21,9 @@ const data = JSON.parse(
 const SITE = data.site.replace(/\/$/, "");
 const BIZ = data.business;
 const MAILTO = `mailto:${BIZ.email}?subject=App%20project%20inquiry`;
+// Booking is the primary CTA — a mailto reads as unstaffed and converts worse.
+// Email stays as the low-commitment fallback everywhere the two sit together.
+const BOOK = BIZ.bookingUrl;
 
 const esc = (s) =>
   String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -74,9 +77,28 @@ const STYLE = `
     .cta{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2.5rem 2rem;text-align:center;margin:2.5rem 0}
     .cta h2{margin-bottom:.6rem}
     .cta p{max-width:440px;margin:0 auto 1.5rem}
+    .cta .cta-alt{margin:1.1rem auto 0;font-size:.9rem;color:var(--muted)}
+    .cta .cta-alt a{color:var(--accent)}
     .related{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
     .related a{display:inline-block;padding:.55rem 1.1rem;border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:.92rem;font-weight:600;transition:all .2s;background:rgba(255,255,255,.03)}
     .related a:hover{border-color:var(--accent);color:var(--accent)}
+    .rate{background:linear-gradient(135deg,var(--card),var(--surface));border:1px solid var(--border);border-radius:16px;padding:2rem;text-align:center;margin:1.5rem 0}
+    .rate .num{font-size:3rem;font-weight:700;color:var(--accent);line-height:1}
+    .rate .num small{font-size:1.1rem;color:var(--muted);font-weight:400}
+    .rate p{margin:.75rem auto 0;max-width:460px}
+    .pkgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.25rem;margin-top:1.5rem}
+    .pkg{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column}
+    .pkg h3{font-size:1.05rem;margin-bottom:.35rem}
+    .pkg .price{color:var(--accent);font-weight:700;font-size:1.35rem;margin-bottom:.75rem}
+    .pkg p{font-size:.92rem;margin-bottom:.9rem}
+    .pkg ul{margin:0;padding-left:1.1rem;font-size:.88rem;color:var(--muted)}
+    .pkg li{margin-bottom:.3rem}
+    .bands{margin-top:1.5rem;border-top:1px solid var(--border)}
+    .band{display:grid;grid-template-columns:1fr;gap:.3rem;padding:1.15rem 0;border-bottom:1px solid var(--border)}
+    @media(min-width:640px){.band{grid-template-columns:1fr auto;align-items:baseline;gap:1.5rem}}
+    .band b{font-size:1.02rem;color:var(--text)}
+    .band .amt{color:var(--accent);font-weight:700;white-space:nowrap}
+    .band span{color:var(--muted);font-size:.92rem;grid-column:1}
     .hub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:1.5rem}
     .hub-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-decoration:none;transition:all .2s}
     .hub-card:hover{border-color:var(--accent);transform:translateY(-3px)}
@@ -94,7 +116,8 @@ const NAV = `
       <li><a href="/#services">Services</a></li>
       <li><a href="/#apps">Apps</a></li>
       <li><a href="/app-development/">App Development</a></li>
-      <li><a href="${MAILTO}" class="nav-cta">Get in Touch</a></li>
+      <li><a href="/app-development/pricing/">Pricing</a></li>
+      <li><a href="${BOOK}" class="nav-cta">Book a Call</a></li>
     </ul>
   </nav>`;
 
@@ -103,6 +126,7 @@ const FOOTER = `
     <p>&copy; 2026 ${esc(BIZ.legalName)} &nbsp;·&nbsp; ${esc(BIZ.region)}, USA &nbsp;·&nbsp;
       <a href="/">Auaha.app</a> &nbsp;·&nbsp;
       <a href="/app-development/">App Development</a> &nbsp;·&nbsp;
+      <a href="${BOOK}">Book a call</a> &nbsp;·&nbsp;
       <a href="mailto:${BIZ.email}">${esc(BIZ.email)}</a> &nbsp;·&nbsp;
       <a href="/privacy/">Privacy</a> &nbsp;·&nbsp;
       <a href="/terms/">Terms</a>
@@ -260,7 +284,7 @@ ${NAV}
       <h1>${esc(topic.h1)} <span>${esc(topic.h1span)}</span></h1>
       <p class="lede">${esc(topic.intro)}</p>
       <div class="btn-group">
-        <a class="btn btn-primary" href="${MAILTO}">Start a project</a>
+        <a class="btn btn-primary" href="${BOOK}">Book a free 30-minute call</a>
         <a class="btn btn-outline" href="/#apps">See our work</a>
       </div>
     </section>
@@ -276,8 +300,9 @@ ${faqHtml}
 
     <div class="cta">
       <h2>Have a project in mind?</h2>
-      <p>Tell us about it — we'll get back to you within one business day. Whether it's a full spec or a napkin idea, we'll help you build something people actually use.</p>
-      <a class="btn btn-primary" href="${MAILTO}">Get in touch</a>
+      <p>Book a free 30-minute call. Bring a full spec or a napkin idea — you'll leave knowing what it would take and roughly what it would cost, including if we think you don't need an app at all.</p>
+      <a class="btn btn-primary" href="${BOOK}">Book a free 30-minute call</a>
+      <p class="cta-alt">Rather write it out? <a href="${MAILTO}">${esc(BIZ.email)}</a></p>
     </div>
 
     <section class="block">
@@ -363,8 +388,8 @@ ${NAV}
       <h1>${esc(h.h1)} <span>${esc(h.h1span)}</span></h1>
       <p class="lede">${esc(h.intro)}</p>
       <div class="btn-group">
-        <a class="btn btn-primary" href="${MAILTO}">Start a project</a>
-        <a class="btn btn-outline" href="/#apps">See our work</a>
+        <a class="btn btn-primary" href="${BOOK}">Book a free 30-minute call</a>
+        <a class="btn btn-outline" href="/app-development/pricing/">See pricing</a>
       </div>
     </section>
 
@@ -385,10 +410,268 @@ ${FOOTER}
 `;
 }
 
+// ── Pricing page ────────────────────────────────────────────────────────────
+// Published rates are a qualifier: they filter budget before a call is booked,
+// and they beat the number a visitor would otherwise invent on their own.
+const RATE = 95;
+
+const PACKAGES = [
+  {
+    name: "App Store Launch",
+    price: "$1,200",
+    blurb:
+      "Your app is built but not shipped. We take it from finished code to live on the store.",
+    items: [
+      "Signing, certificates and provisioning",
+      "Store listing, screenshots and metadata",
+      "Privacy labels and data-safety forms",
+      "Submission, and we handle the review rejections",
+    ],
+  },
+  {
+    name: "App Audit",
+    price: "$500",
+    blurb:
+      "You inherited a codebase, or your last developer went quiet. Find out what you actually have.",
+    items: [
+      "Full codebase and architecture review",
+      "Security, dependency and store-readiness check",
+      "Written report you own and can hand to anyone",
+      "Prioritised plan of what to fix first",
+    ],
+  },
+  {
+    name: "Release Pipeline",
+    price: "$1,500",
+    blurb:
+      "Stop building releases by hand. Automated builds to TestFlight and Play from a single command.",
+    items: [
+      "CI/CD via GitHub Actions",
+      "Signed iOS and Android release builds",
+      "Automated TestFlight and Play uploads",
+      "Documented so your team can run it",
+    ],
+  },
+  {
+    name: "Payments & Subscriptions",
+    price: "$1,800",
+    blurb:
+      "In-app purchases done properly — the part that quietly breaks revenue when it's rushed.",
+    items: [
+      "RevenueCat or native StoreKit / Play Billing",
+      "Subscriptions, trials and lifetime tiers",
+      "Paywall, restore and entitlement handling",
+      "Store product setup on both platforms",
+    ],
+  },
+];
+
+const BANDS = [
+  {
+    name: "MVP build",
+    amt: "$8,000 – $20,000",
+    note: "A focused first version — one core job done well, on iOS and Android, ready for real users.",
+  },
+  {
+    name: "Full application",
+    amt: "$25,000 – $60,000",
+    note: "Accounts, payments, backend, offline support, admin tooling. Multi-month, built to grow.",
+  },
+  {
+    name: "Ongoing development",
+    amt: "from $1,500 / month",
+    note: "A standing block of hours for features, fixes and store releases after launch.",
+  },
+];
+
+const PRICING_FAQ = [
+  {
+    q: "How much does it cost to build an app?",
+    a: `Honestly, it depends on scope — but the useful answer is a range, not a shrug. A focused MVP typically lands between $8,000 and $20,000. A full application with accounts, payments and a backend usually runs $25,000 to $60,000. Small, well-defined pieces of work start around $500. If your budget is below that, say so on a call and we'll tell you whether it's doable or what to cut.`,
+  },
+  {
+    q: "Can I build an app for $5,000?",
+    a: `Sometimes — if the scope is genuinely small, or if what you need is a fixed package rather than a build. What $5,000 does not buy is a full multi-screen app with accounts and payments, and anyone who tells you otherwise is either cutting corners you'll pay for later or planning to come back for more. We'd rather tell you that before you spend it.`,
+  },
+  {
+    q: "Do you work hourly or fixed price?",
+    a: `Both. Well-defined work is quoted as a fixed price so you know the number up front. Open-ended or exploratory work is billed hourly at $${RATE}/hour. Most projects start fixed and move to hourly once the app is live and evolving.`,
+  },
+  {
+    q: "Why is app development so expensive?",
+    a: `An app is not one thing. It's two platforms, a backend, accounts, payments, store review on both sides, and everything that has to keep working after launch. The cost is mostly engineering time, and the projects that look cheap up front are usually the ones that get rebuilt in a year.`,
+  },
+  {
+    q: "What if I already have an app that needs finishing?",
+    a: `That's common and it's some of our favourite work. Start with an App Audit — you get a written assessment of what you have, what it would take to finish, and a prioritised plan. The audit is yours to keep whether or not you hire us for the rest.`,
+  },
+  {
+    q: "Do I own the code?",
+    a: `Yes. You own the source, the repository, the store listings and the accounts. No lock-in, and nothing is held hostage if you decide to take it elsewhere.`,
+  },
+];
+
+function pricingPage() {
+  const url = `${SITE}/app-development/pricing/`;
+  const title = "App Development Pricing & Costs | Auaha App Development";
+  const desc = `What it actually costs to build an app. Published rates: $${RATE}/hour, fixed packages from $500, MVP builds $8,000–$20,000. No quote-only games.`;
+
+  const jsonld = [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: PRICING_FAQ.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "App Development",
+          item: `${SITE}/app-development/`,
+        },
+        { "@type": "ListItem", position: 3, name: "Pricing", item: url },
+      ],
+    },
+  ]
+    .map(
+      (o) =>
+        `  <script type="application/ld+json">\n${JSON.stringify(o, null, 2)}\n  </script>`
+    )
+    .join("\n");
+
+  const pkgHtml = PACKAGES.map(
+    (p) => `        <div class="pkg">
+          <h3>${esc(p.name)}</h3>
+          <div class="price">${esc(p.price)}</div>
+          <p>${esc(p.blurb)}</p>
+          <ul>
+${p.items.map((i) => `            <li>${esc(i)}</li>`).join("\n")}
+          </ul>
+        </div>`
+  ).join("\n");
+
+  const bandHtml = BANDS.map(
+    (b) => `        <div class="band">
+          <b>${esc(b.name)}</b>
+          <div class="amt">${esc(b.amt)}</div>
+          <span>${esc(b.note)}</span>
+        </div>`
+  ).join("\n");
+
+  const faqHtml = PRICING_FAQ.map(
+    (f) => `      <div class="faq-item">
+        <h3>${esc(f.q)}</h3>
+        <p>${esc(f.a)}</p>
+      </div>`
+  ).join("\n");
+
+  return `<!DOCTYPE html>
+<html lang="en">
+
+${head(title, desc, url, jsonld)}
+
+<body>
+${NAV}
+
+  <main class="container wide">
+    <p class="breadcrumb">
+      <a href="/">Home</a> &nbsp;›&nbsp; <a href="/app-development/">App Development</a> &nbsp;›&nbsp; Pricing
+    </p>
+
+    <section class="hero">
+      <div class="badge">Pricing</div>
+      <h1>What it costs to <span>build an app</span></h1>
+      <p class="lede">Most studios won't publish this. We will — because the fastest way to waste both our time is to find out on call three that the budget was never going to work.</p>
+    </section>
+
+    <section class="block">
+      <h2>Hourly</h2>
+      <div class="rate">
+        <div class="num">$${RATE}<small> / hour</small></div>
+        <p>For ongoing work, contract development, and anything open-ended. Billed in real increments against work you can see in the repository.</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Fixed packages</h2>
+      <p>Well-defined work at a known price. Most of these finish inside a week or two.</p>
+      <div class="pkgs">
+${pkgHtml}
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>Project builds</h2>
+      <p>Ranges, not quotes — the number depends on scope, and we'll give you a real one after a call.</p>
+      <div class="bands">
+${bandHtml}
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>What moves the number</h2>
+      <p>Two apps with the same screen count can differ by 3x. The things that actually drive cost:</p>
+      <ul>
+        <li><b>Accounts and login</b> — especially social sign-in, or anything with roles and permissions.</li>
+        <li><b>Payments</b> — subscriptions, trials and restore logic are far more work than a one-time purchase.</li>
+        <li><b>A backend</b> — where the data lives, who can see it, and what happens when two people edit at once.</li>
+        <li><b>Working offline</b> — syncing data that changed on two devices is one of the hardest things in mobile.</li>
+        <li><b>Design</b> — working from an existing brand and design system is much faster than inventing one.</li>
+        <li><b>Integrations</b> — every third-party system is a small project of its own.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>Included in every project</h2>
+      <ul>
+        <li>You own the source code, the repository and the store accounts. No lock-in.</li>
+        <li>Built for both iOS and Android from one codebase.</li>
+        <li>Store submission handled, including the review rejections.</li>
+        <li>Direct access to the person actually writing the code — no account manager in between.</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>Frequently asked</h2>
+${faqHtml}
+    </section>
+
+    <div class="cta">
+      <h2>Not sure which of these you need?</h2>
+      <p>Book a free 30-minute call. Bring a full spec or a napkin idea — you'll leave knowing what it would take and roughly what it would cost, including if we think you don't need an app at all.</p>
+      <a class="btn btn-primary" href="${BOOK}">Book a free 30-minute call</a>
+      <p class="cta-alt">Rather write it out? <a href="${MAILTO}">${esc(BIZ.email)}</a></p>
+    </div>
+
+${PORTFOLIO}
+  </main>
+${FOOTER}
+
+</body>
+
+</html>
+`;
+}
+
 // ── Write hub + topic pages ─────────────────────────────────────────────────
 mkdirSync(resolve(root, "app-development"), { recursive: true });
 writeFileSync(resolve(root, "app-development", "index.html"), hubPage());
 console.log("✓ app-development/index.html");
+
+mkdirSync(resolve(root, "app-development", "pricing"), { recursive: true });
+writeFileSync(
+  resolve(root, "app-development", "pricing", "index.html"),
+  pricingPage()
+);
+console.log("✓ app-development/pricing/index.html");
 
 for (const topic of data.topics) {
   const dir = resolve(root, "app-development", topic.slug);

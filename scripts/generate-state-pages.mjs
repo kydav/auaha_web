@@ -305,6 +305,7 @@ for (const state of data.states) {
 const urls = [
   { loc: `${SITE}/`, pri: "1.0" },
   { loc: `${SITE}/app-development/`, pri: "0.9" },
+  { loc: `${SITE}/app-development/pricing/`, pri: "0.8" },
   ...agency.topics.map((t) => ({
     loc: `${SITE}/app-development/${t.slug}/`,
     pri: "0.7",

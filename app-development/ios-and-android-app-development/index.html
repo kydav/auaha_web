@@ -148,9 +148,28 @@
     .cta{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2.5rem 2rem;text-align:center;margin:2.5rem 0}
     .cta h2{margin-bottom:.6rem}
     .cta p{max-width:440px;margin:0 auto 1.5rem}
+    .cta .cta-alt{margin:1.1rem auto 0;font-size:.9rem;color:var(--muted)}
+    .cta .cta-alt a{color:var(--accent)}
     .related{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
     .related a{display:inline-block;padding:.55rem 1.1rem;border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:.92rem;font-weight:600;transition:all .2s;background:rgba(255,255,255,.03)}
     .related a:hover{border-color:var(--accent);color:var(--accent)}
+    .rate{background:linear-gradient(135deg,var(--card),var(--surface));border:1px solid var(--border);border-radius:16px;padding:2rem;text-align:center;margin:1.5rem 0}
+    .rate .num{font-size:3rem;font-weight:700;color:var(--accent);line-height:1}
+    .rate .num small{font-size:1.1rem;color:var(--muted);font-weight:400}
+    .rate p{margin:.75rem auto 0;max-width:460px}
+    .pkgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.25rem;margin-top:1.5rem}
+    .pkg{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column}
+    .pkg h3{font-size:1.05rem;margin-bottom:.35rem}
+    .pkg .price{color:var(--accent);font-weight:700;font-size:1.35rem;margin-bottom:.75rem}
+    .pkg p{font-size:.92rem;margin-bottom:.9rem}
+    .pkg ul{margin:0;padding-left:1.1rem;font-size:.88rem;color:var(--muted)}
+    .pkg li{margin-bottom:.3rem}
+    .bands{margin-top:1.5rem;border-top:1px solid var(--border)}
+    .band{display:grid;grid-template-columns:1fr;gap:.3rem;padding:1.15rem 0;border-bottom:1px solid var(--border)}
+    @media(min-width:640px){.band{grid-template-columns:1fr auto;align-items:baseline;gap:1.5rem}}
+    .band b{font-size:1.02rem;color:var(--text)}
+    .band .amt{color:var(--accent);font-weight:700;white-space:nowrap}
+    .band span{color:var(--muted);font-size:.92rem;grid-column:1}
     .hub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:1.5rem}
     .hub-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-decoration:none;transition:all .2s}
     .hub-card:hover{border-color:var(--accent);transform:translateY(-3px)}
@@ -171,7 +190,8 @@
       <li><a href="/#services">Services</a></li>
       <li><a href="/#apps">Apps</a></li>
       <li><a href="/app-development/">App Development</a></li>
-      <li><a href="mailto:hello@auaha.app?subject=App%20project%20inquiry" class="nav-cta">Get in Touch</a></li>
+      <li><a href="/app-development/pricing/">Pricing</a></li>
+      <li><a href="https://calendly.com/ky-s-dav/30min" class="nav-cta">Book a Call</a></li>
     </ul>
   </nav>
 
@@ -185,7 +205,7 @@
       <h1>iOS &amp; Android <span>app development</span></h1>
       <p class="lede">Your users are on both iPhone and Android, so your app should be too. Auaha builds for both platforms from a single codebase, so you launch on the App Store and Google Play without doubling the budget.</p>
       <div class="btn-group">
-        <a class="btn btn-primary" href="mailto:hello@auaha.app?subject=App%20project%20inquiry">Start a project</a>
+        <a class="btn btn-primary" href="https://calendly.com/ky-s-dav/30min">Book a free 30-minute call</a>
         <a class="btn btn-outline" href="/#apps">See our work</a>
       </div>
     </section>
@@ -234,8 +254,9 @@
 
     <div class="cta">
       <h2>Have a project in mind?</h2>
-      <p>Tell us about it — we'll get back to you within one business day. Whether it's a full spec or a napkin idea, we'll help you build something people actually use.</p>
-      <a class="btn btn-primary" href="mailto:hello@auaha.app?subject=App%20project%20inquiry">Get in touch</a>
+      <p>Book a free 30-minute call. Bring a full spec or a napkin idea — you'll leave knowing what it would take and roughly what it would cost, including if we think you don't need an app at all.</p>
+      <a class="btn btn-primary" href="https://calendly.com/ky-s-dav/30min">Book a free 30-minute call</a>
+      <p class="cta-alt">Rather write it out? <a href="mailto:hello@auaha.app?subject=App%20project%20inquiry">hello@auaha.app</a></p>
     </div>
 
     <section class="block">
@@ -255,6 +276,7 @@
     <p>&copy; 2026 Auaha App Development LLC &nbsp;·&nbsp; Utah, USA &nbsp;·&nbsp;
       <a href="/">Auaha.app</a> &nbsp;·&nbsp;
       <a href="/app-development/">App Development</a> &nbsp;·&nbsp;
+      <a href="https://calendly.com/ky-s-dav/30min">Book a call</a> &nbsp;·&nbsp;
       <a href="mailto:hello@auaha.app">hello@auaha.app</a> &nbsp;·&nbsp;
       <a href="/privacy/">Privacy</a> &nbsp;·&nbsp;
       <a href="/terms/">Terms</a>
