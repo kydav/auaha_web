@@ -136,11 +136,19 @@ const FOOTER = `
 const PORTFOLIO = `
     <section class="block">
       <h2>Apps we've shipped</h2>
-      <p>Real products, live on the App Store — proof we ship, not just pitch.</p>
+      <p>Real products, live in the app stores — proof we ship, not just pitch.</p>
       <div class="portfolio">
+        <a class="pcard" href="https://shoein.app">
+          <img src="/icons/shoein.png" alt="Shoein' icon" />
+          <span><b>Shoein'</b>Client, horse and scheduling manager for farriers</span>
+        </a>
         <a class="pcard" href="/threshold/">
           <img src="/icons/threshold.png" alt="Threshold icon" />
           <span><b>Threshold</b>Buyer agreements for real estate agents</span>
+        </a>
+        <a class="pcard" href="/functionalparenting/">
+          <img src="/icons/functionalparenting.png" alt="Functional Parenting icon" />
+          <span><b>Functional Parenting</b>Coaching app with subscriptions and a content CMS</span>
         </a>
         <a class="pcard" href="/prior/">
           <img src="/icons/prior.png" alt="Prior icon" />
