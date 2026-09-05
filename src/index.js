@@ -107,6 +107,68 @@ export default {
       );
     }
 
+    // ── Anonymous event collection for the /layoff/ cluster ─────────────────
+    // Counters only: which event, an in-tab session id, a few numbers, and the
+    // path. Never any of what someone wrote — that stays in their browser. No
+    // cookies and no cross-session identifier, so there is nothing to consent
+    // to. Degrades to a silent 204 when the D1 binding isn't configured, so the
+    // site keeps working before the database exists.
+    if (path === "/api/e" && request.method === "POST") {
+      try {
+        const body = await request.json();
+        if (env.EVENTS) {
+          const p = body.p || {};
+          await env.EVENTS.prepare(
+            `INSERT INTO events (event, session, path, referrer, words, seconds, rating, values_count, country, created_at)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))`,
+          )
+            .bind(
+              String(body.e || "").slice(0, 40),
+              String(body.s || "").slice(0, 40),
+              String(body.path || "").slice(0, 200),
+              String(body.ref || "").slice(0, 300),
+              Number(p.words) || null,
+              Number(p.seconds) || null,
+              Number(p.rating) || null,
+              Number(p.values) || null,
+              request.headers.get("cf-ipcountry") || null,
+            )
+            .run();
+        }
+      } catch (err) {
+        // Analytics must never break a page. Swallow and move on.
+        console.error("event error:", err.message);
+      }
+      return new Response(null, { status: 204 });
+    }
+
+    // Optional two-week check-in address, given by someone who just finished.
+    // The only personal data this cluster stores, and only on request.
+    if (path === "/api/checkin" && request.method === "POST") {
+      try {
+        const { email } = await request.json();
+        const clean = String(email || "").trim().toLowerCase();
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(clean) || clean.length > 200) {
+          return new Response(JSON.stringify({ ok: false }), {
+            status: 400,
+            headers: { "Content-Type": "application/json" },
+          });
+        }
+        if (env.EVENTS) {
+          await env.EVENTS.prepare(
+            `INSERT OR IGNORE INTO checkins (email, created_at) VALUES (?, datetime('now'))`,
+          )
+            .bind(clean)
+            .run();
+        }
+      } catch (err) {
+        console.error("checkin error:", err.message);
+      }
+      return new Response(JSON.stringify({ ok: true }), {
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+
     const match = url.pathname.match(TILE_RE);
     if (match) {
       const z = parseInt(match[1], 10);
@@ -214,6 +276,7 @@ export default {
       path !== "/" &&
       !path.endsWith("/") &&
       !path.startsWith("/.well-known/") &&
+      !path.startsWith("/api/") &&
       !/\.[a-z0-9]+$/i.test(path)
     ) {
       const slashUrl = new URL(url);

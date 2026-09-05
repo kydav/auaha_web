@@ -15,6 +15,9 @@ const data = JSON.parse(readFileSync(resolve(__dirname, "states.json"), "utf8"))
 const agency = JSON.parse(
   readFileSync(resolve(__dirname, "agency-topics.json"), "utf8")
 );
+const layoff = JSON.parse(
+  readFileSync(resolve(__dirname, "layoff-topics.json"), "utf8")
+);
 
 const SITE = data.site.replace(/\/$/, "");
 const TODAY = new Date().toISOString().slice(0, 10);
@@ -323,6 +326,13 @@ const urls = [
   ...data.states.map((s) => ({
     loc: `${SITE}/threshold/${s.slug}/`,
     pri: "0.8",
+  })),
+  // Layoff / career-transition cluster. The hub carries the exercise, so it
+  // ranks above its own articles.
+  { loc: `${SITE}${layoff.base}/`, pri: "0.9" },
+  ...layoff.topics.map((t) => ({
+    loc: `${SITE}${layoff.base}/${t.slug}/`,
+    pri: "0.7",
   })),
   { loc: `${SITE}/functionalparenting/`, pri: "0.6" },
   { loc: `${SITE}/prior/`, pri: "0.6" },

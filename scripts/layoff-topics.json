@@ -1,0 +1,328 @@
+{
+  "site": "https://auaha.app",
+  "base": "/layoff",
+  "brand": "Throughline",
+  "hub": {
+    "metaTitle": "Laid Off? A 15-Minute Exercise That Helped People Get More Job Offers",
+    "metaDescription": "A free, research-backed writing exercise for anyone who just lost their job. In a field study with a government employment agency, people who did it received 49% more job offers within four weeks.",
+    "badge": "Free · No account",
+    "h1": "You just lost your job.",
+    "h1span": "Start here.",
+    "intro": "Not advice, not a course, not a subscription. One writing exercise that takes about fifteen minutes, based on a study published in PNAS where people who did it received more job offers within four weeks. Your writing stays on your device — we never see it."
+  },
+  "values": [
+    "Family and close relationships",
+    "Friendship",
+    "Honesty",
+    "Kindness and helping others",
+    "Independence",
+    "Learning and curiosity",
+    "Creativity",
+    "Craftsmanship — doing the work well",
+    "Humour",
+    "Health and physical wellbeing",
+    "Spirituality or faith",
+    "Community and belonging",
+    "Nature and the outdoors",
+    "Music, art or writing",
+    "Fairness and standing up for people",
+    "Teaching or mentoring",
+    "Adventure and trying new things",
+    "Stability and providing for people"
+  ],
+  "topics": [
+    {
+      "slug": "just-got-laid-off-what-to-do",
+      "metaTitle": "I Just Got Laid Off — What Do I Do Now?",
+      "metaDescription": "A calm, practical order of operations for the first week after a layoff: what to handle immediately, what can wait, and what most people get wrong in the first 48 hours.",
+      "badge": "First week",
+      "h1": "You just got laid off.",
+      "h1span": "Here's the order to do things in.",
+      "keyword": "what to do after being laid off",
+      "intro": "The worst part of the first few days is that everything feels equally urgent. It isn't. Here's what genuinely needs handling this week, what can wait a fortnight, and the two things people most often get wrong while they're still in shock.",
+      "sections": [
+        {
+          "h2": "Before you sign anything",
+          "body": [
+            "Most people are handed severance paperwork in the same meeting where they're told they're being let go — which is the worst possible moment to read a legal document. You are almost never required to sign on the spot, and in many cases you're entitled to time to review it.",
+            "Take the paperwork home. Read it when you can actually think. If the numbers are significant or there's a non-compete, non-disparagement or release of claims in there, it is worth paying an employment lawyer for a single consultation before you sign — that is usually a couple of hundred dollars against a decision that can be worth a great deal more."
+          ]
+        },
+        {
+          "h2": "The first 48 hours",
+          "checks": [
+            { "b": "Get your personal files off the laptop — legally.", "t": "Your contacts, your portfolio, your reference letters. Not company data. Access is usually cut within hours, and often before you get home." },
+            { "b": "Write down what happened while it's fresh.", "t": "Date, who was in the room, the reason given, what you were offered. You will want the specifics later, for unemployment claims and for interviews." },
+            { "b": "Check what happens to your health insurance and when.", "t": "The end date is often the end of the month rather than your last day, but not always. This is the detail people miss." },
+            { "b": "File for unemployment.", "t": "There's often a waiting period, so filing early matters. Being laid off — as distinct from being fired for cause — generally makes you eligible." },
+            { "b": "Tell two people.", "t": "Not the internet. Two people who will be kind to you. That's enough for now." }
+          ]
+        },
+        {
+          "h2": "The two things people get wrong",
+          "body": [
+            "The first is applying immediately. Within a day or two of losing a job, most people fire off twenty applications, because doing something feels better than doing nothing. Those applications are written by someone in shock, and they read like it. They're also aimed at whatever happens to be listed rather than at what you actually want, which means the interviews you do get are for jobs you don't want.",
+            "The second is going quiet. Layoffs carry a shame that firings somehow don't — even though a layoff is, by definition, about the company's finances rather than your performance. People disappear for a few weeks to sort themselves out first. But your network is at its most useful in the first fortnight, when the news is fresh and people instinctively want to help."
+          ]
+        },
+        {
+          "h2": "What can wait",
+          "checks": [
+            { "b": "Rewriting your entire CV.", "t": "You'll rewrite it again once you know what you're aiming at. A day or two of thinking first saves you doing it twice." },
+            { "b": "Deciding on a career change.", "t": "Week one is the worst possible time to make a ten-year decision. Note the impulse, revisit it in a month." },
+            { "b": "Telling everyone.", "t": "There's no deadline. Tell people as you're ready to." },
+            { "b": "A LinkedIn 'open to work' banner.", "t": "Useful eventually. Not urgent, and not while you're still deciding what you're open to." }
+          ]
+        },
+        {
+          "h2": "The thing worth doing early",
+          "body": [
+            "There's one exercise with real evidence behind it, and it takes about fifteen minutes. In a field study run with a government employment agency and published in PNAS, unemployed people who wrote about their most important personal values received 49% more job offers over the following four weeks than those who didn't.",
+            "It isn't positive thinking and it isn't a productivity system. Losing a job is a threat to your sense of who you are, and the exercise works by reconnecting you to the parts of yourself the layoff didn't touch. It's free here, needs no account, and what you write never leaves your device."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "Should I say I was laid off or that I left?", "a": "Say you were laid off. It's verifiable, it's extremely common, and it carries no implication about your performance — a layoff is a decision about a role or a budget, not about you. Trying to dress it up as a resignation creates a story you then have to maintain." },
+        { "q": "How long does it usually take to find a new job?", "a": "It varies enormously by field and seniority, and any number you read is an average hiding a very wide range. What's more useful to know is that the first few weeks feel disproportionately bleak because nothing has had time to come back yet — most processes take weeks to produce a reply." },
+        { "q": "Should I take any job to stop the gap?", "a": "A short gap is far less damaging than people fear, and far less damaging than a role you leave after three months. If money makes it necessary, take the work — but treat that as a financial decision rather than a CV one." }
+      ]
+    },
+    {
+      "slug": "how-to-tell-people-you-were-laid-off",
+      "metaTitle": "How to Tell People You Were Laid Off",
+      "metaDescription": "What to say to your partner, your parents, your friends and your network after a layoff — including scripts, and why telling people sooner tends to help more than waiting.",
+      "badge": "The conversations",
+      "h1": "How to tell people",
+      "h1span": "you were laid off",
+      "keyword": "how to tell people you were laid off",
+      "intro": "This is the part people dread more than the job search itself. Here's what actually helps, roughly in the order you'll need it, with wording you can borrow.",
+      "sections": [
+        {
+          "h2": "Why it feels worse than it is",
+          "body": [
+            "A layoff is a decision about a budget, a team or a business line. Being fired is a decision about you. Almost everyone knows the difference, and yet the feeling in your chest doesn't seem to.",
+            "Part of that is simply that work is where a lot of us keep our sense of being useful. When it goes, the instinct is to hide until you've fixed it — to come back with the new job already in hand, so the whole thing can be presented as a story with an ending. That instinct is understandable and it costs you, because the people who could help are the ones you're hiding from."
+          ]
+        },
+        {
+          "h2": "Telling your partner or family",
+          "body": [
+            "Lead with the facts and the plan, in that order, because the person you're telling is going to be frightened about money and will feel better knowing you've thought about it — even if the plan is only a week long.",
+            "Something like: \"I was laid off today. It's part of a bigger cut, it isn't about my performance. I get severance through the end of next month, I'm filing for unemployment tomorrow, and I'm going to spend this week working out what I'm aiming at before I start applying.\"",
+            "Then say the other part, which is harder and matters more: \"I'm okay, but I'm not going to be great for a few days.\" People cope much better with a sad person who warned them than with one who seems fine and then isn't."
+          ]
+        },
+        {
+          "h2": "Telling your network",
+          "checks": [
+            { "b": "Be specific about what you want.", "t": "\"Let me know if you hear of anything\" gives people nothing to act on. \"I'm looking for backend roles at companies under 200 people, ideally remote\" gives them something they can match against." },
+            { "b": "Ask for something small.", "t": "An introduction, or fifteen minutes on a call. People say yes to small asks and then often do more than you asked." },
+            { "b": "Say it plainly.", "t": "\"My role was cut in a restructure\" needs no apology attached to it. Adding one invites the other person to treat it as bad news about you." },
+            { "b": "Go wide early.", "t": "The news is at its most useful in the first fortnight, while it's fresh and people's instinct to help is strongest." }
+          ]
+        },
+        {
+          "h2": "A message you can send",
+          "body": [
+            "\"Hi — some news: my role was cut last week as part of a wider restructure at [company]. I'm fine, and I'm starting to look. I'm aiming at [the kind of role], ideally [the kind of company]. If anyone comes to mind, or you know of something, I'd really appreciate you keeping me in mind. Happy to send my CV over.\"",
+            "Short, unembarrassed, and specific enough that someone reading it can immediately think of a name. That's the whole job of the message."
+          ]
+        },
+        {
+          "h2": "Telling children",
+          "body": [
+            "Children pick up on tension long before they're told anything, and what they invent is usually worse than the truth. Say it simply, say what won't change, and be honest that you don't know everything yet.",
+            "\"My job ended, so I'm going to be home more for a while until I find a new one. We're okay. You'll still go to the same school and see the same friends.\" Then let them ask. It's normal for the questions to come days later, out of nowhere."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "Should I post about it on LinkedIn?", "a": "It works for a lot of people — layoff posts get unusual reach, and reach is exactly what you need. But only post when you can write it without bitterness. If you're not there yet, message twenty people individually instead. That's often more effective anyway." },
+        { "q": "What if I'm too embarrassed to tell anyone?", "a": "That feeling is close to universal, and it's worth knowing it's the layoff talking rather than a fact about your situation. Start with one person who you know will be kind. It gets substantially easier after the first time you say it out loud." },
+        { "q": "Do I have to tell people why I was laid off?", "a": "No. \"My role was cut\" is a complete answer. If the reason is straightforward — a funding round that didn't happen, a whole team closed — saying so can help, because it makes clear it wasn't about you." }
+      ]
+    },
+    {
+      "slug": "how-to-explain-a-layoff-in-an-interview",
+      "metaTitle": "How to Explain a Layoff in an Interview",
+      "metaDescription": "What to say when an interviewer asks why you left, how long to spend on it, and the three mistakes that turn a non-issue into a real one.",
+      "badge": "Interviews",
+      "h1": "How to explain a layoff",
+      "h1span": "in an interview",
+      "keyword": "how to explain being laid off in an interview",
+      "intro": "Interviewers ask about layoffs far less than candidates expect, and care far less than candidates fear. The risk isn't the layoff — it's the way people talk about it. Here's how to make it a non-event.",
+      "sections": [
+        {
+          "h2": "The shape of a good answer",
+          "body": [
+            "Three sentences, and then move on. What happened, that it was structural, what you're looking for next. The brevity is doing most of the work: a short answer signals that you consider it unremarkable, and the interviewer takes their cue from you.",
+            "\"My role was cut in November — the company reduced headcount by about a third and closed the team I was on. I'd been there three years and I'm proud of what we shipped. What I'm looking for now is somewhere I can keep doing [the thing], with a bit more [the thing you actually want].\"",
+            "That's it. No apology, no explanation of the company's finances, no reassurance that it wasn't your fault. Reassurance offered before it's asked for reads as something to reassure about."
+          ]
+        },
+        {
+          "h2": "Three ways people make it worse",
+          "checks": [
+            { "b": "Talking too long.", "t": "The single most common error. A ninety-second answer to a fifteen-second question tells the interviewer this is a sore subject and invites them to poke at it." },
+            { "b": "Criticising the old employer.", "t": "Even when it's deserved, and it often is. The interviewer isn't assessing whether your old company behaved badly — they're imagining how you'll talk about them one day." },
+            { "b": "Pre-emptive defending.", "t": "\"It really wasn't about my performance, I had great reviews\" answers a question nobody asked. Let the shortness of the answer do that work instead." }
+          ]
+        },
+        {
+          "h2": "What about the gap?",
+          "body": [
+            "Have one sentence for it and make sure that sentence contains something you did. \"I took a few weeks to work out what I actually wanted rather than applying to everything, and I've been [learning X / consulting for Y / helping Z].\" Deliberate reads completely differently from adrift, and the difference is often just whether you've articulated it.",
+            "Gaps are also far more normal than they were even a few years ago. Large, well-publicised layoffs have made \"my role was cut\" one of the least remarkable things you can say in an interview."
+          ]
+        },
+        {
+          "h2": "If you're carrying anger into the room",
+          "body": [
+            "Sometimes the layoff genuinely was unfair — badly handled, poorly communicated, aimed at the wrong people. That anger is legitimate and it will also be audible in an interview, in ways you won't hear yourself.",
+            "The practical fix is to have said it all out loud somewhere else first, to a friend or on paper. The fifteen-minute values exercise on this site is useful here for a specific reason: it moves your attention off what the company decided and onto what you actually care about, which is the frame you want to be in when someone asks what you're looking for next."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "Should I bring up the layoff before they ask?", "a": "Only if there's an obvious gap on your CV, in which case mention it briefly and move on. Otherwise wait to be asked. Volunteering it makes it larger than it is." },
+        { "q": "Is 'laid off' better than 'made redundant' or 'restructured'?", "a": "Use whatever's normal where you are. What matters is that the phrasing is neutral and structural — about the role ending rather than about you being let go." },
+        { "q": "What if I was laid off more than once?", "a": "It's more common than you'd think, particularly if you've worked at startups or in a sector that contracted. Name the pattern before they wonder about it: \"Two of the last three companies had layoffs — I've been aiming at early-stage, and that's part of the deal. It's why stability matters to me in this next one.\"" }
+      ]
+    },
+    {
+      "slug": "laid-off-vs-fired",
+      "metaTitle": "Laid Off vs Fired: What's the Difference?",
+      "metaDescription": "Laid off and fired are not the same thing, and the difference affects unemployment benefits, references and what you say in interviews. Here's what separates them.",
+      "badge": "Plain answers",
+      "h1": "Laid off vs fired:",
+      "h1span": "what's the difference?",
+      "keyword": "laid off vs fired difference",
+      "intro": "People use the two words interchangeably, and they shouldn't. The distinction changes what you're likely to be eligible for, what a former employer will confirm, and how the whole thing reads to a future employer.",
+      "sections": [
+        {
+          "h2": "The core difference",
+          "body": [
+            "A layoff is the employer eliminating a position. The reason sits with the business — a budget, a restructure, a merger, a product being shut down, a funding round that didn't land. The work went away, and you went with it.",
+            "Being fired is the employer ending your employment because of you — performance, conduct, attendance, a policy breach. The role usually still exists afterwards, and somebody else will do it.",
+            "The plainest test: if your employer would hire someone else to do exactly your job next month, you were fired. If the job itself no longer exists, you were laid off."
+          ]
+        },
+        {
+          "h2": "Why the difference matters",
+          "checks": [
+            { "b": "Unemployment eligibility.", "t": "Layoffs generally qualify. Being fired for misconduct generally doesn't, though rules vary by state and by what exactly happened." },
+            { "b": "What a former employer will say.", "t": "Many companies confirm only dates and job title either way — but the internal record differs, and it can surface in background checks." },
+            { "b": "Severance.", "t": "Layoffs often come with severance, notice pay, or extended benefits. Firings usually don't." },
+            { "b": "How it reads in an interview.", "t": "\"My role was cut\" needs no defending. \"I was let go\" invites a follow-up question." }
+          ]
+        },
+        {
+          "h2": "The blurry cases",
+          "body": [
+            "Sometimes a company frames a performance exit as a layoff, to make it easier for everyone. Sometimes a genuine layoff is used to remove people the company wanted gone anyway. And sometimes you'll be offered the chance to resign instead.",
+            "Resigning is worth thinking about carefully, because it can affect unemployment eligibility — you generally left voluntarily, which is a different category. The trade is a cleaner story against a possible loss of benefits, and which way that trade goes depends on your finances, so it's worth a conversation with someone who knows your local rules before deciding."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "Is 'let go' the same as being fired?", "a": "\"Let go\" is deliberately vague and gets used for both. If you're describing your own situation, use the specific word — it's clearer and it's better for you if the accurate word is 'laid off'." },
+        { "q": "Can I get unemployment if I was fired?", "a": "Sometimes. Being dismissed for not being a good fit is treated differently from being dismissed for misconduct in most places. It's worth filing and letting the agency make the determination rather than assuming you're not eligible." },
+        { "q": "Will a future employer know which one it was?", "a": "Often not in any detail. Most large employers confirm only employment dates and title. But answer honestly if asked directly — being caught in a rewrite is far worse than either original reason." }
+      ]
+    },
+    {
+      "slug": "job-search-after-layoff-where-to-start",
+      "metaTitle": "Job Search After a Layoff: Where to Actually Start",
+      "metaDescription": "How to run a job search after being laid off without burning out in the first fortnight — what to do first, how many applications is the right number, and where offers actually come from.",
+      "badge": "The search",
+      "h1": "Starting a job search",
+      "h1span": "after a layoff",
+      "keyword": "job search after layoff",
+      "intro": "Most people start by applying to everything, get very few replies, and conclude something is wrong with them. Usually the problem is the shape of the search, not the person doing it.",
+      "sections": [
+        {
+          "h2": "Decide what you're aiming at first",
+          "body": [
+            "A day spent working out what you're actually looking for will save you a fortnight of unfocused applications. You want three things written down: the kind of role, the kind of company, and your genuine constraints on money and location.",
+            "This feels like procrastinating and isn't. Every part of the search downstream — your CV, what you say in a call, who you ask for introductions — gets sharper once you can finish the sentence \"I'm looking for…\" without hedging."
+          ]
+        },
+        {
+          "h2": "Where offers actually come from",
+          "checks": [
+            { "b": "People who already know you.", "t": "Former colleagues and managers. The highest hit rate of anything, by a wide margin, and the most underused because it feels like asking for a favour." },
+            { "b": "Second-degree introductions.", "t": "Someone who knows someone. Nearly as good, and easier to ask for than a job." },
+            { "b": "Applying directly to specific companies.", "t": "Works, particularly at smaller companies where a real person reads it." },
+            { "b": "Mass applications through job boards.", "t": "Lowest hit rate by far. Worth doing, worth not making the whole strategy." }
+          ]
+        },
+        {
+          "h2": "How many applications a day",
+          "body": [
+            "Fewer than you think, done better. Five carefully targeted applications a week will out-perform fifty generic ones, and the difference isn't effort — it's that the targeted ones are readable as being from a specific person who wants that specific job.",
+            "Structure the week instead of the day: two mornings on applications, one on outreach and conversations, one on preparation or learning, and genuinely take the rest off. A job search that fills every waking hour produces worse work and a worse-sounding candidate, and there's nowhere to put the exhaustion."
+          ]
+        },
+        {
+          "h2": "The part nobody schedules",
+          "body": [
+            "Rejection arrives in clusters, often weeks after you'd stopped thinking about the role. It compounds quietly, and by week six most people are applying from a much worse psychological place than they started in — which shows in cover letters and in interviews.",
+            "This is the actual argument for doing the values exercise early, and revisiting it. The published study found that people who did it received more job offers over the following four weeks, and the mechanism is fairly intuitive: someone who is clear about what they're worth applies differently from someone who isn't."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "Should I use recruiters?", "a": "Yes, as one channel of several. Recruiters work for the employer, not for you, which is worth remembering — but a good one in your field is genuinely useful, and worth building a relationship with even between jobs." },
+        { "q": "Should I lower my salary expectations?", "a": "Not at the start. You can always come down; you can't come back up in the same process. If the search stretches on, revisit it as a deliberate decision with a number attached rather than drifting downward under pressure." },
+        { "q": "How do I stay motivated after a lot of rejections?", "a": "Track the things you control — conversations had, applications sent, people contacted — rather than only outcomes, which arrive late and unevenly. And keep at least one part of the week that isn't about the search at all." }
+      ]
+    },
+    {
+      "slug": "losing-your-job-and-your-identity",
+      "metaTitle": "Losing a Job Feels Like Losing Yourself. Here's Why.",
+      "metaDescription": "Why a layoff hits harder than the money explains, what the research says about identity threat, and a fifteen-minute exercise shown to increase job offers.",
+      "badge": "The part nobody prepares you for",
+      "h1": "It isn't just the money.",
+      "h1span": "Here's why it hurts.",
+      "keyword": "job loss identity loss",
+      "intro": "People expect a layoff to be financially frightening. What surprises almost everyone is how much of the difficulty isn't about money at all — and there's a decent body of research explaining why, along with one intervention that's actually been tested.",
+      "sections": [
+        {
+          "h2": "Why it hits where it does",
+          "body": [
+            "For a lot of people, work carries far more than income. It carries the answer to what you say at parties, a daily structure, the sense of being useful to somebody, and a large part of the evidence you use to decide whether you're doing well in life.",
+            "Losing the job takes all of it at once, on a day you didn't choose. Psychologists call this an identity threat — an event that undermines your sense of yourself as competent and worthwhile. Which is why the grief is disproportionate to the paycheque, and why 'but you'll find something else' lands so poorly."
+          ]
+        },
+        {
+          "h2": "What self-affirmation actually means",
+          "body": [
+            "The term sounds like standing in front of a mirror telling yourself you're great. In the research literature it means something narrower and more useful: when one part of your self-image takes a hit, you can restore your sense of integrity by reconnecting with other parts of it that are untouched.",
+            "You didn't stop being a good parent when the role was cut. You didn't stop being the person your friends call. Your judgement, your craft, the thing you'd still do on a Saturday — none of that was in the redundancy pool. The exercise is a structured way of remembering that at a moment when it's genuinely hard to."
+          ]
+        },
+        {
+          "h2": "It's been tested on actual job seekers",
+          "body": [
+            "In 2023, researchers published two field experiments in PNAS on exactly this. Unemployed people spent ten to fifteen minutes writing about the values that mattered most to them and why. That was the whole intervention — once, not daily.",
+            "In the second study, run with a government employment agency, 10.9% of the people who did the exercise were re-employed within four weeks, against 3.4% of those who didn't. They also received about 49% more job offers. In the first study the increase in offers was larger still.",
+            "Two honest caveats, because they matter. The effect on re-employment and offers was measured at four weeks and was no longer statistically significant at eight. And the difference in how quickly people found work was about a day — the meaningful result is offers, not speed."
+          ]
+        },
+        {
+          "h2": "When it's more than a bad few weeks",
+          "body": [
+            "Job loss carries a real, documented risk of depression, and there's a difference between the flat, grey weeks that are a normal response and something that needs support. If you're not sleeping for weeks, can't function, or find yourself thinking about not being here, please talk to a doctor or a therapist.",
+            "In the US you can call or text 988 at any time. This page isn't therapy and neither is the exercise — it's fifteen minutes of writing with some evidence behind it, which is a useful thing and not a substitute for care."
+          ]
+        }
+      ],
+      "faqs": [
+        { "q": "Is this the same as positive affirmations?", "a": "No, and the difference is the point. Affirmations are statements about yourself you repeat. This is a writing exercise about what you value and why, and it's the version that's been tested in field experiments with unemployed people." },
+        { "q": "Do I have to do it more than once?", "a": "The study administered it once. Whether repeating it extends the benefit hasn't been tested — the authors say so explicitly. Do it once, and again later if it helped." },
+        { "q": "Does what I write get sent anywhere?", "a": "No. The writing stays in your browser on your own device. We record only anonymous counts — that an exercise was started or finished — so we know whether the page is useful to people. We never see a word of it." }
+      ]
+    }
+  ]
+}
