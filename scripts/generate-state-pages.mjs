@@ -321,6 +321,7 @@ const urls = [
   { loc: `${SITE}/threshold/buyer-broker-agreement-by-state/`, pri: "0.8" },
   // Hand-written Threshold articles (not generated — keep in sync by hand).
   { loc: `${SITE}/threshold/who-pays-the-buyers-agent/`, pri: "0.8" },
+  { loc: `${SITE}/threshold/open-house-to-signed-buyer/`, pri: "0.8" },
   { loc: `${SITE}/threshold/commission-splits-are-negotiable/`, pri: "0.8" },
   { loc: `${SITE}/threshold/buyer-commission-offer-term/`, pri: "0.8" },
   ...data.states.map((s) => ({

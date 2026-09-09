@@ -477,12 +477,12 @@ const PACKAGES = [
 const BANDS = [
   {
     name: "MVP build",
-    amt: "$8,000 – $20,000",
+    amt: "$5,000 - $15,000",
     note: "A focused first version — one core job done well, on iOS and Android, ready for real users.",
   },
   {
     name: "Full application",
-    amt: "$25,000 – $60,000",
+    amt: "$10,000 - $20,000",
     note: "Accounts, payments, backend, offline support, admin tooling. Multi-month, built to grow.",
   },
   {
@@ -495,7 +495,7 @@ const BANDS = [
 const PRICING_FAQ = [
   {
     q: "How much does it cost to build an app?",
-    a: `Honestly, it depends on scope — but the useful answer is a range, not a shrug. A focused MVP typically lands between $8,000 and $20,000. A full application with accounts, payments and a backend usually runs $25,000 to $60,000. Small, well-defined pieces of work start around $500. If your budget is below that, say so on a call and we'll tell you whether it's doable or what to cut.`,
+    a: `Honestly, it depends on scope — but the useful answer is a range, not a shrug. A focused MVP typically lands between $5,000 and $20,000. A full application with accounts, payments and a backend usually runs $25,000 to $60,000. Small, well-defined pieces of work start around $500. If your budget is below that, say so on a call and we'll tell you whether it's doable or what to cut.`,
   },
   {
     q: "Can I build an app for $5,000?",
@@ -522,7 +522,7 @@ const PRICING_FAQ = [
 function pricingPage() {
   const url = `${SITE}/app-development/pricing/`;
   const title = "App Development Pricing & Costs | Auaha App Development";
-  const desc = `What it actually costs to build an app. Published rates: $${RATE}/hour, fixed packages from $500, MVP builds $8,000–$20,000. No quote-only games.`;
+  const desc = `What it actually costs to build an app. Published rates: $${RATE}/hour, fixed packages from $500, MVP builds $5,000-$15,000. No quote-only games.`;
 
   const jsonld = [
     {
