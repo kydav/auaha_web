@@ -14,20 +14,6 @@
 	"compatibility_flags": [
 		"nodejs_compat"
 	],
-	// ── Event logging for the /layoff/ cluster ────────────────────────────────
-	// /api/e and /api/checkin no-op silently until this binding exists, so the
-	// site deploys fine without it. To turn tracking on:
-	//   1. npx wrangler d1 create auaha-events
-	//   2. paste the returned database_id below and uncomment the block
-	//   3. npx wrangler d1 execute auaha-events --remote --file=scripts/events-schema.sql
-	//   4. npm run deploy
-	// "d1_databases": [
-	//   {
-	//     "binding": "EVENTS",
-	//     "database_name": "auaha-events",
-	//     "database_id": "PASTE_DATABASE_ID_HERE"
-	//   }
-	// ],
 	"r2_buckets": [
 		{
 			"binding": "TILES",
@@ -36,7 +22,11 @@
 	],
 	"d1_databases": [
 		{
-			"binding": "auaha_events",
+			// MUST be EVENTS — src/index.js guards on `env.EVENTS`, and the guard
+			// fails open (silent 204) so a mismatched name loses every event
+			// without an error anywhere. It was bound as `auaha_events` from
+			// 2026-09-05 until this was fixed; that window recorded nothing.
+			"binding": "EVENTS",
 			"database_name": "auaha-events",
 			"database_id": "6b9bfbbc-ac6b-4821-8920-7c8d6eaeb394"
 		}
