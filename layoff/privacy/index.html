@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy — After a Layoff | Throughline</title>
+  <meta name="description" content="What these pages store, what they don't, and what happens to anything you write in the exercise. Short version: what you write never leaves your browser." />
+  <link rel="canonical" href="https://auaha.app/layoff/privacy/" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Privacy — After a Layoff | Throughline" />
+  <meta property="og:description" content="What these pages store, what they don't, and what happens to anything you write in the exercise. Short version: what you write never leaves your browser." />
+  <meta property="og:url" content="https://auaha.app/layoff/privacy/" />
+  <meta property="og:site_name" content="Throughline" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Privacy — After a Layoff | Throughline" />
+  <meta name="twitter:description" content="What these pages store, what they don't, and what happens to anything you write in the exercise. Short version: what you write never leaves your browser." />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Auaha",
+      "item": "https://auaha.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "After a layoff",
+      "item": "https://auaha.app/layoff/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Privacy",
+      "item": "https://auaha.app/layoff/privacy/"
+    }
+  ]
+}
+  </script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#14181a;--surface:#1b2123;--card:#212a2c;--accent:#5aa89b;--accent2:#8fcfc3;--text:#f2f4f3;--muted:#a8b3b1;--border:#2e3839}
+    html{scroll-behavior:smooth}
+    body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+    a{color:var(--accent)}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:rgba(20,24,26,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    .logo{font-size:1.3rem;font-weight:700;letter-spacing:-.4px;color:var(--text);text-decoration:none}
+    .logo span{color:var(--accent)}
+    .nav-links{display:flex;align-items:center;gap:1.5rem;list-style:none}
+    .nav-links a{color:var(--muted);text-decoration:none;font-size:.9rem;transition:color .2s}
+    .nav-links a:hover{color:var(--accent)}
+    .container{max-width:760px;margin:0 auto;padding:0 1.5rem}
+    .breadcrumb{font-size:.82rem;color:var(--muted);padding-top:6.5rem}
+    .breadcrumb a{color:var(--muted);text-decoration:none}
+    .breadcrumb a:hover{color:var(--accent)}
+    .hero{padding:1.5rem 0 2.5rem}
+    .badge{display:inline-block;background:rgba(90,168,155,.12);color:var(--accent2);border:1px solid rgba(90,168,155,.30);border-radius:99px;padding:.3rem 1rem;font-size:.8rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:1.25rem}
+    h1{font-size:clamp(1.9rem,4.6vw,2.8rem);font-weight:800;line-height:1.14;letter-spacing:-.8px;margin-bottom:1.1rem}
+    h1 span{color:var(--accent2)}
+    .lede{font-size:1.1rem;color:var(--muted);margin-bottom:1.75rem}
+    .hero-cta{display:inline-flex;align-items:center;gap:.6rem;background:var(--accent);color:#0f1416;padding:.75rem 1.4rem;border-radius:10px;font-weight:700;font-size:.95rem;text-decoration:none;transition:all .2s}
+    .hero-cta:hover{background:var(--accent2);transform:translateY(-1px)}
+    section.block{padding:2.5rem 0;border-top:1px solid var(--border)}
+    h2{font-size:clamp(1.4rem,3vw,1.85rem);font-weight:800;letter-spacing:-.4px;margin-bottom:1rem}
+    p{color:var(--muted)}
+    .block p+p{margin-top:1rem}
+    ul.checks{list-style:none;margin-top:1rem}
+    ul.checks li{position:relative;padding-left:1.9rem;margin-bottom:.85rem;color:var(--muted)}
+    ul.checks li::before{content:'—';position:absolute;left:0;top:0;color:var(--accent);font-weight:800}
+    ul.checks li b{color:var(--text);font-weight:600}
+    .faq-item{border:1px solid var(--border);border-radius:12px;padding:1.25rem 1.4rem;margin-bottom:1rem;background:var(--card)}
+    .faq-item h3{margin-bottom:.5rem;font-size:1.03rem;font-weight:700}
+    .faq-item p{font-size:.97rem}
+    .cta{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2.4rem 2rem;text-align:center;margin:2.5rem 0}
+    .cta h2{margin-bottom:.6rem}
+    .cta p{max-width:460px;margin:0 auto 1.5rem}
+    .cta-btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:#0f1416;padding:.85rem 1.6rem;border-radius:10px;font-weight:700;text-decoration:none;transition:all .2s;border:none;cursor:pointer;font-size:1rem}
+    .cta-btn:hover{background:var(--accent2);transform:translateY(-2px)}
+    .cta-note{font-size:.8rem;color:var(--muted);margin-top:1rem}
+    .related{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
+    .related a{display:inline-block;padding:.55rem 1.1rem;border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:.92rem;font-weight:600;transition:all .2s;background:rgba(255,255,255,.03)}
+    .related a:hover{border-color:var(--accent);color:var(--accent2)}
+    .disclaimer{font-size:.8rem;color:var(--muted);border-top:1px solid var(--border);padding:1.75rem 0;line-height:1.55}
+    .crisis{background:rgba(90,168,155,.07);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:10px;padding:1rem 1.2rem;margin:1.5rem 0;font-size:.9rem;color:var(--muted)}
+    footer{border-top:1px solid var(--border);padding:2rem 1.5rem;text-align:center;color:var(--muted);font-size:.875rem}
+    footer a{color:var(--accent);text-decoration:none}
+    footer a:hover{text-decoration:underline}
+    @media(max-width:600px){.nav-links{display:none}}
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="/layoff/" class="logo">Throughline<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/layoff/">The exercise</a></li>
+      <li><a href="/layoff/just-got-laid-off-what-to-do/">First week</a></li>
+      <li><a href="https://auaha.app/">Auaha</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <p class="breadcrumb">
+      <a href="/layoff/">After a layoff</a> &nbsp;›&nbsp; Privacy
+    </p>
+
+    <header class="hero">
+      <div class="badge">Privacy</div>
+      <h1>What these pages <span>store, and don't</span></h1>
+      <p class="meta">Auaha App Development LLC &nbsp;·&nbsp; Last updated September 18, 2026</p>
+      <p class="lede">The short version: what you write in the exercise never leaves your
+        browser. We can see that someone did it. We cannot see what they said.</p>
+    </header>
+
+    <article>
+      <h2>What you write stays on your device</h2>
+      <p>The writing exercise saves your answers in your own browser's local storage so you
+        don't lose them if you close the tab or come back later. <strong>That text is never
+        sent to us.</strong> It isn't stored on a server, we can't read it, and nobody else
+        can either. Clearing your browser data deletes it permanently — including from us,
+        because we never had it.</p>
+
+      <h2>What we do record</h2>
+      <p>So we can tell whether these pages are any use to anyone, we record a small,
+        anonymous event when you start and finish the exercise. That's:</p>
+      <ul class="checks">
+        <li>which page you were on, and which site sent you (if any)</li>
+        <li><b>how many words</b> you wrote and <b>how long</b> you spent — the counts, never the words</li>
+        <li>the country your request came from, as reported by our host</li>
+        <li>a random id that lives only until you close the tab, so one visit isn't counted as five</li>
+      </ul>
+      <p>That random id is not a cookie, it's deleted when the tab closes, and it is never
+        connected to anything else. We do not store your IP address. There is no advertising
+        pixel, no Google Analytics, and no third-party tracker of any kind on these pages —
+        which is also why you aren't being asked to accept cookies.</p>
+
+      <h2>The optional check-in</h2>
+      <p>At the end of the exercise you can leave an email address for a single check-in a
+        couple of weeks later. That's the only personal information we hold. It is used for
+        that one message, it is not added to a marketing list, and it is never sold or shared.
+        Email <a href="mailto:hello@auaha.app">hello@auaha.app</a> and we'll delete it — no
+        questions, no reply needed beyond confirming it's done.</p>
+
+      <h2>Your rights</h2>
+      <p>If you're in the UK, EU, or a US state with a privacy law, you have the right to ask
+        what we hold about you, to get a copy, and to have it deleted. For these pages that is
+        a short conversation, because the only thing we could possibly hold is an email
+        address you chose to give us. Write to
+        <a href="mailto:hello@auaha.app">hello@auaha.app</a>.</p>
+
+      <h2>This is not medical or legal advice</h2>
+      <p>These pages are educational. The exercise is based on published research on
+        values affirmation, but it is not therapy, counselling, or career advice specific to
+        your situation. If you are in crisis, please use the resources listed on the exercise
+        page rather than waiting.</p>
+
+      <h2>Contact</h2>
+      <p>Auaha App Development LLC &nbsp;·&nbsp;
+        <a href="mailto:hello@auaha.app">hello@auaha.app</a></p>
+    </article>
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2026 Auaha App Development LLC &nbsp;·&nbsp;
+      <a href="https://auaha.app/">Auaha.app</a> &nbsp;·&nbsp;
+      <a href="/layoff/">The exercise</a> &nbsp;·&nbsp;
+      <a href="/layoff/privacy/">Privacy</a> &nbsp;·&nbsp;
+      <a href="mailto:hello@auaha.app">hello@auaha.app</a>
+    </p>
+  </footer>
+
+</body>
+
+</html>

@@ -331,6 +331,7 @@ const urls = [
   // Layoff / career-transition cluster. The hub carries the exercise, so it
   // ranks above its own articles.
   { loc: `${SITE}${layoff.base}/`, pri: "0.9" },
+  { loc: `${SITE}${layoff.base}/privacy/`, pri: "0.3" },
   ...layoff.topics.map((t) => ({
     loc: `${SITE}${layoff.base}/${t.slug}/`,
     pri: "0.7",

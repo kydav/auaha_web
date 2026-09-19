@@ -222,6 +222,7 @@ function footer() {
       &copy; 2026 Auaha App Development LLC &nbsp;·&nbsp;
       <a href="https://auaha.app/">Auaha.app</a> &nbsp;·&nbsp;
       <a href="${BASE}/">The exercise</a> &nbsp;·&nbsp;
+      <a href="${BASE}/privacy/">Privacy</a> &nbsp;·&nbsp;
       <a href="mailto:hello@auaha.app">hello@auaha.app</a>
     </p>
   </footer>`;
@@ -410,6 +411,112 @@ function hubJsonLd(url) {
         `  <script type="application/ld+json">\n${JSON.stringify(o, null, 2)}\n  </script>`
     )
     .join("\n");
+}
+
+/// Privacy notice for the /layoff/ cluster.
+///
+/// Generated rather than hand-written so a later `npm run gen` can't wipe it,
+/// and so the footer link and the page it points at can never drift apart.
+///
+/// This page exists because these are the only pages on auaha.app that store
+/// anything in a visitor's browser, log anything server-side, or take an email
+/// address. `auaha.app/privacy` is a redirect to the Contact Photos policy, not
+/// a site-wide one, so before this there was nothing covering any of it.
+function privacyPage() {
+  const url = `${SITE}${BASE}/privacy/`;
+  const crumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Auaha", item: `${SITE}/` },
+      { "@type": "ListItem", position: 2, name: "After a layoff", item: `${SITE}${BASE}/` },
+      { "@type": "ListItem", position: 3, name: "Privacy", item: url },
+    ],
+  };
+  const jsonLd = `  <script type="application/ld+json">\n${JSON.stringify(crumbs, null, 2)}\n  </script>`;
+
+  return `<!DOCTYPE html>
+<html lang="en">
+${head({
+    title: `Privacy — After a Layoff | ${BRAND}`,
+    desc:
+      "What these pages store, what they don't, and what happens to anything you " +
+      "write in the exercise. Short version: what you write never leaves your browser.",
+    url,
+    jsonLd,
+  })}
+
+<body>
+
+${chrome()}
+
+  <main class="container">
+    <p class="breadcrumb">
+      <a href="${BASE}/">After a layoff</a> &nbsp;›&nbsp; Privacy
+    </p>
+
+    <header class="hero">
+      <div class="badge">Privacy</div>
+      <h1>What these pages <span>store, and don't</span></h1>
+      <p class="meta">Auaha App Development LLC &nbsp;·&nbsp; Last updated September 18, 2026</p>
+      <p class="lede">The short version: what you write in the exercise never leaves your
+        browser. We can see that someone did it. We cannot see what they said.</p>
+    </header>
+
+    <article>
+      <h2>What you write stays on your device</h2>
+      <p>The writing exercise saves your answers in your own browser's local storage so you
+        don't lose them if you close the tab or come back later. <strong>That text is never
+        sent to us.</strong> It isn't stored on a server, we can't read it, and nobody else
+        can either. Clearing your browser data deletes it permanently — including from us,
+        because we never had it.</p>
+
+      <h2>What we do record</h2>
+      <p>So we can tell whether these pages are any use to anyone, we record a small,
+        anonymous event when you start and finish the exercise. That's:</p>
+      <ul class="checks">
+        <li>which page you were on, and which site sent you (if any)</li>
+        <li><b>how many words</b> you wrote and <b>how long</b> you spent — the counts, never the words</li>
+        <li>the country your request came from, as reported by our host</li>
+        <li>a random id that lives only until you close the tab, so one visit isn't counted as five</li>
+      </ul>
+      <p>That random id is not a cookie, it's deleted when the tab closes, and it is never
+        connected to anything else. We do not store your IP address. There is no advertising
+        pixel, no Google Analytics, and no third-party tracker of any kind on these pages —
+        which is also why you aren't being asked to accept cookies.</p>
+
+      <h2>The optional check-in</h2>
+      <p>At the end of the exercise you can leave an email address for a single check-in a
+        couple of weeks later. That's the only personal information we hold. It is used for
+        that one message, it is not added to a marketing list, and it is never sold or shared.
+        Email <a href="mailto:hello@auaha.app">hello@auaha.app</a> and we'll delete it — no
+        questions, no reply needed beyond confirming it's done.</p>
+
+      <h2>Your rights</h2>
+      <p>If you're in the UK, EU, or a US state with a privacy law, you have the right to ask
+        what we hold about you, to get a copy, and to have it deleted. For these pages that is
+        a short conversation, because the only thing we could possibly hold is an email
+        address you chose to give us. Write to
+        <a href="mailto:hello@auaha.app">hello@auaha.app</a>.</p>
+
+      <h2>This is not medical or legal advice</h2>
+      <p>These pages are educational. The exercise is based on published research on
+        values affirmation, but it is not therapy, counselling, or career advice specific to
+        your situation. If you are in crisis, please use the resources listed on the exercise
+        page rather than waiting.</p>
+
+      <h2>Contact</h2>
+      <p>Auaha App Development LLC &nbsp;·&nbsp;
+        <a href="mailto:hello@auaha.app">hello@auaha.app</a></p>
+    </article>
+  </main>
+
+${footer()}
+
+</body>
+
+</html>
+`;
 }
 
 function hubPage() {
@@ -737,6 +844,11 @@ ${BEACON}
 const hubDir = resolve(root, BASE.replace(/^\//, ""));
 mkdirSync(hubDir, { recursive: true });
 writeFileSync(resolve(hubDir, "index.html"), hubPage());
+
+const privacyDir = resolve(hubDir, "privacy");
+mkdirSync(privacyDir, { recursive: true });
+writeFileSync(resolve(privacyDir, "index.html"), privacyPage());
+console.log("✓ layoff/privacy/index.html");
 console.log(`✓ ${BASE.replace(/^\//, "")}/index.html  (hub + exercise)`);
 
 for (const topic of data.topics) {
