@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#152a25">
+  <meta name="description" content="Count down to Elder Kolton Davis coming home on November 19, 2026 at 6:00 PM Mountain Time.">
+  <title>Elder Davis is coming home</title>
+  <style>
+    :root { color-scheme: light; --ink:#183029; --cream:#f7f3e9; --gold:#bd8850; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--cream); color:var(--ink); font-family:Arial, Helvetica, sans-serif; }
+    .page { min-height:100vh; display:grid; grid-template-columns:minmax(0, 1.1fr) minmax(350px, .9fr); }
+    .content { padding:clamp(32px, 6vw, 90px); display:flex; flex-direction:column; justify-content:center; position:relative; }
+    .eyebrow { color:#926236; font-size:.78rem; font-weight:700; letter-spacing:.25em; text-transform:uppercase; }
+    .rule { width:54px; height:2px; background:var(--gold); margin:28px 0; }
+    h1 { font-family:Georgia, 'Times New Roman', serif; font-size:clamp(3.5rem, 7vw, 7.5rem); line-height:.99; letter-spacing:-.055em; font-weight:400; max-width:780px; margin:0; }
+    h1 em { color:#a36b37; font-weight:400; }
+    .intro { font-size:clamp(1rem, 1.6vw, 1.2rem); line-height:1.7; margin:28px 0 42px; color:#52645b; max-width:510px; }
+    .countdown { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:clamp(8px, 2vw, 22px); max-width:680px; }
+    .unit { border-top:1px solid #c6c8b9; padding-top:16px; }
+    .number { display:block; font-family:Georgia, 'Times New Roman', serif; font-size:clamp(2.5rem, 5.5vw, 5.6rem); line-height:1; font-variant-numeric:tabular-nums; letter-spacing:-.06em; }
+    .label { display:block; margin-top:10px; color:#7c897c; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.18em; }
+    .date { margin:40px 0 0; font-weight:700; font-size:.85rem; letter-spacing:.13em; text-transform:uppercase; }
+    .date span { color:#7c897c; font-weight:400; }
+    .photo { min-height:100vh; background:#394840; position:relative; overflow:hidden; }
+    .photo img { width:100%; height:100%; position:absolute; inset:0; object-fit:cover; object-position:center 39%; }
+    .photo::after { content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 72%, rgba(13,32,25,.55)); pointer-events:none; }
+    .photo-caption { position:absolute; z-index:1; left:32px; bottom:30px; color:white; font-family:Georgia, 'Times New Roman', serif; font-size:1.15rem; letter-spacing:.04em; }
+    @media(max-width:800px) {
+      .page { display:flex; flex-direction:column-reverse; }
+      .photo { min-height:0; height:42vh; min-height:300px; }
+      .photo img { object-position:center 32%; }
+      .content { padding:38px 24px 55px; }
+      h1 { font-size:clamp(3.2rem, 11vw, 5rem); }
+      .intro { margin:20px 0 35px; }
+      .date { line-height:1.6; }
+    }
+    @media(max-width:400px) { .countdown { gap:7px; } .number { font-size:2.4rem; } .label { font-size:.61rem; letter-spacing:.12em; } }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="content" aria-labelledby="heading">
+      <div class="eyebrow">The homecoming countdown</div>
+      <div class="rule" aria-hidden="true"></div>
+      <h1 id="heading">Elder Davis<br>is coming <em>home.</em></h1>
+      <p class="intro">After two years of serving as a missionary for The Church of Jesus Christ of Latter-day Saints, Kolton is almost home. We can't wait to see him.</p>
+      <div class="countdown" role="timer" aria-label="Time until Elder Davis comes home">
+        <div class="unit"><span class="number" id="days">—</span><span class="label">Days</span></div>
+        <div class="unit"><span class="number" id="hours">—</span><span class="label">Hours</span></div>
+        <div class="unit"><span class="number" id="minutes">—</span><span class="label">Minutes</span></div>
+        <div class="unit"><span class="number" id="seconds">—</span><span class="label">Seconds</span></div>
+      </div>
+      <p class="date">November 19, 2026 <span> · 6:00 PM Mountain Time</span></p>
+    </section>
+    <div class="photo">
+      <img src="kolton.jpg" alt="Elder Kolton Davis smiling outdoors" fetchpriority="high">
+      <span class="photo-caption">Welcome home, Kolton.</span>
+    </div>
+  </main>
+  <script>
+    // November is standard time in the Mountain time zone (UTC−7).
+    const homecoming = new Date('2026-11-19T18:00:00-07:00').getTime();
+    const ids = ['days', 'hours', 'minutes', 'seconds'];
+    const elements = ids.map(id => document.getElementById(id));
+    function updateCountdown() {
+      const remaining = Math.max(0, Math.floor((homecoming - Date.now()) / 1000));
+      const values = [
+        Math.floor(remaining / 86400),
+        Math.floor(remaining / 3600) % 24,
+        Math.floor(remaining / 60) % 60,
+        remaining % 60
+      ];
+      values.forEach((value, index) => {
+        elements[index].textContent = index === 0 ? String(value) : String(value).padStart(2, '0');
+      });
+      if (remaining === 0) {
+        document.getElementById('heading').innerHTML = 'Elder Davis<br>is <em>home!</em>';
+        document.querySelector('.intro').textContent = 'Welcome home, Kolton!';
+        clearInterval(timer);
+      }
+    }
+    const timer = setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
+</html>
