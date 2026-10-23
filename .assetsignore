@@ -1,8 +1,21 @@
-node_modules/
-src/
-scripts/
+# Wrangler serves the repo root as static assets, so anything here that isn't
+# meant to be public has to be excluded explicitly. Without this, `wrangler
+# deploy` uploads .git/ and .wrangler/ to the edge. They aren't currently
+# reachable (the worker's trailing-slash 301 turns extensionless paths into
+# 404s) but that is an accident of an unrelated rule, not protection.
+.git
+.git/**
+.wrangler
+.wrangler/**
+node_modules
+node_modules/**
+src
+src/**
+scripts
+scripts/**
 package.json
 package-lock.json
 wrangler.jsonc
-.gitignore
 .assetsignore
+.DS_Store
+**/.DS_Store
