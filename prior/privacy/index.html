@@ -8,7 +8,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Prior by Auaha</title>
-  <meta name="description" content="Privacy policy for Prior, the Utah water rights lookup app — what the app stores, how your data is handled, and your choices." />
+  <meta name="description" content="Privacy policy for Prior, the water rights lookup app for Utah, Colorado and Idaho — what the app stores, how your data is handled, and your choices." />
   <link rel="canonical" href="https://auaha.app/prior/privacy/" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -85,7 +85,7 @@
   <main>
     <div class="chip">Legal</div>
     <h1>Privacy Policy</h1>
-    <p class="meta">Applies to: Prior &nbsp;·&nbsp; Last updated: June 25, 2026 &nbsp;·&nbsp; Auaha App Development LLC</p>
+    <p class="meta">Applies to: Prior &nbsp;·&nbsp; Last updated: October 31, 2026 &nbsp;·&nbsp; Auaha App Development LLC</p>
 
     <p>This Privacy Policy describes how Auaha App Development LLC ("we," "us," or "our") handles information in connection with the Prior mobile application ("the App"). We are committed to protecting your privacy.</p>
 
@@ -95,12 +95,13 @@
       <li><strong>Account information:</strong> Your email address, used to create and authenticate your account via Firebase Authentication.</li>
       <li><strong>Location data:</strong> If you use the "current location" feature, the App accesses your device's GPS coordinates to center the map. Location data is used only in the moment and is never stored or transmitted to our servers.</li>
       <li><strong>Search queries:</strong> Addresses, coordinates, or parcel numbers you enter are sent to third-party mapping and government data services to perform the lookup. These queries are not linked to your identity on our end.</li>
+      <li><strong>Saved lookups:</strong> If you save a lookup, we store the name and note you give it, its map location (coordinates of the property, not your device), the state and parcel number, and the water right numbers found, in your account (Firebase Cloud Firestore) so you can reopen it. Only you can read them, and you can delete any saved lookup in the App.</li>
       <li><strong>Usage analytics:</strong> Anonymous, aggregated usage data to help us improve the App (e.g., feature usage frequency). This does not include any personal information.</li>
     </ul>
 
     <h2>2. Information We Do Not Collect</h2>
     <ul>
-      <li>We do not store your search history or the properties you look up.</li>
+      <li>We do not store your search history or the properties you look up, except lookups you choose to save.</li>
       <li>We do not sell, rent, or share your data with third parties for marketing purposes.</li>
       <li>We do not use your data to serve advertisements.</li>
       <li>We do not collect or store your precise location persistently.</li>
@@ -119,8 +120,11 @@
     <p>Prior queries government and mapping APIs to retrieve parcel and water rights data. When you perform a search, your query (address, coordinates, or parcel number) is sent to these services:</p>
     <ul>
       <li><strong>Mapbox:</strong> Used for map display, geocoding (address to coordinates), and map tile serving. See <a href="https://www.mapbox.com/legal/privacy" target="_blank" rel="noopener">Mapbox Privacy Policy</a>.</li>
-      <li><strong>Utah SGID / AGRC ArcGIS:</strong> Utah state government parcel data services. Queries are subject to Utah's open government data policies.</li>
-      <li><strong>Utah Division of Water Resources ArcGIS:</strong> Utah state government water rights (Points of Diversion) data. Queries are subject to Utah's open government data policies.</li>
+      <li><strong>Utah (UGRC / SGID and Division of Water Rights):</strong> parcel and water rights (Points of Diversion) data.</li>
+      <li><strong>Colorado (statewide parcels and Division of Water Resources CDSS):</strong> parcel and water rights data.</li>
+      <li><strong>Idaho (Department of Water Resources and Idaho parcel services):</strong> parcel and water rights data.</li>
+      <li><strong>Bureau of Land Management:</strong> Public Land Survey System (section, township, range).</li>
+      <li>Government queries contain only the location or number you searched, and are subject to each agency's open government data policies.</li>
     </ul>
 
     <h2>5. Account Security and Storage</h2>
@@ -132,7 +136,8 @@
     <h2>7. Third-Party Services</h2>
     <p>Prior uses the following third-party services, each governed by their own privacy policies:</p>
     <ul>
-      <li><strong>Firebase (Google LLC):</strong> Authentication and analytics. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a>.</li>
+      <li><strong>Firebase (Google LLC):</strong> Authentication, saved lookups (Cloud Firestore) and analytics. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a>.</li>
+      <li><strong>RevenueCat:</strong> Subscription status and purchase validation, using an app user ID and your purchase history with Apple or Google. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>.</li>
       <li><strong>Mapbox:</strong> Map display and geocoding. See <a href="https://www.mapbox.com/legal/privacy" target="_blank" rel="noopener">Mapbox Privacy Policy</a>.</li>
     </ul>
 
