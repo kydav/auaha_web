@@ -111,6 +111,11 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://shoein.app/delete-account/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.2</priority>
+  </url>
+  <url>
     <loc>https://shoein.app/privacy/</loc>
     <lastmod>2026-09-09</lastmod>
     <priority>0.3</priority>

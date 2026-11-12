@@ -358,6 +358,7 @@ const smUrls = [
   { loc: `${SITE}/`, pri: "1.0" },
   ...data.topics.map((t) => ({ loc: `${SITE}/${t.slug}/`, pri: "0.7" })),
   { loc: `${SITE}/support/`, pri: "0.4" },
+  { loc: `${SITE}/delete-account/`, pri: "0.2" },
   { loc: `${SITE}/privacy/`, pri: "0.3" },
   { loc: `${SITE}/terms/`, pri: "0.3" },
 ];

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/icons/shoein-favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/shoein-favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/shoein-favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/shoein-apple-touch.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete Your Account — Shoein' by Auaha</title>
+  <link rel="canonical" href="https://shoein.app/delete-account/" />
+  <meta name="description" content="How to delete your Shoein' account and data: in the app under Profile, or by email." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #1a1613; --surface: #221c17; --card: #2a231c;
+      --accent: #e08521; --accent2: #fbbf24; --text: #f7f4ef; --muted: #b9ab98; --border: #3a3129;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; border-bottom: 1px solid var(--border); background: rgba(26,22,19,0.9); }
+    .logo { font-size: 1.3rem; font-weight: 700; color: var(--text); text-decoration: none; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 1.25rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
+    main { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    .chip { display: inline-block; background: rgba(224,133,33,0.12); color: var(--accent); border: 1px solid rgba(224,133,33,0.28); border-radius: 99px; padding: 0.25rem 0.9rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 1rem; }
+    h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 0.5rem; }
+    .subtitle { color: var(--muted); font-size: 1.05rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
+    .contact-card { background: var(--card); border: 1px solid rgba(224,133,33,0.3); border-radius: 12px; padding: 1.75rem 2rem; margin-bottom: 3rem; display: flex; align-items: center; gap: 1.25rem; }
+    .contact-card-icon { font-size: 2rem; flex-shrink: 0; }
+    .contact-card h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .contact-card p { color: var(--muted); font-size: 0.9rem; margin: 0; }
+    .contact-card a { color: var(--accent); font-weight: 600; }
+    h2.section { font-size: 1.3rem; font-weight: 800; margin: 2.5rem 0 1.25rem; color: var(--text); }
+    .faq { margin-bottom: 0.75rem; }
+    .faq-q { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.25rem; font-weight: 600; font-size: 0.95rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; transition: border-color 0.2s; }
+    .faq-q:hover { border-color: var(--accent); }
+    .faq-q.open { border-color: var(--accent); border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+    .faq-q .chevron { transition: transform 0.2s; color: var(--muted); font-style: normal; }
+    .faq-q.open .chevron { transform: rotate(180deg); }
+    .faq-a { display: none; background: var(--surface); border: 1px solid var(--accent); border-top: none; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; padding: 1rem 1.25rem; color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+    .faq-a.open { display: block; }
+    .faq-a a { color: var(--accent); }
+    footer { border-top: 1px solid var(--border); padding: 2rem 1.5rem; text-align: center; color: var(--muted); font-size: 0.875rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+      h2.step { font-size: 1.2rem; font-weight: 800; margin: 2.25rem 0 0.75rem; }
+    ol, ul { padding-left: 1.4rem; color: var(--muted); }
+    li { margin-bottom: 0.45rem; }
+    p.body { color: var(--muted); margin-bottom: 0.9rem; }
+    strong { color: var(--text); }
+    main a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">Shoein<span>'</span></a>
+    <div class="nav-links">
+      <a href="/">← Shoein'</a>
+      <a href="/support/">Support</a>
+      <a href="/privacy/">Privacy</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="chip">Account</div>
+    <h1>Delete your Shoein' account</h1>
+    <p class="subtitle">Shoein' is made by Auaha App Development LLC. You can delete your account and its data at any time, in the app or by email.</p>
+
+    <h2 class="step">In the app (fastest)</h2>
+    <ol>
+      <li>Open Shoein' and sign in.</li>
+      <li>Go to <strong>Profile</strong> and tap <strong>Delete account</strong> (below Sign out).</li>
+      <li>Type <strong>DELETE</strong> to confirm.</li>
+    </ol>
+    <p class="body">Your account and data are deleted right away. If you signed in a long time ago, you may be asked to sign in again first.</p>
+
+    <h2 class="step">By email</h2>
+    <p class="body">If you no longer have the app, email <a href="mailto:hello@auaha.app?subject=Delete%20my%20Shoein%27%20account">hello@auaha.app</a> from the email address on your account, with the subject <strong>"Delete my Shoein' account"</strong>. We'll confirm it's you, delete the account within 30 days, and let you know when it's done.</p>
+
+    <h2 class="step">What's deleted</h2>
+    <ul>
+      <li>Your account and sign-in</li>
+      <li>All clients, horses, visits, appointments and mileage</li>
+      <li>All horse and visit photos</li>
+      <li>Your business settings (business name, prices, payment details)</li>
+    </ul>
+
+    <h2 class="step">What's kept</h2>
+    <ul>
+      <li>The date your free trial started, stored under an anonymous account ID with nothing else attached. Nothing about you or your clients is kept.</li>
+      <li>Purchase records held by Apple or Google under their own policies.</li>
+    </ul>
+
+    <h2 class="step">Subscriptions</h2>
+    <p class="body">Deleting your account doesn't cancel a Shoein' subscription. Cancel it in your <strong>App Store</strong> settings (iPhone) or <strong>Google Play</strong> subscriptions (Android) so you aren't charged again.</p>
+
+    <p class="body" style="margin-top:2rem">Questions? Email <a href="mailto:hello@auaha.app">hello@auaha.app</a>. See our <a href="/privacy/">Privacy Policy</a> for more.</p>
+  </main>
+
+  <footer>
+    <p>
+      &copy; 2026 Auaha App Development LLC &nbsp;·&nbsp;
+      <a href="https://auaha.app/">Auaha.app</a> &nbsp;·&nbsp;
+      <a href="/">Shoein'</a> &nbsp;·&nbsp;
+      <a href="/privacy/">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="/terms/">Terms of Service</a>
+    </p>
+  </footer>
+</body>
+</html>
