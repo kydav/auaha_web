@@ -42,7 +42,7 @@
         "name": "Does Threshold support my state?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Threshold currently includes buyer representation forms for Colorado, Oklahoma, Louisiana, and Wisconsin. In other states, check with your state REALTOR® association, local board or MLS, or your brokerage for the form you must use."
+          "text": "Yes. Threshold works in every state: scan or upload the buyer agreement your state association, board or brokerage requires, and Threshold sets it up for signing on your phone. Colorado, Oklahoma, Louisiana, and Wisconsin also have a built-in form. Check with your state REALTOR® association, local board or MLS, or your brokerage for the form you must use."
         }
       },
       {
@@ -157,7 +157,7 @@
         </div>
         <div class="legend">
           <span><i class="sw sup"></i> Supported in Threshold</span>
-          <span><i class="sw oth"></i> Other states</span>
+          <span><i class="sw oth"></i> Your own form</span>
         </div>
       </div>
 
@@ -192,15 +192,16 @@
 
     <section class="block">
       <h2 class="s">All states</h2>
-      <p class="body">Threshold currently supports the linked states below. In every other state, confirm your required
+      <p class="body">Threshold works in every state with the form you already use: scan or upload it once and it's
+        ready for every deal. The linked states below also have a built-in form. Wherever you are, confirm your required
         buyer-broker agreement with your state REALTOR® association, local board or MLS, or your brokerage.</p>
       <div class="allstates" id="allstates"></div>
       <noscript>
-        <p class="body">Supported in Threshold:
+        <p class="body">Threshold works in every state with your own form. Built-in forms:
           <a href="/threshold/colorado-buyer-broker-agreement/">Colorado</a>,
           <a href="/threshold/oklahoma-buyer-broker-agreement/">Oklahoma</a>,
           <a href="/threshold/louisiana-buyer-broker-agreement/">Louisiana</a>, and
-          <a href="/threshold/wisconsin-buyer-broker-agreement/">Wisconsin</a>. In other states, confirm your required
+          <a href="/threshold/wisconsin-buyer-broker-agreement/">Wisconsin</a>. Everywhere, confirm your required
           buyer-broker agreement with your state REALTOR® association, local board or MLS, or your brokerage.</p>
       </noscript>
       <div class="links" style="margin-top:1.5rem">
@@ -284,19 +285,21 @@
       var name = s[1];
       var html = "";
       if (SUPPORTED[key]) {
-        html += '<span class="pill sup">Supported in Threshold</span>';
+        html += '<span class="pill sup">Built-in form in Threshold</span>';
         html += '<div class="st">' + name + "</div>";
         html += '<div class="rule">' + RULE + "</div>";
         html += "<p>Threshold includes " + name + "'s buyer representation agreement — complete it, sign on-screen, " +
           "and export a PDF from your phone.</p>";
         html += '<a class="btn btn-primary" href="/threshold/' + SUPPORTED[key] + '/">Open the ' + name + ' guide →</a>';
       } else {
-        html += '<span class="pill oth">Not yet in Threshold</span>';
+        html += '<span class="pill oth">Works with your own form</span>';
         html += '<div class="st">' + name + "</div>";
         html += '<div class="rule">' + RULE + "</div>";
-        html += "<p>Threshold doesn't include " + name + "'s buyer-agreement forms yet. Your state REALTOR® " +
-          "association, local board or MLS, or your brokerage may require their own buyer-broker agreement and can " +
-          "mandate a specific form — check with them for the exact document and rules in " + name + ".</p>";
+        html += "<p>Threshold works in " + name + " with the form you already use: scan or upload it once, then " +
+          "fill it in and get it signed on your phone at every showing. Your state REALTOR® association, local board " +
+          "or MLS, or your brokerage may require their own buyer-broker agreement and can mandate a specific form — " +
+          "check with them for the exact document and rules in " + name + ".</p>";
+        html += '<a class="btn btn-primary" href="/threshold/">See how Threshold works →</a>';
       }
       detailEl.innerHTML = html;
     }
