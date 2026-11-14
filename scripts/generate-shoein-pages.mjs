@@ -260,6 +260,7 @@ function page(topic) {
   <link rel="apple-touch-icon" sizes="180x180" href="/icons/shoein-apple-touch.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${esc(title)}</title>
+  <meta name="apple-itunes-app" content="app-id=6799500214" />
   <meta name="description" content="${esc(desc)}" />
   <link rel="canonical" href="${url}" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -357,6 +358,9 @@ const today = new Date().toISOString().slice(0, 10);
 const smUrls = [
   { loc: `${SITE}/`, pri: "1.0" },
   ...data.topics.map((t) => ({ loc: `${SITE}/${t.slug}/`, pri: "0.7" })),
+  // Hand-written articles (not generated — keep in sync by hand).
+  ...["farrier-new-client-checklist", "farrier-record-keeping", "raising-your-farrier-rates"]
+    .map((slug) => ({ loc: `${SITE}/${slug}/`, pri: "0.7" })),
   { loc: `${SITE}/support/`, pri: "0.4" },
   { loc: `${SITE}/delete-account/`, pri: "0.2" },
   { loc: `${SITE}/privacy/`, pri: "0.3" },
