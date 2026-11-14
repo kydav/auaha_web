@@ -85,7 +85,7 @@
   <main>
     <div class="chip">Legal</div>
     <h1>Privacy Policy</h1>
-    <p class="meta">Applies to: Threshold &nbsp;·&nbsp; Last updated: June 16, 2026 &nbsp;·&nbsp; Auaha App Development LLC</p>
+    <p class="meta">Applies to: Threshold &nbsp;·&nbsp; Last updated: November 13, 2026 &nbsp;·&nbsp; Auaha App Development LLC</p>
 
     <p>This Privacy Policy describes how Auaha App Development LLC ("we," "us," or "our") handles information in connection with the Threshold mobile application ("the App"). We are committed to protecting the privacy of our users.</p>
 
@@ -94,6 +94,7 @@
     <ul>
       <li><strong>Account information:</strong> Your name and email address, used to create and authenticate your agent account via Firebase Authentication.</li>
       <li><strong>Agreement data:</strong> Buyer agreement form data you enter within the App (such as buyer names, property addresses, and agreement terms). This data is stored on your device and, if you choose to sync, in your Firebase account.</li>
+      <li><strong>Forms you add:</strong> When you scan or upload a buyer agreement form, images of its pages, the text read from them, and the PDF file (if you uploaded one) are sent to our servers so the form's fields can be found. See section 4A.</li>
       <li><strong>Usage analytics:</strong> Anonymous, aggregated usage data to help us improve the App (e.g., feature usage frequency). This does not include any personal or client information.</li>
     </ul>
 
@@ -109,6 +110,7 @@
     <ul>
       <li>Authenticate and maintain your agent account</li>
       <li>Store and retrieve your agreement data</li>
+      <li>Find the fields on forms you add, and email signed agreements to the people you choose</li>
       <li>Improve App performance and reliability</li>
       <li>Respond to support requests you initiate</li>
     </ul>
@@ -117,10 +119,23 @@
     <p>Agreement data is stored primarily on your device. If cloud sync is enabled, data is stored in Firebase (Google Cloud), which is encrypted in transit and at rest. We implement reasonable security measures to protect your information, but no method of transmission or storage is 100% secure.</p>
     <p>Your account is protected by Firebase Authentication. We recommend using a strong, unique password and enabling any available multi-factor authentication.</p>
 
+    <h2>4A. Forms You Add and AI Processing</h2>
+    <p>To set up a form you scan or upload, the App reads the page text on your device, then sends the page images, that text, and the PDF file (if any) to our servers on Google Cloud. Our servers send them to Anthropic's Claude AI, which identifies the form's blanks, checkboxes, and signature lines and writes a plain-English overview of the form. Anthropic processes this data only to return that result to us and does not use it to train its models.</p>
+    <ul>
+      <li>The page images, text, and PDF are deleted from our servers as soon as the form is read. The resulting field layout is kept with your import.</li>
+      <li>After you check and save a form, we keep its field layout (field labels, types, and positions) and fingerprints of its printed lines (one-way hashes, not readable text). Once several agents have saved the same form, this lets others who add it get the fields instantly. We never keep or share what you or your clients write on a form.</li>
+      <li>Only add blank forms or forms you are authorized to use. If you scan a filled-in copy, the information on it is sent for processing as described above, then erased from your saved copy of the form.</li>
+      <li>You decide whether to add a form. Built-in state forms and the agreements you fill and sign are never sent to Anthropic.</li>
+    </ul>
+
     <h2>5. Third-Party Services</h2>
     <p>Threshold uses the following third-party services, each governed by their own privacy policies:</p>
     <ul>
-      <li><strong>Firebase (Google LLC):</strong> Used for authentication and optional cloud storage. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a>.</li>
+      <li><strong>Firebase (Google LLC):</strong> Used for authentication, cloud storage and servers, anonymous analytics, and crash reports. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a>.</li>
+      <li><strong>Anthropic, PBC:</strong> Claude AI, used only to find the fields on forms you add (section 4A). See <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy</a>.</li>
+      <li><strong>Resend:</strong> Delivers the signed agreement PDF by email to you and the buyers you enter. See <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">Resend Privacy Policy</a>.</li>
+      <li><strong>RevenueCat:</strong> Manages subscriptions and purchase status. See <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat Privacy Policy</a>.</li>
+      <li><strong>Google ML Kit:</strong> Reads text on scanned pages on your device; this runs offline on your phone.</li>
     </ul>
 
     <h2>6. Your Client's Data</h2>
