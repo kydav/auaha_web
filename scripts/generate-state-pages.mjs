@@ -266,8 +266,9 @@ ${faqHtml}
         ${otherStates(state)}
       </div>
       <p style="margin-top:1rem">
-        In a different state? See the
-        <a href="/threshold/buyer-broker-agreement-by-state/">buyer broker agreement requirements by state&nbsp;→</a>
+        In a different state? Threshold works with
+        <a href="/threshold/sign-any-buyer-agreement-on-your-phone/">your own buyer agreement form&nbsp;→</a>
+        See the <a href="/threshold/buyer-broker-agreement-by-state/">requirements by state&nbsp;→</a>
       </p>
     </section>
 
@@ -319,6 +320,7 @@ const urls = [
   { loc: `${SITE}/threshold/buyer-transaction-compliance-checklist/`, pri: "0.8" },
   { loc: `${SITE}/threshold/buyer-compensation-explainer/`, pri: "0.8" },
   { loc: `${SITE}/threshold/buyer-broker-agreement-by-state/`, pri: "0.8" },
+  { loc: `${SITE}/threshold/sign-any-buyer-agreement-on-your-phone/`, pri: "0.9" },
   // Hand-written Threshold articles (not generated — keep in sync by hand).
   { loc: `${SITE}/threshold/who-pays-the-buyers-agent/`, pri: "0.8" },
   { loc: `${SITE}/threshold/open-house-to-signed-buyer/`, pri: "0.8" },
