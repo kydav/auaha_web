@@ -19,3 +19,5 @@ wrangler.jsonc
 .assetsignore
 .DS_Store
 **/.DS_Store
+CLAUDE.md
+AGENTS.md
